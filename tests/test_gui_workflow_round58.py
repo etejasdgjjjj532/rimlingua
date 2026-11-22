@@ -138,7 +138,7 @@ class DeclaredTrialOutputRound58Tests(unittest.TestCase):
         self.assertIn('試験', self.window.guidance.text())
         with patch('rimworld_translator.gui.QDesktopServices.openUrl', return_value=True) as opened:
             self.window.open_export_folder()
-        self.assertEqual(opened.call_args.args[0].toLocalFile(), str(self.output))
+        self.assertEqual(Path(opened.call_args.args[0].toLocalFile()), self.output)  # QUrl uses '/' on Windows too
         self.assertEqual(self.bytes_tree(self.formal), self.formal_before)
         self.assertEqual(self.bytes_tree(self.source), self.original)
 

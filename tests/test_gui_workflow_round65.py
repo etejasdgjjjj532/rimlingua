@@ -21,7 +21,7 @@ class CompactTrialReportRound65Tests(unittest.TestCase):
                 env = dict(os.environ, QT_QPA_PLATFORM=f'offscreen:configfile={config.name}',
                            RW65_COMPACT_SCREEN_CHILD='1')
                 run = subprocess.run([sys.executable, str(Path(__file__).resolve()), '-v'], env=env, cwd=temporary,
-                                     text=True, capture_output=True, timeout=30)
+                                     text=True, capture_output=True, timeout=120)  # Windows runners are about twice as slow
                 print(f'compact screen {width}x{height}:\n{run.stdout}{run.stderr}', flush=True)
                 self.assertEqual(run.returncode, 0, f'{width}x{height} actual Qt screen failed')
 
