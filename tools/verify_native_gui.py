@@ -123,14 +123,14 @@ def run_smoke(output: Path, *, require_native: bool = False, require_windows_cli
             if not report["keyboard_tab_moves_focus"]:
                 report["issues"].append("Tab navigation from the search field did not move focus.")
             for width, height in ((1240, 730), (960, 660), (max(480,min(660,screen.width()-20)),max(280,min(350,screen.height()-40)))):
-                if width > screen.width() or height > screen.height():
-                    # The OS cannot show a window larger than the screen (e.g. a small CI display at 200%), so
-                    # this size says nothing about the layout; larger screens cover it.
-                    report.setdefault('skipped_sizes', []).append(
-                        f'{width}x{height} exceeds the {screen.width()}x{screen.height()} available screen')
-                    continue
                 window.resize(width, height)
                 app.processEvents()
+                if window.width() < width or window.height() < height:
+                    # The OS clamped the window to a screen smaller than this size (e.g. a small CI display at
+                    # 200%), so the size was never applied and says nothing about the layout.
+                    report.setdefault('skipped_sizes', []).append(
+                        f'{width}x{height} was clamped to {window.width()}x{window.height()} by the screen')
+                    continue
                 QTest.qWait(80)
                 controls = {}
                 for name in ("table", "search", "english", "japanese", "save_button",
