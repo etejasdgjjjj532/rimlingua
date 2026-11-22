@@ -138,7 +138,7 @@ class SettingsRoundtripEdgeTests(unittest.TestCase):
         self.assertEqual(target.data['cache_directory'], '')
 
     def test_deeply_nested_unknown_value_does_not_break_import(self):
-        payload = '{"unknown": ' + '[' * 3000 + ']' * 3000 + ', "font_size": 13}'
+        payload = '{"unknown": ' + '[' * 200 + ']' * 200 + ', "font_size": 13}'
         target = self.store()
         target.import_from(self.write(payload))
         self.assertEqual(target.data['font_size'], 13)

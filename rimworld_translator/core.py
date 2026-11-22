@@ -1230,7 +1230,7 @@ def _publish_transaction(target: Path, writes: dict[str, bytes], removals: list[
             if relative in writes:
                 atomic_write(staging / 'after' / relative, writes[relative])
         recovery = {'target': str(target), 'writes': list(writes), 'removals': removals,
-                    'backups': {relative: str(path.relative_to(staging))
+                    'backups': {relative: path.relative_to(staging).as_posix()
                                 for relative, path in backups.items()}}
         atomic_write(staging / 'recovery.json',
                      (json.dumps(recovery, ensure_ascii=False, indent=2) + '\n').encode('utf-8'))
