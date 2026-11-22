@@ -6,6 +6,8 @@ import tempfile
 import unittest
 from unittest.mock import patch
 
+from rimworld_translator.version import __version__
+
 
 ROOT = Path(__file__).resolve().parents[1]
 
@@ -22,7 +24,7 @@ class ReleaseValidationTests(unittest.TestCase):
         self.executable = self.bundle / 'RimWorldTranslationEditor.exe'
         self.executable.write_bytes(b'synthetic PE file for archive validation')
         self.manifest = {'application': 'rimworld-translation-editor', 'platform': 'windows',
-                         'version': '0.3.0', 'architecture': 'x86_64', 'runtime': 'windows',
+                         'version': __version__, 'architecture': 'x86_64', 'runtime': 'windows',
                          'wine': False, 'native_windows_verified': False, 'gui_verified': False,
                          'self_test': {'ok': True, 'frozen': True}}
         self.write_manifest()
@@ -33,7 +35,7 @@ class ReleaseValidationTests(unittest.TestCase):
     def gui_reports(self, *, wine=False, native=True):
         reports = []
         for scale in ('1', '2'):
-            report = {'version': '0.3.0', 'os': 'win32', 'qt_backend': 'windows', 'wine': wine,
+            report = {'version': __version__, 'os': 'win32', 'qt_backend': 'windows', 'wine': wine,
                       'native': native, 'frozen': True, 'ok': True, 'scale_factor': scale,
                       'executable_sha256': self.builder.sha256_file(self.executable),
                       'save_verified': True, 'export_verified': True, 'history_verified': True,

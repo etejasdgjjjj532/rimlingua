@@ -21,7 +21,7 @@ The [getting-started guide](docs/GETTING_STARTED.md) covers choosing a source, t
 
 ## Startup and distribution status
 
-The current version is **0.3.0**. Local artifacts include a Linux x86_64 portable and a Windows x64 EXE/ZIP built under Wine. The Windows ZIP is labelled `wine-preview`; it does not establish native Windows startup or DPI acceptance. Native Windows builds and hosted CI runs remain unexecuted. There is no published download page yet.
+The current version is **0.4.0**, the first public release. Portable builds for Linux x86_64 and Windows x64 are produced by the release workflow and attached to GitHub Releases. Native Windows startup and DPI on real hardware have not been verified yet.
 
 The local Linux bundle is `dist/linux-current/RimWorldTranslationEditor/`. Keep the whole folder and launch its executable:
 

@@ -120,10 +120,10 @@ archives/checksums.
 
 
 ```text
-dist/rimworld-translation-editor-0.3.0-linux-x86_64.tar.gz
-dist/rimworld-translation-editor-0.3.0-linux-x86_64.tar.gz.sha256
-dist/rimworld-translation-editor-0.3.0-windows-x86_64.zip
-dist/rimworld-translation-editor-0.3.0-windows-x86_64.zip.sha256
+dist/rimworld-translation-editor-0.4.0-linux-x86_64.tar.gz
+dist/rimworld-translation-editor-0.4.0-linux-x86_64.tar.gz.sha256
+dist/rimworld-translation-editor-0.4.0-windows-x86_64.zip
+dist/rimworld-translation-editor-0.4.0-windows-x86_64.zip.sha256
 dist/build-report.json
 ```
 
@@ -236,7 +236,7 @@ Steps after publication is permitted and a remote repository is available:
 1. Confirm all tests and the native GUI, then update `version.py` and the
    CHANGELOG.
 2. After checking the code and license to be published, push the commit and the
-   `v0.3.0` tag. This tool and workflow neither create a repository nor
+   `v0.4.0` tag. This tool and workflow neither create a repository nor
    automatically push local code.
 3. Open **Portable release** in Actions and run it with the tag specified.
    `publish=false` is the default and first produces only build/test artifacts.
