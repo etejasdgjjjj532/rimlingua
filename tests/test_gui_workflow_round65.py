@@ -12,6 +12,10 @@ class CompactTrialReportRound65Tests(unittest.TestCase):
     def test_report_fits_real_small_screen_and_preserves_complete_snapshot(self):
         if os.environ.get('RW65_COMPACT_SCREEN_CHILD'):
             return self.check_compact_report()
+        if os.name == 'nt':
+            # The emulated compact screen (offscreen:configfile) hangs the child on Windows runners even with a
+            # 120 s limit; the same layout check runs on Linux.
+            self.skipTest('offscreen configfile screens hang on Windows')
         with tempfile.TemporaryDirectory() as temporary:
             for width, height in ((660, 350), (480, 280)):
                 config = Path(temporary) / f'{width}.json'
