@@ -79,7 +79,8 @@ class DiagnosticSearchKeyboardTests(unittest.TestCase):
                 self.assertIn('1501–1501', status.text(),
                               'Submitting search must not activate the dialog default Previous page button')
                 self.assertIn('4097–8192', source_status.text())
-                self.assertIn('candidate 1500', listing.currentItem().text())
+                # The list shows the plain-language title; the raw diagnostic stays on the item.
+                self.assertEqual(listing.currentItem().data(Qt.UserRole + 1)['message'], 'candidate 1500')
                 self.assertTrue(dialog.isVisible())
         self.inspect_modal(check)
         self.assertEqual(self.path.read_bytes(), before)

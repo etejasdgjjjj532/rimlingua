@@ -29,7 +29,9 @@ def verify(archive_path: Path, output_path: Path, *, allow_wine: bool = False, r
               'wine':evidence['wine'], 'native_windows_verified':False, 'native_windows_client_verified':False,
               'validation_scope':'wine-supplementary' if evidence['wine'] else 'native-gui'}
     with tempfile.TemporaryDirectory(prefix='rimworld-portable-archive-') as folder:
-        root = Path(folder)
+        # Resolve the folder: on Windows the temporary path may be an 8.3 short name (RUNNER~1), and comparing it
+        # with resolved member paths would flag every member as outside the destination.
+        root = Path(folder).resolve()
         if archive_path.suffix=='.zip':
             with zipfile.ZipFile(archive_path) as archive:
                 for name in archive.namelist():

@@ -58,7 +58,7 @@ class VersionOutputRound15Tests(unittest.TestCase):
 
     @staticmethod
     def files(root):
-        return {str(path.relative_to(root)): path.read_bytes()
+        return {path.relative_to(root).as_posix(): path.read_bytes()
                 for path in root.rglob('*') if path.is_file()}
 
     def test_removed_key_history_and_revival_remain_local_after_restore(self):

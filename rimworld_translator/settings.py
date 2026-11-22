@@ -42,8 +42,13 @@ def resolve_ui_language(value, system_languages=None) -> str:
     if value in ('ja', 'en'):
         return value
     if system_languages is None:
-        from PySide6.QtCore import QLocale
-        system_languages = QLocale.system().uiLanguages()
+        # Tests pin the OS language here (comma-separated BCP 47 tags); users never set this.
+        pinned = os.environ.get('RW_TRANSLATOR_SYSTEM_LANGUAGES', '')
+        if pinned.strip():
+            system_languages = [tag.strip() for tag in pinned.split(',') if tag.strip()]
+        else:
+            from PySide6.QtCore import QLocale
+            system_languages = QLocale.system().uiLanguages()
     primaries = {str(tag).replace('_', '-').split('-')[0].lower() for tag in system_languages}
     if 'en' in primaries:
         return 'en'

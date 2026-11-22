@@ -1,4 +1,4 @@
-RimWorld Translation Editor 0.3.0
+RimWorld Translation Editor 0.4.0
 RimWorld Translation Editor (multi-language translation editor for RimWorld MODs)
 
 Windows: Extract the complete ZIP (right-click, Extract All), then double-click

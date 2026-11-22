@@ -32,7 +32,7 @@ class VersionOutputRound49Tests(unittest.TestCase):
 
     @staticmethod
     def snapshot(root):
-        return {str(p.relative_to(root)): p.read_bytes() for p in root.rglob('*') if p.is_file()}
+        return {p.relative_to(root).as_posix(): p.read_bytes() for p in root.rglob('*') if p.is_file()}
 
     def test_keyed_case_aliases_rejected_before_new_tree_is_created(self):
         project = self.project([('Keyed', 'Main', 'First'), ('Keyed', 'main', 'Second')])

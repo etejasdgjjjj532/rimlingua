@@ -40,7 +40,7 @@ class VersionOutputRound30Tests(unittest.TestCase):
         before = saved.read_bytes()
         target = self.root / 'output'
         export_mod(project, target)
-        output_before = {str(path.relative_to(target)): path.read_bytes()
+        output_before = {path.relative_to(target).as_posix(): path.read_bytes()
                          for path in target.rglob('*') if path.is_file()}
 
         with self.assertRaisesRegex(ValueError, '[Vv]ersion'):
@@ -57,7 +57,7 @@ class VersionOutputRound30Tests(unittest.TestCase):
             self.assertEqual((entry.english, entry.japanese), (english, translated))
             self.assertTrue(entry.approved)
         export_mod(restored, target)
-        self.assertEqual({str(path.relative_to(target)): path.read_bytes()
+        self.assertEqual({path.relative_to(target).as_posix(): path.read_bytes()
                           for path in target.rglob('*') if path.is_file()}, output_before)
         self.assertEqual(ET.parse(target / 'About/About.xml').findtext('supportedVersions/li'), '1.6')
 

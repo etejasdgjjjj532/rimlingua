@@ -4,9 +4,31 @@ Versions follow semantic versioning. Before 1.0, minor versions may add or chang
 features; project-format changes require compatibility tests and explicit notes.
 `rimworld_translator/version.py` is the source for package and binary versions.
 
-## 0.3.0 — Unreleased
+## 0.4.0 — Unreleased
 
-Local implementation: 2026-10-13–14. A published release page is not yet available.
+First public release. Development moved to the public repository (MPL-2.0).
+
+### Interface and settings
+
+- The interface language now follows the OS by default. If the OS language list contains English, English is used; Japanese is used when only Japanese is listed; any other language falls back to English. Preferences offer "Follow OS language", Japanese and English, so the choice can still be pinned.
+- A list or dictionary in `ui_language` or `theme_mode` (hand-edited or imported settings) no longer crashes settings import or startup; the value falls back to its default.
+
+### Cross-platform
+
+- Saved relative paths (entry source files, provenance, selected folders, warnings) use "/" on every OS, so a project saved on Windows matches one saved on Linux.
+- Export reports a case-only file name clash as such on case-insensitive filesystems (Windows, macOS) instead of an unrelated "not owned" conflict.
+- The test suite runs on Windows: it pins the OS language for tests on every platform, uses long temporary paths instead of 8.3 short names, and no longer assumes POSIX path strings.
+
+### Project and documentation
+
+- English is the primary written language (README, guides). The Japanese README and getting-started guide are kept as `README.ja.md` and `docs/GETTING_STARTED.ja.md`.
+- Added the contributor guide, the confirmed design decisions, a roadmap with known limits, and the English audit reports. Game-derived dumps and lists of other people's mods are not distributed.
+- Added the Ludeon "not official, not endorsed" notice to the README and the bundled third-party notices.
+- Added edge-case tests for diagnostic text, output paths and settings export/import. The known failing GUI tests are listed in the roadmap.
+
+## 0.3.0 — Local build only
+
+Local implementation: 2026-10-13–14. This version was built locally but never published; 0.4.0 is the first public release.
 
 ### Extraction and compatibility
 

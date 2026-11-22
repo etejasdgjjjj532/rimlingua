@@ -70,10 +70,10 @@ class VersionOutputRound9Tests(unittest.TestCase):
         export_versions_test(safe, target)
         keep = target / 'notes.txt'
         keep.write_bytes(b'keep existing user content')
-        before = {str(path.relative_to(target)): path.read_bytes()
+        before = {path.relative_to(target).as_posix(): path.read_bytes()
                   for path in target.rglob('*') if path.is_file()}
         export_versions_test(project, target)
-        after = {str(path.relative_to(target)): path.read_bytes()
+        after = {path.relative_to(target).as_posix(): path.read_bytes()
                  for path in target.rglob('*') if path.is_file()}
         self.assertEqual(after['notes.txt'], before['notes.txt'])
         self.assertFalse(any(name.startswith('01.00') for name in after))

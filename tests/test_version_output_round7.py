@@ -64,14 +64,14 @@ class VersionOutputRound7Tests(unittest.TestCase):
         project.set_translation(LABEL, '元の訳')
         target = self.root / 'legacy'
         export_mod(project, target)
-        before = {str(path.relative_to(target)): path.read_bytes()
+        before = {path.relative_to(target).as_posix(): path.read_bytes()
                   for path in target.rglob('*') if path.is_file()}
         for character in (*INVALID, '\ud800', '\udfff'):
             with self.subTest(codepoint=hex(ord(character))):
                 project.set_translation(LABEL, '危険' + character + '訳')
                 with self.assertRaises(ValueError):
                     export_mod(project, target)
-                self.assertEqual({str(path.relative_to(target)): path.read_bytes()
+                self.assertEqual({path.relative_to(target).as_posix(): path.read_bytes()
                                   for path in target.rglob('*') if path.is_file()}, before)
 
     def test_test_output_omits_lone_surrogates_without_stopping_safe_entries(self):

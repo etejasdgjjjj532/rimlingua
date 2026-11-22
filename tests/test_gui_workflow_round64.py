@@ -75,7 +75,7 @@ class TrialReportReopenRound64Tests(unittest.TestCase):
 
     @staticmethod
     def tree(root):
-        return {str(p.relative_to(root)): p.read_bytes() for p in root.rglob('*') if p.is_file()}
+        return {p.relative_to(root).as_posix(): p.read_bytes() for p in root.rglob('*') if p.is_file()}
 
     def test_close_and_escape_reopen_success_snapshot_without_save_or_export(self):
         action = self.action()

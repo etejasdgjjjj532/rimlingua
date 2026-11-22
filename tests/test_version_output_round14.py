@@ -26,7 +26,7 @@ class VersionOutputRound14Tests(unittest.TestCase):
 
     @staticmethod
     def files(root):
-        return {str(path.relative_to(root)): path.read_bytes()
+        return {path.relative_to(root).as_posix(): path.read_bytes()
                 for path in root.rglob('*') if path.is_file()}
 
     def test_switching_versions_before_edit_keeps_translation_in_current_entries(self):

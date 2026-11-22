@@ -372,7 +372,7 @@ def scan(source: Path, game_version='1.6', active_mods=None, cache_path=None, pr
     if assumed:
         active = {p.casefold() for p in assumed_active} | ({result.package_id.casefold()} if result.package_id else set())
     folders = resolve_load_folders(source, game_version, active, warn, assumed)
-    result.selected_folders = [str(p.relative_to(source)) for p in folders]
+    result.selected_folders = [p.relative_to(source).as_posix() for p in folders]
     defs = content_files(folders, 'Defs')
     keyed = content_files(folders, 'Languages/English/Keyed')
     patches = content_files(folders, 'Patches')
@@ -468,7 +468,7 @@ def scan(source: Path, game_version='1.6', active_mods=None, cache_path=None, pr
     try:
         for count, file in enumerate(files, 1):
             check_cancel()
-            relative = str(file.relative_to(source)) if source in file.parents else str(file)
+            relative = file.relative_to(source).as_posix() if source in file.parents else str(file)
             try:
                 if file.stat().st_size > MAX_XML or any(p.is_symlink() for p in (file,*file.parents)):
                     raise ValueError('Symbolic link or oversized XML')
@@ -528,7 +528,7 @@ def scan(source: Path, game_version='1.6', active_mods=None, cache_path=None, pr
                 continue
             value = copy.deepcopy(node)
             document.append(value)
-            provenance[value] = str(file.relative_to(source)) if source in file.parents else str(file)
+            provenance[value] = file.relative_to(source).as_posix() if source in file.parents else str(file)
             if file in defs:
                 original_owned.add(value)
                 text_sources.update((element, provenance[value]) for element in value.iter())
@@ -732,7 +732,7 @@ def scan(source: Path, game_version='1.6', active_mods=None, cache_path=None, pr
             for operation in root:
                 if not isinstance(operation.tag, str):
                     continue
-                patch(operation, str(file.relative_to(source)))
+                patch(operation, file.relative_to(source).as_posix())
     parents = {}
     for node in document:
         if node.get('Name'):
@@ -1096,7 +1096,7 @@ def scan(source: Path, game_version='1.6', active_mods=None, cache_path=None, pr
         root = trees.get(file)
         if root is None:
             continue
-        relative = str(file.relative_to(source))
+        relative = file.relative_to(source).as_posix()
         if root.tag != 'LanguageData':
             warn('keyed-root', f'{relative}: Expected LanguageData',relative)
             continue
@@ -1171,7 +1171,7 @@ def scan(source: Path, game_version='1.6', active_mods=None, cache_path=None, pr
                             for folder in folders if file.is_relative_to(folder/'Languages/English/DefInjected'))
         group = catalog_path.parts[0]
         if len(catalog_path.parts) == 1:
-            warn('legacy-catalog', f'Legacy catalog lacks Def type folder: {file.name}; type inferred from filename',str(file.relative_to(source)))
+            warn('legacy-catalog', f'Legacy catalog lacks Def type folder: {file.name}; type inferred from filename',file.relative_to(source).as_posix())
             group = file.stem
         for child in root:
             if not isinstance(child.tag, str):
@@ -1190,7 +1190,7 @@ def scan(source: Path, game_version='1.6', active_mods=None, cache_path=None, pr
                 stats['catalog_matches'] += 1
                 match.evidence.append('Existing English catalog match')
             elif child.text and not len(child):
-                add('DefInjected',group,child.tag,child.text,str(file.relative_to(source)),True,'catalog',['English DefInjected catalog; source field not resolved'])
+                add('DefInjected',group,child.tag,child.text,file.relative_to(source).as_posix(),True,'catalog',['English DefInjected catalog; source field not resolved'])
     from .string_resources import decode_strings, parse_strings, validate_string_entry
     for file in string_files:
         check_cancel()
@@ -1238,13 +1238,13 @@ def scan(source: Path, game_version='1.6', active_mods=None, cache_path=None, pr
         for category in ('Strings', 'WordLists', 'Languages/English/WordLists', 'Languages/English/WordInfo'):
             base = folder / category
             if base.is_dir() and not base.is_symlink():
-                warn('strings-unsupported', f'Unverified text resource format excluded: {base.relative_to(source)}',
+                warn('strings-unsupported', f'Unverified text resource format excluded: {base.relative_to(source).as_posix()}',
                      base.relative_to(source).as_posix(),
                      suggestion=('Verify the dedicated WordInfo reader and output contract; do not generate XML keys.'
                                  if category == 'Languages/English/WordInfo' else ''))
     for file in content_files(folders,'Assemblies','.dll'):
         stats['dlls'] += 1
-        warn('dll-text', f'{file.relative_to(source)}: DLL may generate text/Defs at runtime. CLR fields can be inspected; hard-coded text needs author/Keyed review.',str(file.relative_to(source)))
+        warn('dll-text', f'{file.relative_to(source).as_posix()}: DLL may generate text/Defs at runtime. CLR fields can be inspected; hard-coded text needs author/Keyed review.',file.relative_to(source).as_posix())
         check_cancel()
         from . import il_candidates
         relative = file.relative_to(source).as_posix()

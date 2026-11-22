@@ -44,7 +44,7 @@ class DistributionTests(unittest.TestCase):
         )
         plan = json.loads(result.stdout)
         self.assertEqual(plan["platform"], "windows" if sys.platform == "win32" else "linux")
-        self.assertEqual(plan["version"], "0.3.0")
+        self.assertEqual(plan["version"], "0.4.0")
         self.assertEqual(Path(plan["root"]), ROOT)
         self.assertEqual(Path(plan['command'][-1]).parts[-2:], ('packaging', 'portable.spec'))
         self.assertNotIn("steamapps", json.dumps(plan).lower())

@@ -12,7 +12,8 @@ class PlatformTests(unittest.TestCase):
     def setUp(self):
         temporary = tempfile.TemporaryDirectory()
         self.addCleanup(temporary.cleanup)
-        self.root = Path(temporary.name)
+        # Resolve 8.3 short names (RUNNER~1) so expected paths match what the code returns on Windows.
+        self.root = Path(temporary.name).resolve()
         self.home = self.root / "home"
         self.home.mkdir()
         registry = patch("rimworld_translator.platforms._windows_steam_roots", return_value=[])

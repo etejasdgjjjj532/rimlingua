@@ -58,7 +58,7 @@ class DeclaredTrialOutputRound58Tests(unittest.TestCase):
         self.app.processEvents()
 
     def bytes_tree(self, root):
-        return {str(path.relative_to(root)): path.read_bytes() for path in root.rglob('*') if path.is_file()}
+        return {path.relative_to(root).as_posix(): path.read_bytes() for path in root.rglob('*') if path.is_file()}
 
     def button(self):
         button = getattr(self.window, 'test_export_button', None)
@@ -138,7 +138,7 @@ class DeclaredTrialOutputRound58Tests(unittest.TestCase):
         self.assertIn('試験', self.window.guidance.text())
         with patch('rimworld_translator.gui.QDesktopServices.openUrl', return_value=True) as opened:
             self.window.open_export_folder()
-        self.assertEqual(opened.call_args.args[0].toLocalFile(), str(self.output))
+        self.assertEqual(Path(opened.call_args.args[0].toLocalFile()), self.output)  # QUrl uses '/' on Windows too
         self.assertEqual(self.bytes_tree(self.formal), self.formal_before)
         self.assertEqual(self.bytes_tree(self.source), self.original)
 

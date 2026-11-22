@@ -125,6 +125,12 @@ def run_smoke(output: Path, *, require_native: bool = False, require_windows_cli
             for width, height in ((1240, 730), (960, 660), (max(480,min(660,screen.width()-20)),max(280,min(350,screen.height()-40)))):
                 window.resize(width, height)
                 app.processEvents()
+                if window.width() < width or window.height() < height:
+                    # The OS clamped the window to a screen smaller than this size (e.g. a small CI display at
+                    # 200%), so the size was never applied and says nothing about the layout.
+                    report.setdefault('skipped_sizes', []).append(
+                        f'{width}x{height} was clamped to {window.width()}x{window.height()} by the screen')
+                    continue
                 QTest.qWait(80)
                 controls = {}
                 for name in ("table", "search", "english", "japanese", "save_button",

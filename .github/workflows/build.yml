@@ -57,7 +57,7 @@ jobs:
         if: runner.os == 'Linux'
         run: |
           sudo apt-get update
-          sudo apt-get install -y xvfb libegl1 libgl1 libxcb-cursor0 libxcb-xinerama0 libxkbcommon-x11-0 fonts-noto-cjk
+          sudo apt-get install -y xvfb libegl1 libgl1 libxcb-cursor0 libxcb-xinerama0 libxkbcommon-x11-0 libxcb-icccm4 libxcb-image0 libxcb-keysyms1 libxcb-randr0 libxcb-render-util0 libxcb-shape0 libxcb-xkb1 fonts-noto-cjk
       - name: Free project-local development dependencies
         run: python -m pip install '.[dev]'
       - name: Full regression suite
@@ -66,6 +66,9 @@ jobs:
         run: python tools/run_tests.py
       - name: Native Linux source GUI at 100% and 200%
         if: runner.os == 'Linux'
+        env:
+          # Print why a Qt platform plugin fails to load, if it does.
+          QT_DEBUG_PLUGINS: '1'
         shell: bash
         run: |
           for scale in 1 2; do

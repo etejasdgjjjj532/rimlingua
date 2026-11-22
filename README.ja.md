@@ -21,7 +21,7 @@
 
 ## 起動と配布状況
 
-現在の版は **0.3.0** です。Linux x86_64 のポータブル版と、Wine 上で生成した Windows x64 EXE/ZIP をローカルに保存しています。Windows ZIP の名前には `wine-preview` が付き、Windows 実機での起動・DPI を確認済みとは扱いません。ネイティブ Windows ビルドと実際の CI 実行は未実施です。公開ダウンロードページはまだありません。
+現在の版は **0.4.0** で、最初の公開版です。Linux x86_64 と Windows x64 のポータブル版は、リリース用のワークフローで作り、GitHub Releases に添付します。Windows 実機での起動・DPI は、まだ確認していません。
 
 Linux のローカル生成物は `dist/linux-current/RimWorldTranslationEditor/` にあります。フォルダー全体を保持し、同名の実行ファイルを開きます。
 

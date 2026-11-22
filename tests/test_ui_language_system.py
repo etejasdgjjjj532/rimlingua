@@ -1,8 +1,10 @@
 """The interface language defaults to the OS language; English wins when the OS list holds both."""
 import json
+import os
 from pathlib import Path
 import tempfile
 import unittest
+from unittest.mock import patch
 
 from rimworld_translator.settings import DEFAULTS, SettingsStore, normalize, resolve_ui_language
 
@@ -31,6 +33,19 @@ class ResolveUiLanguageTests(unittest.TestCase):
     def test_an_unknown_stored_value_behaves_like_system(self):
         self.assertEqual(resolve_ui_language('fr', ['ja-JP']), 'ja')
         self.assertEqual(resolve_ui_language(None, ['ja-JP']), 'ja')
+
+    def test_the_pinned_os_language_replaces_the_os_query(self):
+        for pinned, expected in (('en-US', 'en'), ('ja-JP,ja', 'ja'), ('ja-JP, en-US', 'en'), ('de-DE', 'en')):
+            with patch.dict(os.environ, {'RW_TRANSLATOR_SYSTEM_LANGUAGES': pinned}):
+                self.assertEqual(resolve_ui_language('system'), expected, pinned)
+
+    def test_a_blank_pin_is_ignored_and_the_os_is_asked(self):
+        with patch.dict(os.environ, {'RW_TRANSLATOR_SYSTEM_LANGUAGES': '  '}):
+            self.assertIn(resolve_ui_language('system'), {'ja', 'en'})
+
+    def test_an_explicit_choice_beats_the_pin(self):
+        with patch.dict(os.environ, {'RW_TRANSLATOR_SYSTEM_LANGUAGES': 'en-US'}):
+            self.assertEqual(resolve_ui_language('ja'), 'ja')
 
     def test_the_real_os_query_returns_a_supported_language(self):
         self.assertIn(resolve_ui_language('system'), {'ja', 'en'})
