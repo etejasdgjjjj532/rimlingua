@@ -1,0 +1,1 @@
+<Patch><Operation Class="PatchOperationSequence"><operations><li Class="PatchOperationAttributeRemove"><success>Normal</success><xpath>Defs/ThingDef</xpath><attribute>Absent</attribute><value>replacement</value></li><li Class="PatchOperationAdd"><xpath>Defs/ThingDef</xpath><value><description>must not appear</description></value></li></operations></Operation></Patch>

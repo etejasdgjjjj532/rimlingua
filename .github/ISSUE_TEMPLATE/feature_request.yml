@@ -1,0 +1,22 @@
+name: Feature request
+description: Suggest an improvement to translation work
+title: '[Feature] '
+body:
+  - type: textarea
+    id: problem
+    attributes:
+      label: The task you want to improve
+      description: 'Your goal and where you currently run into difficulty'
+    validations:
+      required: true
+  - type: textarea
+    id: proposal
+    attributes:
+      label: Proposed behavior
+    validations:
+      required: true
+  - type: textarea
+    id: context
+    attributes:
+      label: OS, languages and MOD structure
+      description: 'Optional. Public MOD names or structure only'

@@ -1,0 +1,1 @@
+<Patch><Operation Class="PatchOperationSequence"><operations><li Class="PatchOperationTest"><success>Never</success><xpath>Defs/ThingDef</xpath></li><li Class="PatchOperationAdd"><xpath>Defs/ThingDef[defName="Desk"]</xpath><value><description>must not appear</description></value></li></operations></Operation></Patch>

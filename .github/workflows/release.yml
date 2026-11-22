@@ -1,0 +1,65 @@
+name: Portable release
+
+on:
+  workflow_dispatch:
+    inputs:
+      tag:
+        description: 'Existing semantic version tag, e.g. v0.3.0'
+        required: true
+        type: string
+      publish:
+        description: 'After reviewing both OS results, create a draft release'
+        type: boolean
+        default: false
+      private_free_quota_confirmed:
+        description: 'I verified private-repository free quota and disabled paid overages'
+        type: boolean
+        default: false
+      verify_windows11_client:
+        description: 'Also test the x64 portable on the Windows 11 Arm64 client runner'
+        type: boolean
+        default: false
+
+permissions:
+  contents: read
+
+jobs:
+  build:
+    uses: ./.github/workflows/build.yml
+    with:
+      ref: ${{ inputs.tag }}
+      private_free_quota_confirmed: ${{ inputs.private_free_quota_confirmed }}
+      verify_windows11_client: ${{ inputs.verify_windows11_client }}
+  draft:
+    needs: build
+    if: ${{ inputs.publish && (github.event.repository.private == false || inputs.private_free_quota_confirmed) }}
+    runs-on: ubuntu-22.04
+    environment: release
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ inputs.tag }}
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Verify tag and author-selected source license
+        env:
+          RELEASE_TAG: ${{ inputs.tag }}
+        run: |
+          python -c 'import os, runpy, pathlib; version=runpy.run_path("rimworld_translator/version.py")["__version__"]; assert os.environ["RELEASE_TAG"] == "v"+version, "Tag/version mismatch"; assert pathlib.Path("LICENSE").is_file(), "Author must choose an editor source license before publishing"'
+      - uses: actions/download-artifact@v4
+        with:
+          pattern: portable-*
+          path: release-assets
+          merge-multiple: true
+      - name: Validate that both native OS packages are present
+        run: |
+          python -c 'from pathlib import Path; p=Path("release-assets"); assert list(p.glob("*-windows-x86_64.zip")), "Native Windows archive missing (Wine previews are excluded)"; assert list(p.glob("*-linux-x86_64.tar.gz")), "Linux archive missing"'
+      - name: Create draft with reviewed archives
+        env:
+          GH_TOKEN: ${{ github.token }}
+          RELEASE_TAG: ${{ inputs.tag }}
+        run: |
+          gh release create "$RELEASE_TAG" release-assets/*-windows-x86_64.zip release-assets/*-linux-x86_64.tar.gz release-assets/*-windows-x86_64.zip.sha256 release-assets/*-linux-x86_64.tar.gz.sha256 --draft --verify-tag --title "RimWorld Translation Editor $RELEASE_TAG" --notes-file CHANGELOG.md

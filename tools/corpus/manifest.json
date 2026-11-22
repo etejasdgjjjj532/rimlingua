@@ -1,0 +1,3354 @@
+{
+ "note": "Split is fixed by this file. Holdout mods are never inspected when designing rules; they are only measured.",
+ "game_version": "1.6",
+ "mods": [
+  {
+   "repository": "SmashPhil/SRTS",
+   "revision": "dfbf6bccef548b4ab118022ddd397e9399984714",
+   "split": "dev",
+   "reason": "inspected before the split was fixed"
+  },
+  {
+   "repository": "bbradson/Xenotype-Spawn-Control",
+   "revision": "f16d6eb0aa0a905900350df4e78a4361eb31549a",
+   "split": "dev",
+   "reason": "inspected before the split was fixed"
+  },
+  {
+   "repository": "Owlchemist/moonlight",
+   "revision": "d62d9292d3d6d48acb30ab8519bd2cb31a6286ef",
+   "split": "dev",
+   "reason": "inspected before the split was fixed"
+  },
+  {
+   "repository": "Jaxe-Dev/RimHUD",
+   "revision": "6f1dbfc3ba1196ab081ee4d382101ddd6b23badb",
+   "split": "dev",
+   "reason": "inspected before the split was fixed"
+  },
+  {
+   "repository": "Jaxe-Dev/Bubbles",
+   "revision": "4a81d985225763e6cabc37ea9d60b417f24e1b83",
+   "split": "dev",
+   "reason": "inspected before the split was fixed"
+  },
+  {
+   "repository": "fluffy-mods/WorkTab",
+   "revision": "ec609f02ef2d4ecb556b8f1df751a9c49c7da237",
+   "split": "dev",
+   "reason": "inspected before the split was fixed"
+  },
+  {
+   "repository": "fluffy-mods/ResearchTree",
+   "revision": "ca5c74c23774426adb2316c6f0f10fc1e6db5483",
+   "split": "dev",
+   "reason": "inspected before the split was fixed"
+  },
+  {
+   "repository": "fluffy-mods/Pharmacist",
+   "revision": "ebb52f619832a0f3f771f21a5b5c869b200f0b35",
+   "split": "dev",
+   "reason": "inspected before the split was fixed"
+  },
+  {
+   "repository": "fluffy-mods/AnimalTab",
+   "revision": "3a281f829e785836e07c66666c2125d775018f2c",
+   "split": "dev",
+   "reason": "inspected before the split was fixed"
+  },
+  {
+   "repository": "pardeike/RangeFinder",
+   "revision": "34effbd8c4120534f5e573f8ee194cdffdebab62",
+   "split": "dev",
+   "reason": "inspected before the split was fixed"
+  },
+  {
+   "repository": "Mehni/PickUpAndHaul",
+   "revision": "09f1fac96e70cc2a93d647615a5abd37734a3eba",
+   "split": "dev",
+   "reason": "inspected before the split was fixed"
+  },
+  {
+   "repository": "Mehni/MoreFactionInteraction",
+   "revision": "2da519375feb22a8203a0b1a9e73abb5a8ba62f8",
+   "split": "dev",
+   "reason": "inspected before the split was fixed"
+  },
+  {
+   "repository": "UnlimitedHugs/RimworldAllowTool",
+   "revision": "cc168e824f883582ef2e1e3fab9225ae9594ba1d",
+   "split": "dev",
+   "reason": "inspected before the split was fixed"
+  },
+  {
+   "repository": "Vanilla-Expanded/VanillaAnomalyExpanded-Insanity",
+   "revision": "39864008a8778201cf52a9d537cafd3381e0cae4",
+   "split": "dev",
+   "reason": "inspected before the split was fixed"
+  },
+  {
+   "repository": "Vanilla-Expanded/VanillaRacesExpanded-Hussar",
+   "revision": "80fe798ab7ec9db5487254a8b3124940a35a6af0",
+   "split": "dev",
+   "reason": "inspected before the split was fixed"
+  },
+  {
+   "repository": "Vanilla-Expanded/VanillaRacesExpanded-Fungoid",
+   "revision": "50ca52473cffa4ab254c185b77d84f147938ec06",
+   "split": "dev",
+   "reason": "inspected before the split was fixed"
+  },
+  {
+   "repository": "Vanilla-Expanded/VanillaArmourExpanded",
+   "revision": "c8575e1c4e75b5e2ca3dda1a60a4a67ee5257ab1",
+   "split": "dev",
+   "reason": "inspected before the split was fixed"
+  },
+  {
+   "repository": "Vanilla-Expanded/VanillaFurnitureExpanded-Art",
+   "revision": "1c85947a5af1d77500ab23e1237f831d80e5ef62",
+   "split": "dev",
+   "reason": "inspected before the split was fixed"
+  },
+  {
+   "repository": "Vanilla-Expanded/VanillaTraitsExpanded",
+   "revision": "c449523697e91d0d53db9c78f0a5b3fdc0f57a0d",
+   "split": "dev",
+   "reason": "inspected before the split was fixed"
+  },
+  {
+   "repository": "Vanilla-Expanded/VanillaNutrientPasteExpanded",
+   "revision": "3ae062af0c9b9dcaa29437dc7d5bedeae6b3adb7",
+   "split": "dev",
+   "reason": "inspected before the split was fixed"
+  },
+  {
+   "repository": "SmashPhil/HeatedFloors",
+   "revision": "2ad13eeeec6e6b27032c1a53908ba2e0e2dbc4f5",
+   "split": "dev",
+   "reason": "sha256(repository) %% 10 < 4 -> holdout"
+  },
+  {
+   "repository": "Owlchemist/quiet-instruments",
+   "revision": "b9d3c5bfefa4cbce6a7448eb6f7e5f9b78d489f9",
+   "split": "dev",
+   "reason": "sha256(repository) %% 10 < 4 -> holdout"
+  },
+  {
+   "repository": "Owlchemist/clean-pathfinding",
+   "revision": "1fdbd93ae097edc2388a53d7037a463fc04aa7ba",
+   "split": "dev",
+   "reason": "holdout burned in round 1: its values were reviewed"
+  },
+  {
+   "repository": "Owlchemist/cherry-picker",
+   "revision": "b9581d21a5da7636967fb3b28e4ae61a0442a38e",
+   "split": "dev",
+   "reason": "holdout burned in round 1: its values were reviewed"
+  },
+  {
+   "repository": "Owlchemist/smart-farming",
+   "revision": "a02a3a50bb71dd3e5ab2ca1001ac805346f6d48d",
+   "split": "dev",
+   "reason": "sha256(repository) %% 10 < 4 -> holdout"
+  },
+  {
+   "repository": "Owlchemist/simple-fx-smoke",
+   "revision": "b2ce2c90221c4f4f73a5189b649071620eb3183e",
+   "split": "dev",
+   "reason": "holdout burned in round 1: its values were reviewed"
+  },
+  {
+   "repository": "Owlchemist/toggleable-overlays",
+   "revision": "f8d1559aabdbf5332bb020f7f9a59c836bfaf346",
+   "split": "dev",
+   "reason": "holdout burned in round 1: its values were reviewed"
+  },
+  {
+   "repository": "OrionFive/CashRegister",
+   "revision": "e1155b8d0ca25b9f2da55dbe885cac472c3d0ee2",
+   "split": "dev",
+   "reason": "sha256(repository) %% 10 < 4 -> holdout"
+  },
+  {
+   "repository": "alextd/RimWorld-StopPokingMe",
+   "revision": "550da6985ca0bcd9a29e231dbfefd6e9cb341b7d",
+   "split": "dev",
+   "reason": "sha256(repository) %% 10 < 4 -> holdout"
+  },
+  {
+   "repository": "Vanilla-Expanded/VanillaExpanded-RoyaltyPatches",
+   "revision": "2d8aee25ca728ae90885033b5708eaa0ac8917aa",
+   "split": "dev",
+   "reason": "holdout burned in round 1: its values were reviewed"
+  },
+  {
+   "repository": "Vanilla-Expanded/VanillaExpanded-IdeologyPatches",
+   "revision": "d150ed7bc07ac9f8c0c40c2ee1e9c76ff7dbbd30",
+   "split": "dev",
+   "reason": "sha256(repository) %% 10 < 4 -> holdout"
+  },
+  {
+   "repository": "Vanilla-Expanded/VanillaBiotechExpanded-XenotypeIcons",
+   "revision": "0d1fcad3b94be7ab1ffaa79e475d22f34737e3be",
+   "split": "dev",
+   "reason": "sha256(repository) %% 10 < 4 -> holdout"
+  },
+  {
+   "repository": "Vanilla-Expanded/VanillaBackstoriesExpanded",
+   "revision": "4628c47f915d0d4c6314c46b074d47e92f6111d0",
+   "split": "dev",
+   "reason": "holdout burned in round 1: its values were reviewed"
+  },
+  {
+   "repository": "ElHanko/rimworld-mod-translation-mod",
+   "revision": "29bf9f18191c3aab965fa77cccd8945a73c4b333",
+   "split": "dev",
+   "reason": "sha256(repository) %% 10 < 4 -> holdout"
+  },
+  {
+   "repository": "fluffy-mods/MusicManager",
+   "revision": "e7be74ee3958a8a76a670605c55efc09afff4cf0",
+   "split": "dev",
+   "reason": "holdout burned in round 1: its values were reviewed"
+  },
+  {
+   "repository": "alextd/RimWorld-ReplaceStuff",
+   "revision": "b871f10c6f56be6f8286a804a64d5edca911a085",
+   "split": "dev",
+   "reason": "sha256(repository) %% 10 < 4 -> holdout"
+  },
+  {
+   "repository": "alextd/RimWorld-TDFindLib",
+   "revision": "4f0389edc3b80fc41358c8a8e0dee95994f81c8d",
+   "split": "dev",
+   "reason": "sha256(repository) %% 10 < 4 -> holdout"
+  },
+  {
+   "repository": "Vanilla-Expanded/VanillaFurnitureExpanded-Medical",
+   "revision": "7d21f89405f5503240031d043ced71c49625e65f",
+   "split": "dev",
+   "reason": "sha256(repository) %% 10 < 4 -> holdout"
+  },
+  {
+   "repository": "UnlimitedHugs/RimworldMapReroll",
+   "revision": "6bd67877b7451f988f3df27156b3918c0fd75034",
+   "split": "dev",
+   "reason": "sha256(repository) %% 10 < 4 -> holdout"
+  },
+  {
+   "repository": "alextd/RimWorld-ErrorsScreamAtYou",
+   "revision": "e5bb6c752f3cc3a55c33f6557049fbc8454dc3ef",
+   "split": "dev",
+   "reason": "sha256(repository) %% 10 < 4 -> holdout"
+  },
+  {
+   "repository": "CombatExtended-Continued/CombatExtendedArmory",
+   "revision": "ab72cdd2e4c67da1ae4fb55ce6f1bf9abd89c814",
+   "split": "dev",
+   "reason": "sha256(repository) %% 10 < 4 -> holdout"
+  },
+  {
+   "repository": "bbradson/Fishery",
+   "revision": "418aad61f2249a3702c5a82884f96cacf233796f",
+   "split": "dev",
+   "reason": "sha256(repository) %% 10 < 4 -> holdout"
+  },
+  {
+   "repository": "zetrith/Prepatcher",
+   "revision": "9fd173802bec8674be922c84aebbd370cb3ccbaa",
+   "split": "dev",
+   "reason": "sha256(repository) %% 10 < 4 -> holdout"
+  },
+  {
+   "repository": "fluffy-mods/ModManager",
+   "revision": "051e09c8df21198ffe1406ccc34cb55f0f043536",
+   "split": "dev",
+   "reason": "sha256(repository) %% 10 < 4 -> holdout"
+  },
+  {
+   "repository": "Dubwise56/Dubs-Mint-Minimap",
+   "revision": "c918325b3edd5f15069f7b96509481a27f258feb",
+   "split": "dev",
+   "reason": "sha256(repository) %% 10 < 4 -> holdout"
+  },
+  {
+   "repository": "OrionFive/Gastronomy",
+   "revision": "cf34a227b6161475c8560d1364dc134cc248f67d",
+   "split": "dev",
+   "reason": "sha256(repository) %% 10 < 4 -> holdout"
+  },
+  {
+   "repository": "UnlimitedHugs/RimworldHugsLib",
+   "revision": "99d60abc5633e6d4746d180e1d1ec65591f775f7",
+   "split": "dev",
+   "reason": "sha256(repository) %% 10 < 4 -> holdout"
+  },
+  {
+   "repository": "Vanilla-Expanded/VanillaPlantsExpanded",
+   "revision": "b8c5c45ff788bea274b5dde627b2dcb153bd0a63",
+   "split": "dev",
+   "reason": "holdout burned in round 1: its values were reviewed"
+  },
+  {
+   "repository": "fluffy-mods/Blueprints",
+   "revision": "dd90d34695dee6566ab62b43f6f4607bdb63fe2b",
+   "split": "dev",
+   "reason": "holdout burned in round 1: its values were reviewed"
+  },
+  {
+   "repository": "Dubwise56/Dubs-Mint-Menus",
+   "revision": "4a126efc9d237e29f6b07714bf155ce7d2c2a30b",
+   "split": "dev",
+   "reason": "holdout burned in round 1: its values were reviewed"
+  },
+  {
+   "repository": "OrionFive/MoreMechanoids",
+   "revision": "897ba129a14d27dfc49fafb485d23d30ff286b80",
+   "split": "dev",
+   "reason": "holdout burned in round 1: its values were reviewed"
+  },
+  {
+   "repository": "Vanilla-Expanded/VanillaFactionsExpanded-Classical",
+   "revision": "e87afb54d6eff2de4620179d07b7bda2a7180c7b",
+   "split": "dev",
+   "reason": "sha256(repository) %% 10 < 4 -> holdout"
+  },
+  {
+   "repository": "bbradson/Performance-Fish",
+   "revision": "a99972001e02d553a738611726cd9577ff41f86e",
+   "split": "dev",
+   "reason": "holdout burned in round 1: its values were reviewed"
+  },
+  {
+   "repository": "Vanilla-Expanded/VanillaCookingExpanded",
+   "revision": "74b2fd7dfb1a9c9aaec2b6108c6a01b5463ff4f1",
+   "split": "dev",
+   "reason": "holdout burned in round 1: its values were reviewed"
+  },
+  {
+   "repository": "Vanilla-Expanded/VanillaBooksExpanded",
+   "revision": "336b9387c98901a4117089e842257d217c145ed4",
+   "split": "dev",
+   "reason": "sha256(repository) %% 10 < 4 -> holdout"
+  },
+  {
+   "repository": "Dubwise56/Dubs-Performance-Analyzer",
+   "revision": "62ae414276c2055ce570da7a4a9465515706fb8e",
+   "split": "dev",
+   "reason": "holdout burned in round 1: its values were reviewed"
+  },
+  {
+   "repository": "pardeike/CameraPlus",
+   "revision": "263854f56c893d1b03220a7929c893d6ff97cc76",
+   "split": "dev",
+   "reason": "sha256(repository) %% 10 < 4 -> holdout"
+  },
+  {
+   "repository": "kbatbouta/RimWorld-RocketMan",
+   "revision": "303bd4da6393d7979247920770b62582b68caee8",
+   "split": "dev",
+   "reason": "holdout burned in round 1: its values were reviewed"
+  },
+  {
+   "repository": "fluffy-mods/ColonyManager",
+   "revision": "f6337304a6199000006dcb4acfac2c9ac0cc8f09",
+   "split": "dev",
+   "reason": "sha256(repository) %% 10 < 4 -> holdout"
+  },
+  {
+   "repository": "fluffy-mods/StuffedFloors",
+   "revision": "c194aade6a272323547905bafcb3e3d7c93f6dd0",
+   "split": "dev",
+   "reason": "sha256(repository) %% 10 < 4 -> holdout"
+  },
+  {
+   "repository": "Vanilla-Expanded/VanillaApparelExpanded",
+   "revision": "2ca20dfce1a0baffbaf55d040eca52e99ffbcac2",
+   "split": "dev",
+   "reason": "holdout burned in round 1: its values were reviewed"
+  },
+  {
+   "repository": "Vanilla-Expanded/VanillaFurnitureExpanded",
+   "revision": "27c86aad273d69a2c888659e852fd542e0cd2ce9",
+   "split": "dev",
+   "reason": "holdout burned in round 1: its values were reviewed"
+  },
+  {
+   "repository": "Vanilla-Expanded/VanillaFactionsExpanded-Ancients",
+   "revision": "509838926a4570ffdcab331526a013cea3270397",
+   "split": "dev",
+   "reason": "holdout burned in round 1: its values were reviewed"
+  },
+  {
+   "repository": "Dubwise56/Rimefeller",
+   "revision": "a2cbfee6abe3261ece6272ea4a2310ef18a0865b",
+   "split": "dev",
+   "reason": "holdout burned in round 1: its values were reviewed"
+  },
+  {
+   "repository": "erdelf/MinifyEverything",
+   "revision": "89f70ccda360aee393fb410ed9a4384a4d8195ec",
+   "split": "dev",
+   "reason": "holdout burned in round 1: its values were reviewed"
+  },
+  {
+   "repository": "bbradson/Adaptive-Storage-Framework",
+   "revision": "31ee88b46651cfbe37da3f89620bc0b907165cc0",
+   "split": "dev",
+   "reason": "holdout burned in round 1: its values were reviewed"
+  },
+  {
+   "repository": "Vanilla-Expanded/VanillaRacesExpanded-Saurid",
+   "revision": "021b9f684c7670ef325bc33e17e0a692367913a5",
+   "split": "dev",
+   "reason": "holdout burned in round 1: its values were reviewed"
+  },
+  {
+   "repository": "edbmods/EdBPrepareCarefully",
+   "revision": "f0e273d9dc001ee96fddb2a53082a368b2e48791",
+   "split": "dev",
+   "reason": "holdout burned in round 3: its values were reviewed"
+  },
+  {
+   "repository": "rwmt/Multiplayer",
+   "revision": "4a3be276bbf90cc597abfa5b299935ca8eeeb285",
+   "split": "dev",
+   "reason": "holdout burned in round 3: its values were reviewed"
+  },
+  {
+   "repository": "Inky-Feather/RimCrow",
+   "revision": "90740602c47d4fa62136237b253346716832dced",
+   "split": "dev",
+   "reason": "holdout burned in round 3: its values were reviewed"
+  },
+  {
+   "repository": "D12-Dev/OpenWorld",
+   "revision": "f5e83ec0acb44b591f1491c6ed65b1e41fcf6f36",
+   "split": "dev",
+   "reason": "holdout burned in round 3: its values were reviewed"
+  },
+  {
+   "repository": "TheForgotten69/RimStack",
+   "revision": "3e137688bb83420e88364921d59f92542ce3f097",
+   "split": "dev",
+   "reason": "holdout burned in round 3: its values were reviewed"
+  },
+  {
+   "repository": "catgirlfighter/RimWorld_CommonSense",
+   "revision": "aed142c6121e104b78afe3b973e1677b1ff601e4",
+   "split": "dev",
+   "reason": "holdout burned in round 3: its values were reviewed"
+  },
+  {
+   "repository": "Aviuz/PrisonLabor",
+   "revision": "f75a4dbcbb7d967062bf21901099484754eba88c",
+   "split": "dev",
+   "reason": "holdout burned in round 3: its values were reviewed"
+  },
+  {
+   "repository": "PeteTimesSix/SimpleSidearms",
+   "revision": "093d15fe29bf923051bebe0e7289cbabd4177f46",
+   "split": "dev",
+   "reason": "holdout burned in round 3: its values were reviewed"
+  },
+  {
+   "repository": "lilwhitemouse/RimWorld-LWM.DeepStorage",
+   "revision": "fe53650ab2c54056eb9e4cd8b8733083dc2eee77",
+   "split": "dev",
+   "reason": "holdout burned in round 3: its values were reviewed"
+  },
+  {
+   "repository": "rvanasa/rimworld-cities",
+   "revision": "5a1520e469427b8cca8b903af5ee59f5750f0802",
+   "split": "dev",
+   "reason": "holdout burned in round 3: its values were reviewed"
+  },
+  {
+   "repository": "havietisov/RimAlong",
+   "revision": "ae1e038306ccf98da5261900ef4e2906f7ee35b7",
+   "split": "dev",
+   "reason": "holdout burned in round 3: its values were reviewed"
+  },
+  {
+   "repository": "voult2/BetterPawnControl",
+   "revision": "7cfc247ca1981f3037a6f5693deec061ee5e4564",
+   "split": "dev",
+   "reason": "holdout burned in round 3: its values were reviewed"
+  },
+  {
+   "repository": "quicksilverfox/RimworldMods",
+   "revision": "ede8ddd8c8099acc116fde03c6699348f657eb66",
+   "split": "dev",
+   "reason": "holdout burned in round 3: its values were reviewed"
+  },
+  {
+   "repository": "Falconne/ImprovedWorkbenches",
+   "revision": "f8db7979e9885e0e723a110e56d702b68dbfc341",
+   "split": "dev",
+   "reason": "holdout burned in round 3: its values were reviewed"
+  },
+  {
+   "repository": "m00nl1ght-dev/GeologicalLandforms",
+   "revision": "e8035e2b2fdb46ceb92aa159e17e72fdc5dcc421",
+   "split": "dev",
+   "reason": "holdout burned in round 3: its values were reviewed"
+  },
+  {
+   "repository": "koisama/kNumbers",
+   "revision": "a52e9924f79879d599f1a80e1350be6592228498",
+   "split": "dev",
+   "reason": "holdout burned in round 3: its values were reviewed"
+  },
+  {
+   "repository": "RimWorld-CCL-Reborn/JecsTools",
+   "revision": "7be56bc5fc80f9802d940f41d69c634587235169",
+   "split": "dev",
+   "reason": "holdout burned in round 3: its values were reviewed"
+  },
+  {
+   "repository": "thomotron/Phinix",
+   "revision": "ce82b8f2cd57718f05de86458eebd3320f35c4d8",
+   "split": "dev",
+   "reason": "holdout burned in round 3: its values were reviewed"
+  },
+  {
+   "repository": "m00nl1ght-dev/MapPreview",
+   "revision": "8bedaa489a5ea4240749704517df0f0daaa00711",
+   "split": "dev",
+   "reason": "holdout burned in round 3: its values were reviewed"
+  },
+  {
+   "repository": "mastertea/RandomPlus",
+   "revision": "1f417a1a9a13605f70c789741d4c12669b792990",
+   "split": "dev",
+   "reason": "holdout burned in round 3: its values were reviewed"
+  },
+  {
+   "repository": "rheirman/GiddyUpCore",
+   "revision": "017b3cbe032de30528b70c6c37654a7322c95bfa",
+   "split": "dev",
+   "reason": "holdout burned in round 3: its values were reviewed"
+  },
+  {
+   "repository": "neitsa/PrepareLanding",
+   "revision": "fa0d8c8a12be4ba5e64ebd3d5047d1b4a5ad57d5",
+   "split": "dev",
+   "reason": "holdout burned in round 3: its values were reviewed"
+  },
+  {
+   "repository": "alextd/RimWorld-TDBug",
+   "revision": "f0d49789de855d852ab3f78d5d0c0ffc481e0caa",
+   "split": "dev",
+   "reason": "holdout burned in round 3: its values were reviewed"
+  },
+  {
+   "repository": "Weilbyte/SnapOut",
+   "revision": "621ba2b953981ddbf1624c055995bb91d44e0fcd",
+   "split": "dev",
+   "reason": "holdout burned in round 3: its values were reviewed"
+  },
+  {
+   "repository": "Falconne/HeatMap",
+   "revision": "f619c1351f5addd402cd959558c5176c950406e0",
+   "split": "dev",
+   "reason": "holdout burned in round 3: its values were reviewed"
+  },
+  {
+   "repository": "Neceros/SRTS-Expanded",
+   "revision": "1cb6900aaf7fc33ce7401463b8b4756cb00b2b15",
+   "split": "dev",
+   "reason": "holdout burned in round 3: its values were reviewed"
+  },
+  {
+   "repository": "UnlimitedHugs/RimworldDefensivePositions",
+   "revision": "e264a7215be40830e3db65e3264319648ec4f553",
+   "split": "dev",
+   "reason": "holdout burned in round 3: its values were reviewed"
+  },
+  {
+   "repository": "sumghai/MedPod",
+   "revision": "c2041fad5c366df1515a7ec5ffd0a5528d05d19f",
+   "split": "dev",
+   "reason": "holdout burned in round 3: its values were reviewed"
+  },
+  {
+   "repository": "Aviuz/Locks",
+   "revision": "38e8395134b57ccb49b5d62e4f10a0e21ec790c3",
+   "split": "dev",
+   "reason": "holdout burned in round 3: its values were reviewed"
+  },
+  {
+   "repository": "emipa606/NoVersionWarning",
+   "revision": "55d046526ea471c149643253e43b41fe90b515b0",
+   "split": "dev",
+   "reason": "holdout burned in round 3: its values were reviewed"
+  },
+  {
+   "repository": "RimWorld-CCL-Reborn/BetterMiniMap",
+   "revision": "116ac4e160bf1bd12774e1f96320eb5531716bbb",
+   "split": "dev",
+   "reason": "holdout burned in round 3: its values were reviewed"
+  },
+  {
+   "repository": "Mehni/ModSorter",
+   "revision": "70b29e4c3f2c861e044cf2563ddc2cc9ce91b513",
+   "split": "dev",
+   "reason": "holdout burned in round 3: its values were reviewed"
+  },
+  {
+   "repository": "Ratysz/MadSkills",
+   "revision": "442c1ea39fae659a9d03e63944acef23452c573c",
+   "split": "dev",
+   "reason": "holdout burned in round 3: its values were reviewed"
+  },
+  {
+   "repository": "bcooper94/ColorCodedMoodBar",
+   "revision": "562c754da7728f75dfeb2e0a55cb19247817caeb",
+   "split": "dev",
+   "reason": "holdout burned in round 3: its values were reviewed"
+  },
+  {
+   "repository": "Vanilla-Expanded/VanillaAnimalsExpanded-RoyalAnimals",
+   "revision": "7760da658ce8919790d3f5f99847faeded0e7da5",
+   "split": "dev",
+   "reason": "holdout burned in round 3: its values were reviewed"
+  },
+  {
+   "repository": "Vanilla-Expanded/VanillaApparelExpanded-Accessories",
+   "revision": "d04ccaaed7c7c2b48f34fcdfee73bbabb8b76b69",
+   "split": "dev",
+   "reason": "holdout burned in round 3: its values were reviewed"
+  },
+  {
+   "repository": "Vanilla-Expanded/VanillaBaseGenerationExpanded",
+   "revision": "0bc03c94792484c1a68dbc8c18d4c3786f99ab02",
+   "split": "dev",
+   "reason": "holdout burned in round 3: its values were reviewed"
+  },
+  {
+   "repository": "Vanilla-Expanded/VanillaBrewingExpanded-Coffees-and-Teas",
+   "revision": "9e3cd65e56a3c707adf0b0d20c6f1e67e34a709c",
+   "split": "dev",
+   "reason": "holdout burned in round 3: its values were reviewed"
+  },
+  {
+   "repository": "Vanilla-Expanded/VanillaCookingExpanded-Bakery",
+   "revision": "e0156b19fe8c9bb42e8284132057488859ac62f0",
+   "split": "dev",
+   "reason": "holdout burned in round 3: its values were reviewed"
+  },
+  {
+   "repository": "Vanilla-Expanded/VanillaCookingExpanded-Sushi",
+   "revision": "17c5fa1a24eed929e7aca41d22a273ac508b4a05",
+   "split": "dev",
+   "reason": "holdout burned in round 3: its values were reviewed"
+  },
+  {
+   "repository": "Vanilla-Expanded/VanillaFactionsExpanded-Insectoids",
+   "revision": "b14d60a1451fa3e249d73639f331b5e893b58557",
+   "split": "dev",
+   "reason": "holdout burned in round 3: its values were reviewed"
+  },
+  {
+   "repository": "Vanilla-Expanded/VanillaFactionsExpanded-Pirates",
+   "revision": "be4040eaa04d834d0290929f2605ac2960ea5e1c",
+   "split": "dev",
+   "reason": "holdout burned in round 3: its values were reviewed"
+  },
+  {
+   "repository": "Vanilla-Expanded/VanillaFactionsExpanded-Tribals",
+   "revision": "1827be39a09f2b3de910786efd25af59ce942264",
+   "split": "dev",
+   "reason": "holdout burned in round 3: its values were reviewed"
+  },
+  {
+   "repository": "Vanilla-Expanded/VanillaFishingExpanded-FishingTreasures",
+   "revision": "027d1ab9820d2f7b3da22d374bfa58dbb0a97022",
+   "split": "dev",
+   "reason": "holdout burned in round 3: its values were reviewed"
+  },
+  {
+   "repository": "Vanilla-Expanded/VanillaFurnitureExpanded-Farming",
+   "revision": "38672543739cce4c6d96190ddd5b3363294f5741",
+   "split": "dev",
+   "reason": "holdout burned in round 3: its values were reviewed"
+  },
+  {
+   "repository": "Vanilla-Expanded/VanillaFurnitureExpanded-Props",
+   "revision": "cea0920bf18860cd04394b0416a1b3d34973002a",
+   "split": "dev",
+   "reason": "holdout burned in round 3: its values were reviewed"
+  },
+  {
+   "repository": "Vanilla-Expanded/VanillaGeneticsExpanded-More-Lab-Stuff",
+   "revision": "40979d7863cb6c9eff398fd2083426ecb7560c80",
+   "split": "dev",
+   "reason": "holdout burned in round 3: its values were reviewed"
+  },
+  {
+   "repository": "Vanilla-Expanded/VanillaIdeologiesExpanded-SplitsandSchisms",
+   "revision": "8e90dfa296cca0ecadcdc429691c4a9f81fb3c05",
+   "split": "dev",
+   "reason": "holdout burned in round 3: its values were reviewed"
+  },
+  {
+   "repository": "Vanilla-Expanded/VanillaIdeologyExpanded-Dryads",
+   "revision": "a76be88645a42e61ae5dfd8b80d866cba70091f7",
+   "split": "dev",
+   "reason": "holdout burned in round 3: its values were reviewed"
+  },
+  {
+   "repository": "Vanilla-Expanded/VanillaIdeologyExpanded-IconsandSymbols",
+   "revision": "639c23aae083a04ff41ee22dae0377f411214cf2",
+   "split": "dev",
+   "reason": "holdout burned in round 3: its values were reviewed"
+  },
+  {
+   "repository": "Vanilla-Expanded/VanillaIdeologyExpanded-SophianStyle",
+   "revision": "58365e8869d5199f57fca3308aafe5365decf8a2",
+   "split": "dev",
+   "reason": "holdout burned in round 3: its values were reviewed"
+  },
+  {
+   "repository": "Vanilla-Expanded/VanillaPersonaWeaponsExpanded",
+   "revision": "c8156ef48c14fd08f54922e0b841457692b4c8d0",
+   "split": "dev",
+   "reason": "holdout burned in round 3: its values were reviewed"
+  },
+  {
+   "repository": "Vanilla-Expanded/VanillaPlantsExpanded-Mushrooms",
+   "revision": "2528b009b5c638203f615636c4dc61a1073b7797",
+   "split": "dev",
+   "reason": "holdout burned in round 3: its values were reviewed"
+  },
+  {
+   "repository": "Vanilla-Expanded/VanillaPsycastsExpanded-Hemosage",
+   "revision": "f5094fc7a6edb899460112e6a6564563d53d917f",
+   "split": "dev",
+   "reason": "holdout burned in round 3: its values were reviewed"
+  },
+  {
+   "repository": "Vanilla-Expanded/VanillaQuestsExpanded-Cryptoforge",
+   "revision": "9b5aa8337c8d576b557e0cfc5976cab5bc3ba0d8",
+   "split": "dev",
+   "reason": "holdout burned in round 3: its values were reviewed"
+  },
+  {
+   "repository": "Vanilla-Expanded/VanillaQuestsExpanded-DroneFactory",
+   "revision": "322a1452055fe7545111eace2d5ad2e5d7b1175f",
+   "split": "dev",
+   "reason": "holdout burned in round 3: its values were reviewed"
+  },
+  {
+   "repository": "Vanilla-Expanded/VanillaRacesExpanded-Android",
+   "revision": "51cfbf09ffe67e71a2c3b799b07901a045c5593e",
+   "split": "dev",
+   "reason": "holdout burned in round 3: its values were reviewed"
+  },
+  {
+   "repository": "Vanilla-Expanded/VanillaRacesExpanded-CustomIcons",
+   "revision": "1baf0ee085ae021699b1258435b0af0fb2477726",
+   "split": "dev",
+   "reason": "holdout burned in round 3: its values were reviewed"
+  },
+  {
+   "repository": "Vanilla-Expanded/VanillaRacesExpanded-Lycanthrope",
+   "revision": "30dd9d142af337b579ac31e0fd661f31de229cf0",
+   "split": "dev",
+   "reason": "holdout burned in round 3: its values were reviewed"
+  },
+  {
+   "repository": "Vanilla-Expanded/VanillaRacesExpanded-Starjack",
+   "revision": "ce21973bd5043bbf27e4cba3f5404e2867233f87",
+   "split": "dev",
+   "reason": "holdout burned in round 3: its values were reviewed"
+  },
+  {
+   "repository": "Vanilla-Expanded/VanillaAnimalsExpanded-WasteAnimals",
+   "revision": "6f38a3e12f3f58c2ba2b8b1884adc9aa654db6bc",
+   "split": "dev",
+   "reason": "VE holdout; new entries from the unreadable-class fallback were inspected in round 10 (31/31 player-facing)"
+  },
+  {
+   "repository": "Vanilla-Expanded/VanillaBrewingExpanded",
+   "revision": "5e530a126adc08f62b75d2d295898f077f73c590",
+   "split": "dev",
+   "reason": "VE holdout; new entries from the unreadable-class fallback were inspected in round 10 (31/31 player-facing)"
+  },
+  {
+   "repository": "Vanilla-Expanded/VanillaCookingExpanded-Stews",
+   "revision": "538c6cc687890dc49eb5363fd87121a97bf36fc0",
+   "split": "dev",
+   "reason": "VE holdout; new entries from the unreadable-class fallback were inspected in round 10 (31/31 player-facing)"
+  },
+  {
+   "repository": "Vanilla-Expanded/VanillaFactionsExpanded-Medieval",
+   "revision": "279080a8fa4b237d65c71912feedc5d4349265b7",
+   "split": "dev",
+   "reason": "VE holdout; new entries from the unreadable-class fallback were inspected in round 10 (31/31 player-facing)"
+  },
+  {
+   "repository": "Vanilla-Expanded/VanillaFactionsExpanded-Vikings",
+   "revision": "9b6132bfa6ff9389f7a4360c88d6bf8c2d23e0d6",
+   "split": "dev",
+   "reason": "VE holdout; new entries from the unreadable-class fallback were inspected in round 10 (31/31 player-facing)"
+  },
+  {
+   "repository": "Vanilla-Expanded/VanillaFurnitureExpanded-Production",
+   "revision": "c8d6639683accf55f92a39117c591c8296cf2327",
+   "split": "dev",
+   "reason": "VE holdout; new entries from the unreadable-class fallback were inspected in round 10 (31/31 player-facing)"
+  },
+  {
+   "repository": "Vanilla-Expanded/VanillaHelixienGasExpanded",
+   "revision": "0752fea6300f0af9dc3529b8576b0d562ace9367",
+   "split": "dev",
+   "reason": "VE holdout; new entries from the unreadable-class fallback were inspected in round 10 (31/31 player-facing)"
+  },
+  {
+   "repository": "Vanilla-Expanded/VanillaIdeologyExpanded-HatsandRags",
+   "revision": "0cae21935f92888085ac20947710899807f0f34e",
+   "split": "dev",
+   "reason": "VE holdout; new entries from the unreadable-class fallback were inspected in round 10 (31/31 player-facing)"
+  },
+  {
+   "repository": "Vanilla-Expanded/VanillaOutpostsExpanded",
+   "revision": "2b4d6869398719fd071f1e6186473b3433dd95b1",
+   "split": "dev",
+   "reason": "VE holdout; new entries from the unreadable-class fallback were inspected in round 10 (31/31 player-facing)"
+  },
+  {
+   "repository": "Vanilla-Expanded/VanillaPlantsExpanded-Succulents",
+   "revision": "82e7a2549705a2371f1b62073aaccea263456ecf",
+   "split": "dev",
+   "reason": "VE holdout; new entries from the unreadable-class fallback were inspected in round 10 (31/31 player-facing)"
+  },
+  {
+   "repository": "Vanilla-Expanded/VanillaQuestsExpanded-Deadlife",
+   "revision": "378448b1daf650abe92a98fb4d5d04047a72ec4c",
+   "split": "dev",
+   "reason": "VE holdout; new entries from the unreadable-class fallback were inspected in round 10 (31/31 player-facing)"
+  },
+  {
+   "repository": "Vanilla-Expanded/VanillaRacesExpanded-Archon",
+   "revision": "94a51f368bfdaa471e83c930db71f3e62ca47554",
+   "split": "dev",
+   "reason": "VE holdout; new entries from the unreadable-class fallback were inspected in round 10 (31/31 player-facing)"
+  },
+  {
+   "repository": "Vanilla-Expanded/VanillaRacesExpanded-Pigskin",
+   "revision": "09a53356bb2c32576e3a6d0dc2719b483e05ac6b",
+   "split": "dev",
+   "reason": "VE holdout; new entries from the unreadable-class fallback were inspected in round 10 (31/31 player-facing)"
+  },
+  {
+   "repository": "Vanilla-Expanded/VanillaRecyclingExpanded",
+   "revision": "fd49194b9aee1a83bf1f5b847b1a2e0a6b5a41b1",
+   "split": "dev",
+   "reason": "VE holdout; new entries from the unreadable-class fallback were inspected in round 10 (31/31 player-facing)"
+  },
+  {
+   "repository": "Vanilla-Expanded/VanillaSocialInteractionsExpanded",
+   "revision": "fbc14d89042b96c24b375f9f93da8855e4443815",
+   "split": "dev",
+   "reason": "VE holdout; new entries from the unreadable-class fallback were inspected in round 10 (31/31 player-facing)"
+  },
+  {
+   "repository": "Vanilla-Expanded/VanillaStorytellersExpanded-WinstonWave",
+   "revision": "af28d76ba0653e1eb7c08890c5e88121aaa99d21",
+   "split": "dev",
+   "reason": "VE holdout; new entries from the unreadable-class fallback were inspected in round 10 (31/31 player-facing)"
+  },
+  {
+   "repository": "Vanilla-Expanded/VanillaTexturesExpanded-Furniture-Variations",
+   "revision": "10ec1b7198ee8135fc5d712f48d7532162dfcf42",
+   "split": "dev",
+   "reason": "VE holdout; new entries from the unreadable-class fallback were inspected in round 10 (31/31 player-facing)"
+  },
+  {
+   "repository": "Vanilla-Expanded/VanillaVehiclesExpanded-Tier3",
+   "revision": "e9d6a547a2f75ba6c7aac05a35b9ad56297baafa",
+   "split": "dev",
+   "reason": "VE holdout; new entries from the unreadable-class fallback were inspected in round 10 (31/31 player-facing)"
+  },
+  {
+   "repository": "Vanilla-Expanded/VanillaWeaponsExpanded-Bioferrite",
+   "revision": "3930ffe7b9447fbb5918e34bae961e8246b78a82",
+   "split": "dev",
+   "reason": "VE holdout; new entries from the unreadable-class fallback were inspected in round 10 (31/31 player-facing)"
+  },
+  {
+   "repository": "Vanilla-Expanded/VanillaWeaponsExpanded-Frontier",
+   "revision": "69674a17be0e7942891f14b2175119ef02457535",
+   "split": "dev",
+   "reason": "VE holdout; new entries from the unreadable-class fallback were inspected in round 10 (31/31 player-facing)"
+  },
+  {
+   "repository": "Vanilla-Expanded/VanillaWeaponsExpanded-Heavy",
+   "revision": "5ac8cdd788e63925befd5c0ae900e135198e1075",
+   "split": "dev",
+   "reason": "VE holdout; new entries from the unreadable-class fallback were inspected in round 10 (31/31 player-facing)"
+  },
+  {
+   "repository": "Vanilla-Expanded/VanillaWeaponsExpanded-Makeshift",
+   "revision": "c21b58574a4c77fd814be5047bb2b779079efc5a",
+   "split": "dev",
+   "reason": "VE holdout; new entries from the unreadable-class fallback were inspected in round 10 (31/31 player-facing)"
+  },
+  {
+   "repository": "pabloschwindt1-art/Convergence-Era-of-Cultivation",
+   "revision": "615d4592e757fd1426adef66e0bf25dbfe829f2a",
+   "split": "dev",
+   "reason": "round 8 holdout; miss categories inspected by field and type name, then used to design the unresolved-class fallback"
+  },
+  {
+   "repository": "sumghai/MousekinRace",
+   "revision": "9310defc00f406cf10ec942ad2d68beb81133052",
+   "split": "dev",
+   "reason": "round 8 holdout; miss categories inspected by field and type name, then used to design the unresolved-class fallback"
+  },
+  {
+   "repository": "OrionFive/Hospitality",
+   "revision": "6b6769769e8ed556d18f4a67606e1a1eb5d4fb30",
+   "split": "dev",
+   "reason": "round 8 holdout; miss categories inspected by field and type name, then used to design the unresolved-class fallback"
+  },
+  {
+   "repository": "zymex22/Project-RimFactory-Revived",
+   "revision": "ede0db655d1f97120a6b42da265716919537ccf2",
+   "split": "dev",
+   "reason": "round 8 holdout; miss categories inspected by field and type name, then used to design the unresolved-class fallback"
+  },
+  {
+   "repository": "Rainezean/Rimworld-Patches",
+   "revision": "5bc83d5f1735292a97195f48c2bcbd08eebf7581",
+   "split": "dev",
+   "reason": "round 8 holdout; miss categories inspected by field and type name, then used to design the unresolved-class fallback"
+  },
+  {
+   "repository": "sumghai/Replimat",
+   "revision": "fe1c11c0220c92f300e501caec74fd90ae1f9ac9",
+   "split": "dev",
+   "reason": "round 8 holdout; miss categories inspected by field and type name, then used to design the unresolved-class fallback"
+  },
+  {
+   "repository": "MrHydralisk/Anomalies-Expected",
+   "revision": "f295f100121a7e14cf4bb600676dcff9f6e2eea8",
+   "split": "dev",
+   "reason": "round 8 holdout; miss categories inspected by field and type name, then used to design the unresolved-class fallback"
+  },
+  {
+   "repository": "sam-hunt/UniqueWeaponsUnbound",
+   "revision": "866dee14b80c46ac9a098afef164f4f038cbff18",
+   "split": "dev",
+   "reason": "round 8 holdout; miss categories inspected by field and type name, then used to design the unresolved-class fallback"
+  },
+  {
+   "repository": "vbardales/Rimworld-Ancient-Chinese-Beast-And-Gene-Expanded-Renew",
+   "revision": "88723e968800e05181eb94841a26b7828041b04b",
+   "split": "dev",
+   "reason": "round 8 holdout; miss categories inspected by field and type name, then used to design the unresolved-class fallback"
+  },
+  {
+   "repository": "MrHydralisk/Underground-Vault",
+   "revision": "61bd48f9a1e3c24782dcf090ae436fa8385d3076",
+   "split": "dev",
+   "reason": "round 8 holdout; miss categories inspected by field and type name, then used to design the unresolved-class fallback"
+  },
+  {
+   "repository": "DJcri/Despicable",
+   "revision": "778e17e91f94d1e7864f46e7639b0c299f8b2491",
+   "split": "dev",
+   "reason": "round 8 holdout; miss categories inspected by field and type name, then used to design the unresolved-class fallback"
+  },
+  {
+   "repository": "AIRsLight/ClashOfRim",
+   "revision": "151459bd2c9501cc205e15ed7fb5118df4a42040",
+   "split": "dev",
+   "reason": "round 8 holdout; miss categories inspected by field and type name, then used to design the unresolved-class fallback"
+  },
+  {
+   "repository": "sam-hunt/LocalMineralScanner",
+   "revision": "d3b896e1f56b6cdf95afac7b12521f9b4c4b5970",
+   "split": "dev",
+   "reason": "round 8 holdout; miss categories inspected by field and type name, then used to design the unresolved-class fallback"
+  },
+  {
+   "repository": "sumghai/Hamefura",
+   "revision": "70966ae8d956675df0d3bbd7009a09a5641435e2",
+   "split": "dev",
+   "reason": "round 8 holdout; miss categories inspected by field and type name, then used to design the unresolved-class fallback"
+  },
+  {
+   "repository": "lenghuan94-lab/RatkinDiningEtiquette",
+   "revision": "a6a08cbd3cc00f960a03af7d60748920c25159da",
+   "split": "dev",
+   "reason": "round 8 holdout; miss categories inspected by field and type name, then used to design the unresolved-class fallback"
+  },
+  {
+   "repository": "sumghai/DefensiveMachineGunTurretPack",
+   "revision": "67f3959a44d1824113513ed6a6693466aacf01c3",
+   "split": "dev",
+   "reason": "round 8 holdout; miss categories inspected by field and type name, then used to design the unresolved-class fallback"
+  },
+  {
+   "repository": "realloon/CustomizeWeapon",
+   "revision": "d5e41881b0b79c7ae74ee7361e3e6fa462323562",
+   "split": "dev",
+   "reason": "round 8 holdout; miss categories inspected by field and type name, then used to design the unresolved-class fallback"
+  },
+  {
+   "repository": "WVCSergkart/MoreMechanoidsWorkModes",
+   "revision": "b7ff31bdbe5f9181a2dbc556b61468791821e9a9",
+   "split": "dev",
+   "reason": "round 8 holdout; miss categories inspected by field and type name, then used to design the unresolved-class fallback"
+  },
+  {
+   "repository": "MrHydralisk/Complementary-Odyssey",
+   "revision": "cf78329870e70569bc79ca3a281f572424d64509",
+   "split": "dev",
+   "reason": "round 8 holdout; miss categories inspected by field and type name, then used to design the unresolved-class fallback"
+  },
+  {
+   "repository": "TabbyMackerel/RatkinRaceHSK-Expended",
+   "revision": "1c25b76f027016fbabaa33424f929fd07cf0c934",
+   "split": "dev",
+   "reason": "round 8 holdout; miss categories inspected by field and type name, then used to design the unresolved-class fallback"
+  },
+  {
+   "repository": "amedranogil/SharedBeds",
+   "revision": "bd901fb0a6503d277e599300c1d60fd128afb762",
+   "split": "dev",
+   "reason": "round 8 holdout; miss categories inspected by field and type name, then used to design the unresolved-class fallback"
+  },
+  {
+   "repository": "sumghai/RimNGE",
+   "revision": "ddd0c740d6101bee6e67e5eacca05044a23c50be",
+   "split": "dev",
+   "reason": "round 8 holdout; miss categories inspected by field and type name, then used to design the unresolved-class fallback"
+  },
+  {
+   "repository": "Gu-ZT/DubheTech",
+   "revision": "0256ebca228ada2a0b9ac0b5c99c6d7dd371eae8",
+   "split": "dev",
+   "reason": "round 8 holdout; miss categories inspected by field and type name, then used to design the unresolved-class fallback"
+  },
+  {
+   "repository": "TheTiscks/ReinforcedWalls_Renewed",
+   "revision": "ef60992b012cc014d0fbfa112d29b7bb3f2a72a3",
+   "split": "dev",
+   "reason": "round 8 holdout; miss categories inspected by field and type name, then used to design the unresolved-class fallback"
+  },
+  {
+   "repository": "Hazzer/FishTraps",
+   "revision": "a6387bf12b5e1044e794100cde8e93e6c1620838",
+   "split": "dev",
+   "reason": "round 8 holdout; miss categories inspected by field and type name, then used to design the unresolved-class fallback"
+  },
+  {
+   "repository": "HG-Dev/RimWorldMod-F3-SourceFiles",
+   "revision": "eae0b10b2a872f37099e96288a2882028733c615",
+   "split": "dev",
+   "reason": "round 9 holdout; miss categories inspected by field and type name (no fix needed)"
+  },
+  {
+   "repository": "MrHydralisk/VNPE-Reimagined-Progression",
+   "revision": "dfc940576874fc6e2dcdcadab3daa428a8d56d4b",
+   "split": "dev",
+   "reason": "round 9 holdout; miss categories inspected by field and type name (no fix needed)"
+  },
+  {
+   "repository": "panzmoravylab/RIMWORLD-STARGATE-Parallel-Gates",
+   "revision": "db0da5a80bc1d0be0f3a5a7ee8b563c75ee6a4e0",
+   "split": "dev",
+   "reason": "round 9 holdout; miss categories inspected by field and type name (no fix needed)"
+  },
+  {
+   "repository": "MrHydralisk/VOE-Additional-Outposts",
+   "revision": "af831ad31b3e10ec5fe922b7ceea8b1e87d9c320",
+   "split": "dev",
+   "reason": "round 9 holdout; miss categories inspected by field and type name (no fix needed)"
+  },
+  {
+   "repository": "mrbabilo/RadiusUIInspectorPlus",
+   "revision": "90919fce5f52485d42ceb7bb9ca616d4e0f81c59",
+   "split": "dev",
+   "reason": "round 9 holdout; miss categories inspected by field and type name (no fix needed)"
+  },
+  {
+   "repository": "Rickynewts/Wetware-BandWidthCasket",
+   "revision": "4edb4bb81c6f2dd3daa2f724710fd77a4d0d16bd",
+   "split": "dev",
+   "reason": "round 9 holdout; miss categories inspected by field and type name (no fix needed)"
+  },
+  {
+   "repository": "RimWorld-RimMind-Mod/RimWorld-RimMind-Mod-Core",
+   "revision": "a1084be29f5593344aa4ecd9754adbe61fb96804",
+   "split": "dev",
+   "reason": "round 9 holdout; miss categories inspected by field and type name (no fix needed)"
+  },
+  {
+   "repository": "yancy22737-sudo/yc-s-Faction-Editor",
+   "revision": "844e33e5c0985e52e585a8d9a9b0c57655107dbc",
+   "split": "dev",
+   "reason": "round 9 holdout; miss categories inspected by field and type name (no fix needed)"
+  },
+  {
+   "repository": "AmCh-Q/RimWorldMod_NeedBarOverflow",
+   "revision": "0d368a91cf3dd1dadbc30d83363dd5711bd95e83",
+   "split": "dev",
+   "reason": "round 9 holdout; miss categories inspected by field and type name (no fix needed)"
+  },
+  {
+   "repository": "vbardales/Rimworld-Entity-Gazing",
+   "revision": "0e88e90c66723cc238a0feadff0dc3821db86c08",
+   "split": "dev",
+   "reason": "round 9 holdout; miss categories inspected by field and type name (no fix needed)"
+  },
+  {
+   "repository": "vbardales/Rimworld-Soft-Warm-Primitive-Beds-Renew",
+   "revision": "7ea0c2b64dc7a3c33677476dd776ac8c3675212a",
+   "split": "dev",
+   "reason": "round 9 holdout; miss categories inspected by field and type name (no fix needed)"
+  },
+  {
+   "repository": "Coahuilite/Mwah",
+   "revision": "b8f73d03b3bed9cebba8ab531126750ee808449b",
+   "split": "dev",
+   "reason": "round 9 holdout; miss categories inspected by field and type name (no fix needed)"
+  },
+  {
+   "repository": "emipa606/RamboWeaponsPack",
+   "revision": "558cf170339d08cfba166fe4f20c3543bc22adce",
+   "split": "dev",
+   "reason": "round 12 holdout; unattributed fields inspected by name in round 14 (class/kind/type hints, punctuation-only values, dependency Keyed keys)"
+  },
+  {
+   "repository": "emipa606/MedicalSupplements",
+   "revision": "1d8f3881ab4d2f5752c3e29f1703358a2ebaf06f",
+   "split": "dev",
+   "reason": "round 12 holdout; unattributed fields inspected by name in round 14 (class/kind/type hints, punctuation-only values, dependency Keyed keys)"
+  },
+  {
+   "repository": "dsweber2/EnhancedIdeology",
+   "revision": "c1897c2bc12b65299c4707a5390397316ee22de8",
+   "split": "dev",
+   "reason": "round 12 holdout; unattributed fields inspected by name in round 14 (class/kind/type hints, punctuation-only values, dependency Keyed keys)"
+  },
+  {
+   "repository": "preampinbut/RatkinRaceStandalone",
+   "revision": "77d983c6920a65ac6b258c2b0734836c27dcda38",
+   "split": "dev",
+   "reason": "round 12 holdout; unattributed fields inspected by name in round 14 (class/kind/type hints, punctuation-only values, dependency Keyed keys)"
+  },
+  {
+   "repository": "sam-hunt/BetterTradersGuild",
+   "revision": "b60e83da977b813f9509c703ca286182bb29696a",
+   "split": "dev",
+   "reason": "round 12 holdout; unattributed fields inspected by name in round 14 (class/kind/type hints, punctuation-only values, dependency Keyed keys)"
+  },
+  {
+   "repository": "sam-hunt/UniqueMeleeWeapons",
+   "revision": "be2167a51fa84689287f77f32383f7ff26f7c288",
+   "split": "dev",
+   "reason": "round 12 holdout; unattributed fields inspected by name in round 14 (class/kind/type hints, punctuation-only values, dependency Keyed keys)"
+  },
+  {
+   "repository": "Lordlony/SmoothingExpanded",
+   "revision": "c21b6b04c5e41f2886f087e01c8883a1a07b53ef",
+   "split": "dev",
+   "reason": "round 12 holdout; unattributed fields inspected by name in round 14 (class/kind/type hints, punctuation-only values, dependency Keyed keys)"
+  },
+  {
+   "repository": "pacas/HMC-Nobility-Expanded",
+   "revision": "0040ec934c11a209bc840944ca929e0cac2460e7",
+   "split": "dev",
+   "reason": "round 12 holdout; unattributed fields inspected by name in round 14 (class/kind/type hints, punctuation-only values, dependency Keyed keys)"
+  },
+  {
+   "repository": "emipa606/DoomFactions",
+   "revision": "8308868fcae81a0c562cee330211c81860b84238",
+   "split": "dev",
+   "reason": "round 12 holdout; unattributed fields inspected by name in round 14 (class/kind/type hints, punctuation-only values, dependency Keyed keys)"
+  },
+  {
+   "repository": "muri-desu/Carniculus",
+   "revision": "f9ebc6d559fd8b80c6595450d71ed3d284f20eb1",
+   "split": "dev",
+   "reason": "round 12 holdout; unattributed fields inspected by name in round 14 (class/kind/type hints, punctuation-only values, dependency Keyed keys)"
+  },
+  {
+   "repository": "Rinmiolc/Emergency-Expanded",
+   "revision": "780acb321f6ecf1d1bfcfe053991cb2e5eced935",
+   "split": "dev",
+   "reason": "round 12 holdout; unattributed fields inspected by name in round 14 (class/kind/type hints, punctuation-only values, dependency Keyed keys)"
+  },
+  {
+   "repository": "lumenastrum/HeyraTheHorned",
+   "revision": "7e2fab8463516f5e0eaf8ae2ee01cbf4923ca457",
+   "split": "dev",
+   "reason": "round 12 holdout; unattributed fields inspected by name in round 14 (class/kind/type hints, punctuation-only values, dependency Keyed keys)"
+  },
+  {
+   "repository": "Ionfrigate12345/Rimworld_FactionalWarContinued",
+   "revision": "b879585126170a5b68f81f9bfe84b111972e7e36",
+   "split": "dev",
+   "reason": "round 12 holdout; unattributed fields inspected by name in round 14 (class/kind/type hints, punctuation-only values, dependency Keyed keys)"
+  },
+  {
+   "repository": "emipa606/MoreFurniture",
+   "revision": "9ca25caf18c78c449fe9ddd27ca092d70e285372",
+   "split": "dev",
+   "reason": "round 12 holdout; unattributed fields inspected by name in round 14 (class/kind/type hints, punctuation-only values, dependency Keyed keys)"
+  },
+  {
+   "repository": "emipa606/HeavyMeleeWeapons",
+   "revision": "6ac11cf5ab25f6611b308702e879cc4b638d9f80",
+   "split": "dev",
+   "reason": "round 12 holdout; unattributed fields inspected by name in round 14 (class/kind/type hints, punctuation-only values, dependency Keyed keys)"
+  },
+  {
+   "repository": "emipa606/XNDAnimalArmor",
+   "revision": "f9d1286e1b110a9083ca6c53d145dd4099225f94",
+   "split": "dev",
+   "reason": "round 12 holdout; unattributed fields inspected by name in round 14 (class/kind/type hints, punctuation-only values, dependency Keyed keys)"
+  },
+  {
+   "repository": "sam-hunt/ShipcrackerWarcasket",
+   "revision": "3ab1de1c8810cc16f42bdc2d505d1b27b898ee50",
+   "split": "dev",
+   "reason": "round 12 holdout; unattributed fields inspected by name in round 14 (class/kind/type hints, punctuation-only values, dependency Keyed keys)"
+  },
+  {
+   "repository": "emipa606/WeaponsOfTheGods",
+   "revision": "956f1042dbebf083f1302115b0ed3316e8f5eaa1",
+   "split": "dev",
+   "reason": "round 12 holdout; unattributed fields inspected by name in round 14 (class/kind/type hints, punctuation-only values, dependency Keyed keys)"
+  },
+  {
+   "repository": "JonM0/MedicalSystemExpansion2",
+   "revision": "04fd8714d46df43ffcfebe6676ecae880560f616",
+   "split": "dev",
+   "reason": "round 12 holdout; unattributed fields inspected by name in round 14 (class/kind/type hints, punctuation-only values, dependency Keyed keys)"
+  },
+  {
+   "repository": "Linruo909/AlienCuisine",
+   "revision": "81b13701954309700e3618ec648a1c02c6e5ab44",
+   "split": "dev",
+   "reason": "round 12 holdout; unattributed fields inspected by name in round 14 (class/kind/type hints, punctuation-only values, dependency Keyed keys)"
+  },
+  {
+   "repository": "emipa606/ReGrowthExtinctAnimals",
+   "revision": "9610d7470bf0a8bf7565cdaf0a508a6bee5c7c2c",
+   "split": "dev",
+   "reason": "round 12 holdout; unattributed fields inspected by name in round 14 (class/kind/type hints, punctuation-only values, dependency Keyed keys)"
+  },
+  {
+   "repository": "269435403/RimMedical",
+   "revision": "87db10231579e665b7ad5482bdbcd5e1a9ebeb4e",
+   "split": "dev",
+   "reason": "round 12 holdout; unattributed fields inspected by name in round 14 (class/kind/type hints, punctuation-only values, dependency Keyed keys)"
+  },
+  {
+   "repository": "Vanilla-Expanded/VanillaFurnitureExpanded-Security",
+   "revision": "f7597712b096c130b52d37a1da11b8a87c859a85",
+   "split": "dev",
+   "reason": "round 12 holdout; unattributed fields inspected by name in round 14 (class/kind/type hints, punctuation-only values, dependency Keyed keys)"
+  },
+  {
+   "repository": "emipa606/VanillaChristmasExpanded",
+   "revision": "4bf167cfb84eb66653dadb1e3e35fade519bf7c7",
+   "split": "dev",
+   "reason": "round 12 holdout; unattributed fields inspected by name in round 14 (class/kind/type hints, punctuation-only values, dependency Keyed keys)"
+  },
+  {
+   "repository": "vbardales/Rimworld-Japanese-Homestead",
+   "revision": "38250151886f4d594696f4740ec7fddee343c55c",
+   "split": "dev",
+   "reason": "round 16 holdout; miss categories inspected by type and field name only"
+  },
+  {
+   "repository": "Grzybol/RimWorld_VanillaExpanded_Artillery_1.6",
+   "revision": "e4e71612fcb470798d6854f008d409b985d2f8a1",
+   "split": "dev",
+   "reason": "round 16 holdout; miss categories inspected by type and field name only"
+  },
+  {
+   "repository": "Cocopomel/Paniel_the_Automata",
+   "revision": "c679eb13c7a17da83523b85794ccf66442d42b03",
+   "split": "dev",
+   "reason": "round 16 holdout; miss categories inspected by type and field name only"
+  },
+  {
+   "repository": "JalapenoLabs/rimworld-fishing-is-fun",
+   "revision": "7a01fca3fd7ca5df7ce117432d11825480ebdffe",
+   "split": "dev",
+   "reason": "round 16 holdout; miss categories inspected by type and field name only"
+  },
+  {
+   "repository": "muri-desu/Gokusotsu",
+   "revision": "bb1685aebac378eef14580fbb02efe9da8fa4ccd",
+   "split": "dev",
+   "reason": "round 16 holdout; miss categories inspected by type and field name only"
+  },
+  {
+   "repository": "sam-hunt/PersonaWeaponsUnbound",
+   "revision": "0e61fdcdf961b7d65ad5314ff9eb22627fa60417",
+   "split": "dev",
+   "reason": "round 16 holdout; miss categories inspected by type and field name only"
+  },
+  {
+   "repository": "emipa606/CrusadersFaction",
+   "revision": "227dfeaf7db64bfdde55baa3cb80ade1b54b0ee4",
+   "split": "dev",
+   "reason": "round 16 holdout; miss categories inspected by type and field name only"
+  },
+  {
+   "repository": "joatta89-arch/CleoTribeMod",
+   "revision": "11f07fa765130a306c48b34dd6ad7ded32af7bd0",
+   "split": "dev",
+   "reason": "round 16 holdout; miss categories inspected by type and field name only"
+  },
+  {
+   "repository": "emipa606/CyberneticWarfare",
+   "revision": "73a8c4ba3ed0e27e687808efd371ba6da45ec71e",
+   "split": "dev",
+   "reason": "round 16 holdout; miss categories inspected by type and field name only"
+  },
+  {
+   "repository": "emipa606/ExpandedIncidents",
+   "revision": "b6c50f435ffaf641d3d8d6f50a570411483603a7",
+   "split": "dev",
+   "reason": "round 16 holdout; miss categories inspected by type and field name only"
+  },
+  {
+   "repository": "RunningBugs/rimworld-myweapons",
+   "revision": "e6d8906710e64727865097d329ca6ed119249c83",
+   "split": "dev",
+   "reason": "round 16 holdout; miss categories inspected by type and field name only"
+  },
+  {
+   "repository": "D14137/Rimworld---Dead-Man-Switch---Joint-Operation",
+   "revision": "24be59bf255f23067da872ebeae73159b1e3462f",
+   "split": "dev",
+   "reason": "round 16 holdout; miss categories inspected by type and field name only"
+  },
+  {
+   "repository": "mopolita/BatteriesExpanded",
+   "revision": "21501dadd9a8fb8d0308799dcf59056f8ed18361",
+   "split": "dev",
+   "reason": "round 16 holdout; miss categories inspected by type and field name only"
+  },
+  {
+   "repository": "sam-hunt/ToxinWarcasket",
+   "revision": "e2080d6f5d6d0af1710fab976227107b7948cf3a",
+   "split": "dev",
+   "reason": "round 16 holdout; miss categories inspected by type and field name only"
+  },
+  {
+   "repository": "emipa606/QQsGirlsFrontlineApparelPack",
+   "revision": "527612a8b3999a106889e2784085e1667ffde836",
+   "split": "dev",
+   "reason": "round 16 holdout; miss categories inspected by type and field name only"
+  },
+  {
+   "repository": "TianTiman/Customize-PLA-Weapon",
+   "revision": "ef2b065487c1ee267feb1dcc8c0c5d6554bc8ad5",
+   "split": "dev",
+   "reason": "round 16 holdout; miss categories inspected by type and field name only"
+  },
+  {
+   "repository": "emipa606/ArrowPleaseFactionAddon",
+   "revision": "275dc4a9fe7f262cc5601f43cb663bbebf421d12",
+   "split": "dev",
+   "reason": "round 16 holdout; miss categories inspected by type and field name only"
+  },
+  {
+   "repository": "SergeyNickUp/Rimworld-1.5-1.6-mod-collection",
+   "revision": "1ecca876030f5e7ee75c14dd557126e770e26202",
+   "split": "dev",
+   "reason": "round 16 holdout; miss categories inspected by type and field name only; a collection of several mods with duplicated defNames, so its recall is not meaningful"
+  },
+  {
+   "repository": "emipa606/StarshipTroopersWeapons",
+   "revision": "848c7de9e47cbe498c18356cadf741b461ec6f39",
+   "split": "dev",
+   "reason": "round 16 holdout; miss categories inspected by type and field name only"
+  },
+  {
+   "repository": "emipa606/NilchEiPersonalityTraits",
+   "revision": "b8e2e694b2b833dbece014b962aa941df08e578a",
+   "split": "dev",
+   "reason": "round 16 holdout; miss categories inspected by type and field name only"
+  },
+  {
+   "repository": "ViPok137/Overpowered-Toys",
+   "revision": "465921bdfd89e0c308fb09058502f37eb1634c8b",
+   "split": "dev",
+   "reason": "round 16 holdout; miss categories inspected by type and field name only"
+  },
+  {
+   "repository": "CH4ACKO3/SearchAndRescue",
+   "revision": "111a87189ed88a295003e873c97c84bcab804c3e",
+   "split": "dev",
+   "reason": "round 16 holdout; miss categories inspected by type and field name only"
+  },
+  {
+   "repository": "victoranohin/AndroidSubroutinesExpanded",
+   "revision": "f02398a042f4dfcaa962fd44cd2c55434578cc2e",
+   "split": "dev",
+   "reason": "round 16 holdout; miss categories inspected by type and field name only"
+  },
+  {
+   "repository": "TabbyMackerel/RatkinRaceHSK-Expended-Redux",
+   "revision": "36c9499ffb4864fad90d73088c3f917f510554db",
+   "split": "dev",
+   "reason": "round 16 holdout; miss categories inspected by type and field name only"
+  },
+  {
+   "repository": "Char2iot/Rimworld_Races_Ibices",
+   "revision": "99b86c8af0e43d74ebc17b990311871e10466953",
+   "split": "dev",
+   "reason": "round 16 holdout; miss categories inspected by type and field name only"
+  },
+  {
+   "repository": "emipa606/AncientAsianWeapons",
+   "revision": "2e2265788d755435040da580f741cb0030476cc9",
+   "split": "dev",
+   "reason": "round 16 holdout; miss categories inspected by type and field name only"
+  },
+  {
+   "repository": "emipa606/CIWSAnimal",
+   "revision": "0dad1726ad3b600cbabccb2c9242ee6ac5300dcb",
+   "split": "dev",
+   "reason": "round 16 holdout; miss categories inspected by type and field name only"
+  },
+  {
+   "repository": "DrSeedon/Grounded-RimWorld",
+   "revision": "defecb469e1cf4810ed82efce1e53b05d405046d",
+   "split": "dev",
+   "reason": "round 16 holdout; miss categories inspected by type and field name only"
+  },
+  {
+   "repository": "emipa606/O21Thaumrim",
+   "revision": "5f96df858d05ea35ff7e54875de800fa485e4021",
+   "split": "dev",
+   "reason": "round 16 holdout; miss categories inspected by type and field name only"
+  },
+  {
+   "repository": "emipa606/FunctionalVanillaExpandedProps",
+   "revision": "88d0e796e57e92efe3e5d9acfcee74129c2c6afb",
+   "split": "dev",
+   "reason": "round 16 holdout; miss categories inspected by type and field name only"
+  },
+  {
+   "repository": "emipa606/UNFurniture",
+   "revision": "e6df1c5783777ed87f0f2ea31a5983adab921978",
+   "split": "dev",
+   "reason": "round 17 holdout; miss categories inspected by type and field name only (no fix needed)"
+  },
+  {
+   "repository": "emipa606/ZeroTechTrait",
+   "revision": "63dfe45ac72909c7d1559c4140209e29c87f0988",
+   "split": "dev",
+   "reason": "round 17 holdout; miss categories inspected by type and field name only (no fix needed)"
+  },
+  {
+   "repository": "emipa606/RoyalApparel",
+   "revision": "ff546f0f6ff8c5eb89daa7e347a8ec0402874960",
+   "split": "dev",
+   "reason": "round 17 holdout; miss categories inspected by type and field name only (no fix needed)"
+  },
+  {
+   "repository": "Maiya0126/CrystalTech",
+   "revision": "341e9a75eaee2f2194a7dd01d7d92e4a0d6ca3a6",
+   "split": "dev",
+   "reason": "round 17 holdout; miss categories inspected by type and field name only (no fix needed)"
+  },
+  {
+   "repository": "emipa606/CIWSWeapon",
+   "revision": "4e0c8eec1d5cb1050be48d5b3d4b8b5f962f9e60",
+   "split": "dev",
+   "reason": "round 17 holdout; miss categories inspected by type and field name only (no fix needed)"
+  },
+  {
+   "repository": "Azetus/Rimworld-Tactical-Rigs-and-Pouches",
+   "revision": "37a4f724365e93fa0a4ae62f2fc1c76e17b2b65d",
+   "split": "dev",
+   "reason": "round 17 holdout; miss categories inspected by type and field name only (no fix needed)"
+  },
+  {
+   "repository": "vbardales/Rimworld-Animal-Apparel-Collars-And-Kit-Renew",
+   "revision": "a176bb58741593d7577048207e29a94d060b782b",
+   "split": "dev",
+   "reason": "round 17 holdout; miss categories inspected by type and field name only (no fix needed)"
+  },
+  {
+   "repository": "Listera0/Rimworld_SlaveQuest",
+   "revision": "ada6cadb0818c7fc09952c135f515d31ede33c0b",
+   "split": "dev",
+   "reason": "round 17 holdout; miss categories inspected by type and field name only (no fix needed)"
+  },
+  {
+   "repository": "pooi-woop/TheEmptyFortStrategy-KongChengJi",
+   "revision": "70361008a4d38f27697446358ec916a7aedccedf",
+   "split": "dev",
+   "reason": "round 17 holdout; miss categories inspected by type and field name only (no fix needed)"
+  },
+  {
+   "repository": "emipa606/GoWWeaponPack",
+   "revision": "bde3446596ba9d4f47d07ac87a27c34dee43a40e",
+   "split": "dev",
+   "reason": "round 17 holdout; miss categories inspected by type and field name only (no fix needed)"
+  },
+  {
+   "repository": "SineSwiper/RimWorld-FactionBlender",
+   "revision": "e492b63c1b3d465342820fc684bfa639345c59b0",
+   "split": "dev",
+   "reason": "round 17 holdout; miss categories inspected by type and field name only (no fix needed)"
+  },
+  {
+   "repository": "emipa606/AncientRimMediterranFactions",
+   "revision": "adcb2a62b7cadb9f4e3930268ec84dffee81e464",
+   "split": "dev",
+   "reason": "round 17 holdout; miss categories inspected by type and field name only (no fix needed)"
+  },
+  {
+   "repository": "wtrstylus-331/Rimworld-Explosive-Vests",
+   "revision": "a7547587f71008c759bcb5517055d1074cd6c3e7",
+   "split": "dev",
+   "reason": "round 17 holdout; miss categories inspected by type and field name only (no fix needed)"
+  },
+  {
+   "repository": "emipa606/AnimalFeedTrough",
+   "revision": "bbe607d8109c7f11c3f96407fa52d6e672c029ad",
+   "split": "dev",
+   "reason": "round 17 holdout; miss categories inspected by type and field name only (no fix needed)"
+  },
+  {
+   "repository": "mxswat/Waymakers",
+   "revision": "7badbc3925059b75edeadb4defa14b29ecf7813e",
+   "split": "dev",
+   "reason": "round 17 holdout; miss categories inspected by type and field name only (no fix needed)"
+  },
+  {
+   "repository": "vbardales/Rimworld-Tabletop-Dev-Renew",
+   "revision": "0707539ca26356efe820c5422fda5e83a3e037a5",
+   "split": "dev",
+   "reason": "round 17 holdout; miss categories inspected by type and field name only (no fix needed)"
+  },
+  {
+   "repository": "Relvl/Rimworld_BestApparel",
+   "revision": "cf7492b563de180b0f5846caae93138159d0ff6f",
+   "split": "dev",
+   "reason": "round 17 holdout; miss categories inspected by type and field name only (no fix needed)"
+  },
+  {
+   "repository": "emipa606/ApparelTab",
+   "revision": "93a4388c91cdb7258102eb56d98fa41f059d4830",
+   "split": "dev",
+   "reason": "round 17 holdout; miss categories inspected by type and field name only (no fix needed)"
+  },
+  {
+   "repository": "vbardales/Rimworld-Unruly-Drifter-Renew",
+   "revision": "73fe1b8a210ee4a9f5e7733a8d18f5a81037093e",
+   "split": "dev",
+   "reason": "round 17 holdout; miss categories inspected by type and field name only (no fix needed)"
+  },
+  {
+   "repository": "vbardales/Rimworld-Megabees-Renew",
+   "revision": "df815098084049c10d2dd2a1a6b876a1b6b38249",
+   "split": "dev",
+   "reason": "round 17 holdout; miss categories inspected by type and field name only (no fix needed)"
+  },
+  {
+   "repository": "aemonke/PrepareLanding",
+   "revision": "e1d83fb3abf857f6d7d68115f5a6aef14dba471e",
+   "split": "dev",
+   "reason": "round 17 holdout; miss categories inspected by type and field name only (no fix needed)"
+  },
+  {
+   "repository": "emipa606/ArchitectExpandedFencesTabPatch",
+   "revision": "e1e3f104e69b569cde3f3c2afff97080988604f2",
+   "split": "dev",
+   "reason": "round 17 holdout; miss categories inspected by type and field name only (no fix needed)"
+  },
+  {
+   "repository": "emipa606/PowerfulFactionBases",
+   "revision": "5752aab31865d81a84ceede5a9d8f23c89910bd7",
+   "split": "dev",
+   "reason": "round 17 holdout; miss categories inspected by type and field name only (no fix needed)"
+  },
+  {
+   "repository": "vbardales/Rimworld-Seren-Biotech-Extended",
+   "revision": "474eaba5eb734c90ac37b7a83e45c5b40be38424",
+   "split": "dev",
+   "reason": "round 17 holdout; miss categories inspected by type and field name only (no fix needed)"
+  },
+  {
+   "repository": "vbardales/Rimworld-Vanilla-Like-Pizza-Renew",
+   "revision": "9e53df90b2c347c2e0920a8404018f4ca5dbf8d7",
+   "split": "dev",
+   "reason": "round 17 holdout; miss categories inspected by type and field name only (no fix needed)"
+  },
+  {
+   "repository": "vbardales/Rimworld-Rotmeth-Renew",
+   "revision": "a38ad5c77b93b3cb9163189c40f51f6318755879",
+   "split": "dev",
+   "reason": "round 17 holdout; miss categories inspected by type and field name only (no fix needed)"
+  },
+  {
+   "repository": "vbardales/Rimworld-Retro-Joy-Renew",
+   "revision": "0c62f118206b2a7dba02d10dcbf5d1588740927c",
+   "split": "dev",
+   "reason": "round 17 holdout; miss categories inspected by type and field name only (no fix needed)"
+  },
+  {
+   "repository": "MSeokS/trait-manager",
+   "revision": "3efe542add2241fdc9e67c4cdeda928164995ea6",
+   "split": "dev",
+   "reason": "round 17 holdout; miss categories inspected by type and field name only (no fix needed)"
+  },
+  {
+   "repository": "Gerbesh/DeepRim.Vertical",
+   "revision": "fa7e771cd8801f2d19e12d25d06f1c136b8cdb51",
+   "split": "dev",
+   "reason": "round 17 holdout; miss categories inspected by type and field name only (no fix needed)"
+  },
+  {
+   "repository": "vbardales/Rimworld-Ebbbs-Renew",
+   "revision": "c730bce09c45cd03b7e9d957dce09c2d940a7515",
+   "split": "dev",
+   "reason": "round 17 holdout; miss categories inspected by type and field name only (no fix needed)"
+  },
+  {
+   "repository": "Izzypizzy1218/WildShift",
+   "revision": "c6aec7ce07f55bcaa062925d20b182e7727bfba7",
+   "split": "dev",
+   "reason": "round 18 holdout; miss categories inspected by type and field name only (no fix needed)"
+  },
+  {
+   "repository": "dermac217-sketch/BulgurMillet",
+   "revision": "53bde0c4d01c49a431461d645a50d9d61e6630b8",
+   "split": "dev",
+   "reason": "round 18 holdout; miss categories inspected by type and field name only (no fix needed)"
+  },
+  {
+   "repository": "vbardales/Rimworld-Poultry-Variety-Pack-Renew",
+   "revision": "58ed5e5101ce468b124e0339e75fe5f4215b5ff3",
+   "split": "dev",
+   "reason": "round 18 holdout; miss categories inspected by type and field name only (no fix needed)"
+  },
+  {
+   "repository": "vbardales/Rimworld-Creatures-Of-Ki-Renew",
+   "revision": "65005a42377ab54a030ecf897da646a306bb1b08",
+   "split": "dev",
+   "reason": "round 18 holdout; miss categories inspected by type and field name only (no fix needed)"
+  },
+  {
+   "repository": "emipa606/WeaponsOfElysion",
+   "revision": "1645f2b0293d23c72df0228af2819c4e344a8b4d",
+   "split": "dev",
+   "reason": "round 18 holdout; miss categories inspected by type and field name only (no fix needed)"
+  },
+  {
+   "repository": "beanJy/BondageFurniture",
+   "revision": "d87ef3606dca864fee7c12f9e4bf72963a60966e",
+   "split": "dev",
+   "reason": "round 18 holdout; miss categories inspected by type and field name only (no fix needed)"
+  },
+  {
+   "repository": "vbardales/Rimworld-Nelim-Props-As-Style",
+   "revision": "4137ec5855beed0772a41ca9abdbf71f8620b000",
+   "split": "dev",
+   "reason": "round 18 holdout; miss categories inspected by type and field name only (no fix needed)"
+  },
+  {
+   "repository": "emipa606/LargeFactionBases",
+   "revision": "3d4ad947d6b694aee9cb92471b5e581f177f670e",
+   "split": "dev",
+   "reason": "round 18 holdout; miss categories inspected by type and field name only (no fix needed)"
+  },
+  {
+   "repository": "emipa606/SexualityTraits",
+   "revision": "706f403aadb91e13ccf52c6ea2ffa3055dcc2fd7",
+   "split": "dev",
+   "reason": "round 18 holdout; miss categories inspected by type and field name only (no fix needed)"
+  },
+  {
+   "repository": "emipa606/TagTrait",
+   "revision": "b8432f77b69fb7e766fd1cae72a7f4b0e841ec5c",
+   "split": "dev",
+   "reason": "round 18 holdout; miss categories inspected by type and field name only (no fix needed)"
+  },
+  {
+   "repository": "emipa606/ApparelOrganizer",
+   "revision": "9a163781781752d4e135cd0256c065047cee7a38",
+   "split": "dev",
+   "reason": "round 18 holdout; miss categories inspected by type and field name only (no fix needed)"
+  },
+  {
+   "repository": "emipa606/AnimalsForage",
+   "revision": "b0bc71d6832f06948d28426b72d8ceae2eef8c6c",
+   "split": "dev",
+   "reason": "round 18 holdout; miss categories inspected by type and field name only (no fix needed)"
+  },
+  {
+   "repository": "emipa606/AnimalTamingHelmet",
+   "revision": "2392723674cb47770aef71e3881ed98416da2839",
+   "split": "dev",
+   "reason": "round 18 holdout; miss categories inspected by type and field name only (no fix needed)"
+  },
+  {
+   "repository": "vbardales/Rimworld-Tanuki-Renew",
+   "revision": "759d2455bd74e30604d3a4248397af16398a1f5a",
+   "split": "dev",
+   "reason": "round 18 holdout; miss categories inspected by type and field name only (no fix needed)"
+  },
+  {
+   "repository": "KarasevQ/God-Cursor",
+   "revision": "01551ee4c1c8ed37fa149e1feaf1e8b758453a68",
+   "split": "dev",
+   "reason": "round 18 holdout; miss categories inspected by type and field name only (no fix needed)"
+  },
+  {
+   "repository": "vbardales/Rimworld-A-Sloth-Mod-Renew",
+   "revision": "d4321547bb17c79112ad6fc7e52a65c0cbbd081d",
+   "split": "dev",
+   "reason": "round 18 holdout; miss categories inspected by type and field name only (no fix needed)"
+  },
+  {
+   "repository": "vbardales/Rimworld-Beef-Eaters-Renew",
+   "revision": "692301efbffbd06f7b69f271955ed7125a0dba6c",
+   "split": "dev",
+   "reason": "round 18 holdout; miss categories inspected by type and field name only (no fix needed)"
+  },
+  {
+   "repository": "vbardales/Rimworld-Funny-Creatures-Renew",
+   "revision": "53f475430b21e557c3ff11d8e0f05105623532a7",
+   "split": "dev",
+   "reason": "round 18 holdout; miss categories inspected by type and field name only (no fix needed)"
+  },
+  {
+   "repository": "vbardales/Rimworld-Mengwu-Expanded-Animals-Renew",
+   "revision": "e3e8c9cbece3703e2dbca5794ef2b4fb980669be",
+   "split": "dev",
+   "reason": "round 18 holdout; miss categories inspected by type and field name only (no fix needed)"
+  },
+  {
+   "repository": "hypeclubcommunity-pixel/Military-RimWorld-Mod",
+   "revision": "2715192376ebb2bfc755468e44be04c50705f00d",
+   "split": "dev",
+   "reason": "round 18 holdout; miss categories inspected by type and field name only (no fix needed)"
+  },
+  {
+   "repository": "ChrisF-127/SimpleSidearms_SwitchWeapons",
+   "revision": "667d2f38908f98bdcb7188ceda798de546d5b3a2",
+   "split": "dev",
+   "reason": "round 18 holdout; miss categories inspected by type and field name only (no fix needed)"
+  },
+  {
+   "repository": "vbardales/Rimworld-Precious-Stones-And-Jewelry-Enhanced-Renew",
+   "revision": "0207658127c4a022f0cf595527e89d6257a34b95",
+   "split": "dev",
+   "reason": "round 18 holdout; miss categories inspected by type and field name only (no fix needed)"
+  },
+  {
+   "repository": "269435403/FactionCulturalDiversity",
+   "revision": "342deec1824af86996ae973f6247d32935acd429",
+   "split": "dev",
+   "reason": "round 18 holdout; miss categories inspected by type and field name only (no fix needed)"
+  },
+  {
+   "repository": "linyaDev/HSKMoreBalanceQuests",
+   "revision": "07cc67a24e3a89521e3952151499f68c065e62e9",
+   "split": "dev",
+   "reason": "round 18 holdout; miss categories inspected by type and field name only (no fix needed)"
+  },
+  {
+   "repository": "SandyTheGreat/RPG-Style-Inventory",
+   "revision": "acd1249309a00de16386936d805894c857b009f3",
+   "split": "dev",
+   "reason": "round 18 holdout; miss categories inspected by type and field name only (no fix needed)"
+  },
+  {
+   "repository": "Ionfrigate12345/Rimworld_RealisticApparelHeatInsulation",
+   "revision": "a39e256c57dfb941261b0662fb3d0ec4d5408c61",
+   "split": "dev",
+   "reason": "round 18 holdout; miss categories inspected by type and field name only (no fix needed)"
+  },
+  {
+   "repository": "mrbabilo/RadiusUIColonistBarPlus",
+   "revision": "2b6a83b4ebc45f974619d03434bfdd06f5393112",
+   "split": "dev",
+   "reason": "round 18 holdout; miss categories inspected by type and field name only (no fix needed)"
+  },
+  {
+   "repository": "carbineact1on/HSK-Ancient-Collection",
+   "revision": "a5fc3556f6b069a436c54b8d6d3bce7a9be60d7b",
+   "split": "dev",
+   "reason": "round 19 holdout; unattributed fields inspected by name (display text, no fix needed)"
+  },
+  {
+   "repository": "eebasso/Rimworld-Psychology-unofficial-v1.1-1.4",
+   "revision": "cd4e66aff60c67dbdcad06eb512d5d3427142912",
+   "split": "dev",
+   "reason": "round 19 holdout; unattributed fields inspected by name (display text, no fix needed)"
+  },
+  {
+   "repository": "emipa606/EMInsectsAndPlants",
+   "revision": "498dcf367e1847f803caafe73e37868253aac00e",
+   "split": "dev",
+   "reason": "round 19 holdout; unattributed fields inspected by name (display text, no fix needed)"
+  },
+  {
+   "repository": "Azetus/Bulwarkon-Mechanoid",
+   "revision": "60468976e4de77f783d46c2ac6f00d1fe3e573a4",
+   "split": "dev",
+   "reason": "round 19 holdout; unattributed fields inspected by name (display text, no fix needed)"
+  },
+  {
+   "repository": "emipa606/MechanoidMasterBlaster",
+   "revision": "01cfd228915d18209f06f3c97306ca1d273f095d",
+   "split": "dev",
+   "reason": "round 19 holdout; unattributed fields inspected by name (display text, no fix needed)"
+  },
+  {
+   "repository": "emipa606/MechanoidPower",
+   "revision": "1e25ece348fcc0556102137f01f5afdfceb36908",
+   "split": "dev",
+   "reason": "round 19 holdout; unattributed fields inspected by name (display text, no fix needed)"
+  },
+  {
+   "repository": "emipa606/RimCardsMechanoidExpansion",
+   "revision": "fd10336fb3fe8363922b7106f93c1ac7cf083660",
+   "split": "dev",
+   "reason": "round 19 holdout; unattributed fields inspected by name (display text, no fix needed)"
+  },
+  {
+   "repository": "emipa606/MechanoidRecycling",
+   "revision": "6be20de8ac41d4b0da2b2ea388f37eb167f197f3",
+   "split": "dev",
+   "reason": "round 19 holdout; unattributed fields inspected by name (display text, no fix needed)"
+  },
+  {
+   "repository": "emipa606/ProgenitorMechanoid",
+   "revision": "aedc90699808ac9f383020491579c9904c6d9b8d",
+   "split": "dev",
+   "reason": "round 19 holdout; unattributed fields inspected by name (display text, no fix needed)"
+  },
+  {
+   "repository": "ivni77/Replimat-Mech",
+   "revision": "3cc7daade216f2ec51d46214dfe9b0a9009c658f",
+   "split": "dev",
+   "reason": "round 19 holdout; unattributed fields inspected by name (display text, no fix needed)"
+  },
+  {
+   "repository": "emipa606/CannibalMeals",
+   "revision": "4a49e6e4c37566a7f61b7339b6caf9f0475d4b35",
+   "split": "dev",
+   "reason": "round 19 holdout; unattributed fields inspected by name (display text, no fix needed)"
+  },
+  {
+   "repository": "lenghuan94-lab/RatkinTableManners",
+   "revision": "5fe6f57cb14c5bd108f93a2a425b8fb3eaa0b151",
+   "split": "dev",
+   "reason": "round 19 holdout; unattributed fields inspected by name (display text, no fix needed)"
+  },
+  {
+   "repository": "Xeraster/RW_Realistic_Planets_Continued_1.3",
+   "revision": "ff234e1ba7f001e748ec2304eb29e12171cd884b",
+   "split": "dev",
+   "reason": "round 19 holdout; unattributed fields inspected by name (display text, no fix needed)"
+  },
+  {
+   "repository": "Asofwar/rimlink",
+   "revision": "35b2d7a8884e9a2c8232d22c93c13301a96b26fc",
+   "split": "dev",
+   "reason": "round 19 holdout; unattributed fields inspected by name (display text, no fix needed)"
+  },
+  {
+   "repository": "emipa606/MechanoidsFeelChillNow",
+   "revision": "56f49bd3d1824f17d173f1210df0369b7d079519",
+   "split": "dev",
+   "reason": "round 19 holdout; unattributed fields inspected by name (display text, no fix needed)"
+  },
+  {
+   "repository": "lenghuan94-lab/SimpleDoorLock",
+   "revision": "7773c2785a77e5a4d362564c8d30c2fca8dcc8ca",
+   "split": "dev",
+   "reason": "round 19 holdout; unattributed fields inspected by name (display text, no fix needed)"
+  },
+  {
+   "repository": "1579486875/UniversalBedFacilityCompat",
+   "revision": "42e4078fafe951241132af691afc6516da5b52a0",
+   "split": "dev",
+   "reason": "round 19 holdout; unattributed fields inspected by name (display text, no fix needed)"
+  },
+  {
+   "repository": "rheirman/WhatTheHack",
+   "revision": "6f29e3b8c1544ef67dc3db2ddc02b4104de596a9",
+   "split": "dev",
+   "reason": "round 20 holdout (code search); miss categories inspected by type and field name, led to the base-class guess for unloaded assemblies"
+  },
+  {
+   "repository": "SeanLeeLKY/Rimworld-Translation-Package",
+   "revision": "e9b266fa67a4a514bc9f8f76d1b09c7e183ff75a",
+   "split": "dev",
+   "reason": "round 20 holdout (code search); miss categories inspected by type and field name, led to the base-class guess for unloaded assemblies; translation pack of other mods (no Defs of its own), recall not meaningful"
+  },
+  {
+   "repository": "jecrell/Star-Wars---The-Force",
+   "revision": "2db6f7137d0e4c84d2ce7998168d82c494af4bc8",
+   "split": "dev",
+   "reason": "round 20 holdout (code search); miss categories inspected by type and field name, led to the base-class guess for unloaded assemblies"
+  },
+  {
+   "repository": "jptrrs/HumanResources",
+   "revision": "4cb8f9d9f33c83531b9088424e16c4322253623e",
+   "split": "dev",
+   "reason": "round 20 holdout (code search); miss categories inspected by type and field name, led to the base-class guess for unloaded assemblies"
+  },
+  {
+   "repository": "syrinka/HumanResources",
+   "revision": "46a1f9f953fd0093ea378104d97794152a924187",
+   "split": "dev",
+   "reason": "round 20 holdout (code search); miss categories inspected by type and field name, led to the base-class guess for unloaded assemblies"
+  },
+  {
+   "repository": "emipa606/Apothecary",
+   "revision": "b79a0f7ee75a8f5b630b87bf8627884a459318e3",
+   "split": "dev",
+   "reason": "round 20 holdout (code search); miss categories inspected by type and field name, led to the base-class guess for unloaded assemblies"
+  },
+  {
+   "repository": "q847633684/Vanilla-Expanded-ZH",
+   "revision": "e8828971f8c65ca73f55ac28cd69eb326fb60830",
+   "split": "dev",
+   "reason": "round 20 holdout (code search); miss categories inspected by type and field name, led to the base-class guess for unloaded assemblies; translation pack of other mods (no Defs of its own), recall not meaningful"
+  },
+  {
+   "repository": "AaronCRobinson/ExpandedRoofing",
+   "revision": "50a3e64788d08600b16c7bf6d21a7783dbb54eab",
+   "split": "dev",
+   "reason": "round 20 holdout (code search); miss categories inspected by type and field name, led to the base-class guess for unloaded assemblies"
+  },
+  {
+   "repository": "jecrell/Star-Wars---Factions",
+   "revision": "8f5c771e2e5db1089d31620ffa413f24954099f1",
+   "split": "dev",
+   "reason": "round 20 holdout (code search); miss categories inspected by type and field name, led to the base-class guess for unloaded assemblies"
+  },
+  {
+   "repository": "moreoreganostodump/RJW-Sexperience",
+   "revision": "82d81ea0bedcd45386487eaf6c2fa3b2a6162eed",
+   "split": "dev",
+   "reason": "round 20 holdout (code search); miss categories inspected by type and field name, led to the base-class guess for unloaded assemblies"
+  },
+  {
+   "repository": "Lord-of-the-Rims-DevTeam/Lord-of-the-Rims---Elves",
+   "revision": "398f5b98e5064d0bf58ff54fa6bda03d9b707935",
+   "split": "dev",
+   "reason": "round 20 holdout (code search); miss categories inspected by type and field name, led to the base-class guess for unloaded assemblies"
+  },
+  {
+   "repository": "DJeck12/Ponies-of-the-Rim",
+   "revision": "ab13f4d1a50dd460f1ac37167498983753051d7c",
+   "split": "dev",
+   "reason": "round 20 holdout (code search); miss categories inspected by type and field name, led to the base-class guess for unloaded assemblies"
+  },
+  {
+   "repository": "Aurani/EPOE-Forked",
+   "revision": "61a65ecd9de60f619337a3c16641e34b220fd895",
+   "split": "dev",
+   "reason": "round 20 holdout (code search); miss categories inspected by type and field name, led to the base-class guess for unloaded assemblies"
+  },
+  {
+   "repository": "rimworld-frontierdevelopment/Shields",
+   "revision": "dd523cb48f1ef76ffe083bcb24c2fd64592f058d",
+   "split": "dev",
+   "reason": "round 20 holdout (code search); miss categories inspected by type and field name, led to the base-class guess for unloaded assemblies"
+  },
+  {
+   "repository": "sophietheopossum/newratkinplus",
+   "revision": "e654ada288a07965acaf9518e8396adba23c8697",
+   "split": "dev",
+   "reason": "round 20 holdout (code search); miss categories inspected by type and field name, led to the base-class guess for unloaded assemblies"
+  },
+  {
+   "repository": "GoGaTio/New-Anomaly-Threats",
+   "revision": "4b712522a619df3004d396a46078067deeb09239",
+   "split": "dev",
+   "reason": "round 20 holdout (code search); miss categories inspected by type and field name, led to the base-class guess for unloaded assemblies"
+  },
+  {
+   "repository": "jecrell/Star-Wars---Fully-Functional-Lightsabers",
+   "revision": "14a9b1bb55b5202ce1190d95ac2284d30187cfb7",
+   "split": "dev",
+   "reason": "round 20 holdout (code search); miss categories inspected by type and field name, led to the base-class guess for unloaded assemblies"
+  },
+  {
+   "repository": "pch2728/VanillaWeaponsExpandedCE",
+   "revision": "dea93b747ffddf5d2d6f38cc8c7e696d720603ea",
+   "split": "dev",
+   "reason": "round 20 holdout (code search); miss categories inspected by type and field name, led to the base-class guess for unloaded assemblies"
+  },
+  {
+   "repository": "emipa606/AFSydailyFox",
+   "revision": "4a6ad9446196f157a8d3723f7b3231f520c38152",
+   "split": "dev",
+   "reason": "round 20 holdout (code search); miss categories inspected by type and field name, led to the base-class guess for unloaded assemblies"
+  },
+  {
+   "repository": "emipa606/RationalRomance",
+   "revision": "ca0cc3bb5ddca3d6ae59c976f3372b7391911e0f",
+   "split": "dev",
+   "reason": "round 20 holdout (code search); miss categories inspected by type and field name, led to the base-class guess for unloaded assemblies"
+  },
+  {
+   "repository": "jlibrary/RimTalk",
+   "revision": "1626b1a6e317f44e700ff0bd91823f23a559a891",
+   "split": "dev",
+   "reason": "round 20 holdout (code search); miss categories inspected by type and field name, led to the base-class guess for unloaded assemblies"
+  },
+  {
+   "repository": "jecrell/DoorsExpanded",
+   "revision": "5bb1575d420b374d305165541afeb8d6b3fd0527",
+   "split": "dev",
+   "reason": "round 20 holdout (code search); miss categories inspected by type and field name, led to the base-class guess for unloaded assemblies"
+  },
+  {
+   "repository": "Lord-of-the-Rims-DevTeam/Lord-of-the-Rims---Hobbits",
+   "revision": "132628ca6a1e81f140d84046e21327aa91863e8a",
+   "split": "dev",
+   "reason": "round 20 holdout (code search); miss categories inspected by type and field name, led to the base-class guess for unloaded assemblies"
+  },
+  {
+   "repository": "dninemfive/ajocollection",
+   "revision": "079b7cc3353c5ab8611f70ef5e03cb3268d713da",
+   "split": "dev",
+   "reason": "round 20 holdout (code search); miss categories inspected by type and field name, led to the base-class guess for unloaded assemblies"
+  },
+  {
+   "repository": "AndroidQuazar/VanillaFurnitureExpanded-Security",
+   "revision": "2cdf8a903f5723ebf349b0ebd6848c087c8993fc",
+   "split": "dev",
+   "reason": "round 20 holdout (code search); miss categories inspected by type and field name, led to the base-class guess for unloaded assemblies"
+  },
+  {
+   "repository": "emipa606/FishIndustry",
+   "revision": "23fd2ac5958146ac6871c824c4f383a43a714ac6",
+   "split": "dev",
+   "reason": "round 20 holdout (code search); miss categories inspected by type and field name, led to the base-class guess for unloaded assemblies"
+  },
+  {
+   "repository": "emipa606/Fermenter",
+   "revision": "8834e1c9ed245c7103eb6c9fb40b434b3491c2c8",
+   "split": "dev",
+   "reason": "round 20 holdout (code search); miss categories inspected by type and field name, led to the base-class guess for unloaded assemblies"
+  },
+  {
+   "repository": "RunningBugs/rimworld-SecurityForce",
+   "revision": "2280ef898eff8df0e6233ce2ecc7c655e65853de",
+   "split": "dev",
+   "reason": "round 20 holdout (code search); miss categories inspected by type and field name, led to the base-class guess for unloaded assemblies"
+  },
+  {
+   "repository": "AUTOMATIC1111/Radiology",
+   "revision": "3b7f301a1e273b99886787e21a3b113b3e63047a",
+   "split": "dev",
+   "reason": "round 20 holdout (code search); miss categories inspected by type and field name, led to the base-class guess for unloaded assemblies"
+  },
+  {
+   "repository": "emipa606/AdaptationRefusal",
+   "revision": "f342129ba9c4425052ebbd0d1ca3742dec3de7df",
+   "split": "dev",
+   "reason": "round 20 holdout (code search); miss categories inspected by type and field name, led to the base-class guess for unloaded assemblies"
+  },
+  {
+   "repository": "TheLoneTec/Medical-Supplements-SK",
+   "revision": "75a5caadb2278d1ad2790877c6010c56eeba85f6",
+   "split": "dev",
+   "reason": "round 20 holdout (code search); miss categories inspected by type and field name, led to the base-class guess for unloaded assemblies"
+  },
+  {
+   "repository": "rwpsychology/Psychology",
+   "revision": "c92f9dcc9b01c5701bf2755831389951e8516c7c",
+   "split": "dev",
+   "reason": "round 20 holdout (code search); miss categories inspected by type and field name, led to the base-class guess for unloaded assemblies"
+  },
+  {
+   "repository": "alextd/RimWorld-SmartMedicine",
+   "revision": "5fab0dd18776a204973484943e0e4fd5ace29a24",
+   "split": "dev",
+   "reason": "round 20 holdout (code search); miss categories inspected by type and field name, led to the base-class guess for unloaded assemblies"
+  },
+  {
+   "repository": "Refzlund/haulers-dream",
+   "revision": "507685246a9ce29476dda52a7c14e0af7d94d96e",
+   "split": "dev",
+   "reason": "round 20 holdout (code search); miss categories inspected by type and field name, led to the base-class guess for unloaded assemblies"
+  },
+  {
+   "repository": "AndroidQuazar/VanillaWeaponsExpanded",
+   "revision": "b4a2e2750134e0d30d124a78566ddc47541b7121",
+   "split": "dev",
+   "reason": "round 20 holdout (code search); miss categories inspected by type and field name, led to the base-class guess for unloaded assemblies"
+  },
+  {
+   "repository": "Watcher011/HSK.Watcher.content.Fallout",
+   "revision": "3f4b3cf7312f46ddbc7472b8ec255979aaf05d32",
+   "split": "dev",
+   "reason": "round 20 holdout (code search); miss categories inspected by type and field name, led to the base-class guess for unloaded assemblies"
+  },
+  {
+   "repository": "Lord-of-the-Rims-DevTeam/Lord-of-the-Rims---Dwarves",
+   "revision": "19301acc3b61dd65942d71a37f2974ffe81028ee",
+   "split": "dev",
+   "reason": "round 20 holdout (code search); miss categories inspected by type and field name, led to the base-class guess for unloaded assemblies"
+  },
+  {
+   "repository": "Endgegner/RimWorld-Mod-Cybernetic-Warfare-and-Special-Weapons",
+   "revision": "aae7cfb43996fe75c39159594d1d641d0d3ad448",
+   "split": "dev",
+   "reason": "round 20 holdout (code search); miss categories inspected by type and field name, led to the base-class guess for unloaded assemblies"
+  },
+  {
+   "repository": "Syrchalis/SetUpCamp",
+   "revision": "2ca4767dc6098585ff8967008fd293ef2f26e110",
+   "split": "dev",
+   "reason": "round 20 holdout (code search); miss categories inspected by type and field name, led to the base-class guess for unloaded assemblies"
+  },
+  {
+   "repository": "emipa606/Jetpack",
+   "revision": "ead054b732426b09e94096811eb3a774fda37c5c",
+   "split": "dev",
+   "reason": "round 20 holdout (code search); miss categories inspected by type and field name, led to the base-class guess for unloaded assemblies"
+  },
+  {
+   "repository": "JodemLee/KoTOR_CoreRimworldMod",
+   "revision": "b546df15f936d3d10de84440d16ad41aa19b017e",
+   "split": "dev",
+   "reason": "round 22 holdout (code search); misses and reference matches inspected by type and field name, led to the namespace alias fix"
+  },
+  {
+   "repository": "SyntacticFlow/Rimworld-CyberneticOrganismNeuralNetwork",
+   "revision": "7fc9405dba484d79fa9eae1a4107e75f4808cbb7",
+   "split": "dev",
+   "reason": "round 22 holdout (code search); misses and reference matches inspected by type and field name, led to the namespace alias fix"
+  },
+  {
+   "repository": "tkkntkkn/natures-pretty-sweet",
+   "revision": "0e01299363679b7e82f251e4f2c1975a015d9f87",
+   "split": "dev",
+   "reason": "round 22 holdout (code search); misses and reference matches inspected by type and field name, led to the namespace alias fix"
+  },
+  {
+   "repository": "rheirman/DualWield",
+   "revision": "bd4c2bbd07e40583274f03f0b753dcc5b3dd7737",
+   "split": "dev",
+   "reason": "round 22 holdout (code search); misses and reference matches inspected by type and field name, led to the namespace alias fix"
+  },
+  {
+   "repository": "krafs/LevelUp",
+   "revision": "383783e5cba9f035acbbe2e1fb298278e6143aae",
+   "split": "dev",
+   "reason": "round 22 holdout (code search); misses and reference matches inspected by type and field name, led to the namespace alias fix"
+  },
+  {
+   "repository": "emipa606/ChristmasStuffAdventCalendar",
+   "revision": "6e81f2cabae4229e53808b807422f4dd31182d22",
+   "split": "dev",
+   "reason": "round 22 holdout (code search); misses and reference matches inspected by type and field name, led to the namespace alias fix"
+  },
+  {
+   "repository": "Watcher011/HSK.Watcher.content",
+   "revision": "f93d0c0f27054f27894c115ae954f9cbc254c3c5",
+   "split": "dev",
+   "reason": "round 22 holdout (code search); misses and reference matches inspected by type and field name, led to the namespace alias fix"
+  },
+  {
+   "repository": "RimWorld-zh-mods/Ykara-Mods-zh",
+   "revision": "d1ba6c47a4d13cd7e3b7975d87f17c4936a57a45",
+   "split": "dev",
+   "reason": "round 22 holdout (code search); misses and reference matches inspected by type and field name, led to the namespace alias fix"
+  },
+  {
+   "repository": "emipa606/ReconAndDiscovery",
+   "revision": "08565ffd14d97d5128b6eff9ca66f9554723e033",
+   "split": "dev",
+   "reason": "round 22 holdout (code search); misses and reference matches inspected by type and field name, led to the namespace alias fix"
+  },
+  {
+   "repository": "Watcher011/HSK.Watcher.content.130mm.Main",
+   "revision": "f522f9610c827658454707fccc1b3bf6bcd21917",
+   "split": "dev",
+   "reason": "round 22 holdout (code search); misses and reference matches inspected by type and field name, led to the namespace alias fix"
+  },
+  {
+   "repository": "GoGaTio/New-Anomaly-Threats-Framework",
+   "revision": "d36718d3bca7f720a11936add7e2a31d79f182a3",
+   "split": "dev",
+   "reason": "round 22 holdout (code search); misses and reference matches inspected by type and field name, led to the namespace alias fix"
+  },
+  {
+   "repository": "Lord-of-the-Rims-DevTeam/Lord-of-the-Rims---The-Third-Age",
+   "revision": "072a894fcad3bf0c5a44278d34199861400a186e",
+   "split": "dev",
+   "reason": "round 22 holdout (code search); misses and reference matches inspected by type and field name, led to the namespace alias fix"
+  },
+  {
+   "repository": "AUTOMATIC1111/Rimlaser",
+   "revision": "81fd10b4037ed34545f597e4a35d9e600acd94fa",
+   "split": "dev",
+   "reason": "round 22 holdout (code search); misses and reference matches inspected by type and field name, led to the namespace alias fix"
+  },
+  {
+   "repository": "himesama1301/MizuMod",
+   "revision": "40f03f0af2e4dcea5ce400819a4733f9c8ad337f",
+   "split": "dev",
+   "reason": "round 22 holdout (code search); misses and reference matches inspected by type and field name, led to the namespace alias fix"
+  },
+  {
+   "repository": "emipa606/CASPowerArmour",
+   "revision": "0d5103c4e8c077dbb2cde6e37925731ae6e7b891",
+   "split": "dev",
+   "reason": "round 22 holdout (code search); misses and reference matches inspected by type and field name, led to the namespace alias fix"
+  },
+  {
+   "repository": "emipa606/RFFishingReWork",
+   "revision": "052ba7ff57e74714671d7a72db13b63144859dab",
+   "split": "dev",
+   "reason": "round 22 holdout (code search); misses and reference matches inspected by type and field name, led to the namespace alias fix"
+  },
+  {
+   "repository": "rheirman/GiddyUpRideAndRoll",
+   "revision": "fa722e7f2f7e48150fd2f0e06854a1da7b3f1227",
+   "split": "dev",
+   "reason": "round 22 holdout (code search); misses and reference matches inspected by type and field name, led to the namespace alias fix"
+  },
+  {
+   "repository": "deanec64/RJW",
+   "revision": "7c2f45a8bda8f6721ff23f8e9799c62ef3d8855c",
+   "split": "dev",
+   "reason": "round 22 holdout (code search); misses and reference matches inspected by type and field name, led to the namespace alias fix"
+  },
+  {
+   "repository": "rheirman/battlemounts",
+   "revision": "e78b6aebf23ff48677b35e4059cf156a48526c39",
+   "split": "dev",
+   "reason": "round 22 holdout (code search); misses and reference matches inspected by type and field name, led to the namespace alias fix"
+  },
+  {
+   "repository": "Kriil/rimworld-combat-training",
+   "revision": "b2cc86a6c21351734854f6c33b10955d2b02bc72",
+   "split": "dev",
+   "reason": "round 22 holdout (code search); misses and reference matches inspected by type and field name, led to the namespace alias fix"
+  },
+  {
+   "repository": "emipa606/CaveworldFlora",
+   "revision": "728729901d06b5647a874d819af3c5e1d0833f04",
+   "split": "dev",
+   "reason": "round 22 holdout (code search); misses and reference matches inspected by type and field name, led to the namespace alias fix"
+  },
+  {
+   "repository": "q847633684/rjw-zh",
+   "revision": "d00311abeab964207c9a14fe77fb4fe0290779d4",
+   "split": "dev",
+   "reason": "round 22 holdout (code search); misses and reference matches inspected by type and field name, led to the namespace alias fix; translation pack of another mod, recall not meaningful"
+  },
+  {
+   "repository": "notfood/RimWorld-MendAndRecycle",
+   "revision": "1797ea8bab3e2af0b81a4e8d533ea3b7483250b7",
+   "split": "dev",
+   "reason": "round 22 holdout (code search); misses and reference matches inspected by type and field name, led to the namespace alias fix"
+  },
+  {
+   "repository": "fluffy-mods/FluffyBreakdowns",
+   "revision": "2e34016c358ecc69a8fca728b2b927930363ff41",
+   "split": "dev",
+   "reason": "round 22 holdout (code search); misses and reference matches inspected by type and field name, led to the namespace alias fix"
+  },
+  {
+   "repository": "HardcoreSK/Android-Legacy",
+   "revision": "1650d8120efbab7d1559aabd859378790e1f3231",
+   "split": "dev",
+   "reason": "round 22 holdout (code search); misses and reference matches inspected by type and field name, led to the namespace alias fix"
+  },
+  {
+   "repository": "RWDevathon/Synstructs-Core",
+   "revision": "045bcd4940127c62932d50c2861ec06e65c16de0",
+   "split": "dev",
+   "reason": "round 22 holdout (code search); misses and reference matches inspected by type and field name, led to the namespace alias fix"
+  },
+  {
+   "repository": "Watcher011/HSK.Watcher.content.130mm.Main-main",
+   "revision": "7562001bda763400124a125c68c1cd6db5506cc2",
+   "split": "dev",
+   "reason": "round 22 holdout (code search); misses and reference matches inspected by type and field name, led to the namespace alias fix"
+  },
+  {
+   "repository": "emipa606/RimCuisine2Core",
+   "revision": "fa53e384056df73810e120f271aadda588f8be7d",
+   "split": "dev",
+   "reason": "round 22 holdout (code search); misses and reference matches inspected by type and field name, led to the namespace alias fix"
+  },
+  {
+   "repository": "notfood/RimWorld-Infused",
+   "revision": "c07cbfc6bc21802ff04c8a81c1069ca89217529f",
+   "split": "dev",
+   "reason": "round 22 holdout (code search); misses and reference matches inspected by type and field name, led to the namespace alias fix"
+  },
+  {
+   "repository": "emipa606/DogsMate",
+   "revision": "beffc95547c34fb437c132c123d9e950f327fad5",
+   "split": "dev",
+   "reason": "round 22 holdout (code search); misses and reference matches inspected by type and field name, led to the namespace alias fix"
+  },
+  {
+   "repository": "Shadowrabbit/FactionalWar",
+   "revision": "3d35b55a1d38e425093dee9845c6d3a6a50fecbc",
+   "split": "dev",
+   "reason": "round 22 holdout (code search); misses and reference matches inspected by type and field name, led to the namespace alias fix"
+  },
+  {
+   "repository": "alextd/RimWorld-EnhancementPack",
+   "revision": "234e1791c7a8bcbf1163b8c28b5de212806d82bf",
+   "split": "dev",
+   "reason": "round 22 holdout (code search); misses and reference matches inspected by type and field name, led to the namespace alias fix"
+  },
+  {
+   "repository": "XeoNovaDan/GeneticallyEngineeredPlants",
+   "revision": "52c7b51c0f250ad271a04e5d37217f9a932019ce",
+   "split": "dev",
+   "reason": "round 22 holdout (code search); misses and reference matches inspected by type and field name, led to the namespace alias fix"
+  },
+  {
+   "repository": "aRandomKiwi/Kill-For-Me",
+   "revision": "713c32ad517a7f1bdd0211d33ec56a50d1cf9a40",
+   "split": "dev",
+   "reason": "round 22 holdout (code search); misses and reference matches inspected by type and field name, led to the namespace alias fix"
+  },
+  {
+   "repository": "emipa606/CommonAilments",
+   "revision": "21b369eb60a376172d2494b13d4835eecdbd172c",
+   "split": "dev",
+   "reason": "round 22 holdout (code search); misses and reference matches inspected by type and field name, led to the namespace alias fix"
+  },
+  {
+   "repository": "N7Huntsman/Ceramics",
+   "revision": "49abd9e0c0f57cbd54b62e9053e8f07a96bb7104",
+   "split": "dev",
+   "reason": "round 22 holdout (code search); misses and reference matches inspected by type and field name, led to the namespace alias fix"
+  },
+  {
+   "repository": "Endgegner/RimWorld-Mod-Cybernetic-Organism-and-Neural-Network",
+   "revision": "a4b1bc05bd45bcb0b8aa5988f428f3d9901b56e3",
+   "split": "dev",
+   "reason": "round 22 holdout (code search); misses and reference matches inspected by type and field name, led to the namespace alias fix"
+  },
+  {
+   "repository": "uranv/ManosabaExpansion",
+   "revision": "e42d8a1a35dffc5968668c311f5feea0333d67d8",
+   "split": "dev",
+   "reason": "round 22 holdout (code search); misses and reference matches inspected by type and field name, led to the namespace alias fix"
+  },
+  {
+   "repository": "fluffy-mods/FollowMe",
+   "revision": "a0ab4b24d8593f1bc0237c0728edae0da6590fa6",
+   "split": "dev",
+   "reason": "round 22 holdout (code search); misses and reference matches inspected by type and field name, led to the namespace alias fix"
+  },
+  {
+   "repository": "DrCarlLuo/RimworldMod_RaidAlarm-PreemptiveStrike",
+   "revision": "99b287dcc30ef43792093f26997b1466a5e12b2b",
+   "split": "dev",
+   "reason": "round 22 holdout (code search); misses and reference matches inspected by type and field name, led to the namespace alias fix"
+  },
+  {
+   "repository": "solaris0115/BioReactor",
+   "revision": "cbbe6aff78f7043b59b89d9f2f25111542030f40",
+   "split": "dev",
+   "reason": "round 22 holdout (code search); misses and reference matches inspected by type and field name, led to the namespace alias fix"
+  },
+  {
+   "repository": "RevenantBob/DragonianMod",
+   "revision": "e28be13644ca97e80f07ea661d5c99c86a991c36",
+   "split": "dev",
+   "reason": "round 22 holdout (code search); misses and reference matches inspected by type and field name, led to the namespace alias fix"
+  },
+  {
+   "repository": "jptrrs/OpenTheWindows",
+   "revision": "9882fc5bff9704d4ffd7b2edac471a48b0671059",
+   "split": "dev",
+   "reason": "round 22 holdout (code search); misses and reference matches inspected by type and field name, led to the namespace alias fix"
+  },
+  {
+   "repository": "KiameV/rimworld-changedresser",
+   "revision": "af7f43f3bdf9c0b30752951b9413a0049dfb22fc",
+   "split": "dev",
+   "reason": "round 22 holdout (code search); misses and reference matches inspected by type and field name, led to the namespace alias fix"
+  },
+  {
+   "repository": "emipa606/CleaningPriority",
+   "revision": "e9c73db0f051350d1840eb9cb4a0edb28aa6fc66",
+   "split": "dev",
+   "reason": "round 22 holdout (code search); misses and reference matches inspected by type and field name, led to the namespace alias fix"
+  },
+  {
+   "repository": "emipa606/DeepRim",
+   "revision": "e3d9af7ab22b2d2b53ff2bade9351cf2eec25d5c",
+   "split": "dev",
+   "reason": "round 22 holdout (code search); misses and reference matches inspected by type and field name, led to the namespace alias fix"
+  },
+  {
+   "repository": "XeoNovaDan/SurvivalTools",
+   "revision": "9cbb4239579678fff5a6311cef17320fda62d3a8",
+   "split": "dev",
+   "reason": "round 22 holdout (code search); misses and reference matches inspected by type and field name, led to the namespace alias fix"
+  },
+  {
+   "repository": "EvilEyeGuy/MedievalOverhaul-1.4_unofficial",
+   "revision": "bf28e4138cb16df24c0f00ce6943df09fe365f6e",
+   "split": "dev",
+   "reason": "round 22 holdout (code search); misses and reference matches inspected by type and field name, led to the namespace alias fix"
+  },
+  {
+   "repository": "emipa606/WikiRim",
+   "revision": "7114d7c0586a0b7d795f3f29f4b18a4a4b9e7c3e",
+   "split": "dev",
+   "reason": "round 22 holdout (code search); misses and reference matches inspected by type and field name, led to the namespace alias fix"
+  },
+  {
+   "repository": "emipa606/NotOnlyJustACannon",
+   "revision": "0284fe9c4f462cc0f9446774b709d1f35c33b178",
+   "split": "dev",
+   "reason": "round 22 holdout (code search); misses and reference matches inspected by type and field name, led to the namespace alias fix"
+  },
+  {
+   "repository": "emipa606/GrimworldMelee",
+   "revision": "084b88150a69b17e0af03c4039210d1be2b33047",
+   "split": "dev",
+   "reason": "round 24 holdout (code search); misses inspected by type and field name (no fix needed)"
+  },
+  {
+   "repository": "Dubwise56/Dubs-Paint-Shop",
+   "revision": "61b5ed592a4280d4e1738564c790d78652809f5a",
+   "split": "dev",
+   "reason": "round 24 holdout (code search); misses inspected by type and field name (no fix needed)"
+  },
+  {
+   "repository": "emipa606/RimUniverseBiomes",
+   "revision": "04912e2172461133a3d5d0089ae60dd3cd7c1de6",
+   "split": "dev",
+   "reason": "round 24 holdout (code search); misses inspected by type and field name (no fix needed)"
+  },
+  {
+   "repository": "emipa606/LegacyArk",
+   "revision": "e29decd905ff10ac3ae10b9f641cde6834d28ac0",
+   "split": "dev",
+   "reason": "round 24 holdout (code search); misses inspected by type and field name (no fix needed)"
+  },
+  {
+   "repository": "emipa606/RimCuisine2BottlingandBoozeExpansion",
+   "revision": "3a4434a16af5cc3ff3a00ddc732c27ed736d1118",
+   "split": "dev",
+   "reason": "round 24 holdout (code search); misses inspected by type and field name (no fix needed)"
+  },
+  {
+   "repository": "emipa606/AgrivoltaicSolarPanels",
+   "revision": "d56ca8fb539f431e385d7ae05617adc808284722",
+   "split": "dev",
+   "reason": "round 24 holdout (code search); misses inspected by type and field name (no fix needed)"
+  },
+  {
+   "repository": "emipa606/CuprosAlloys",
+   "revision": "c2d85c567bdf536f43f014c2a491c2f3035b05c5",
+   "split": "dev",
+   "reason": "round 24 holdout (code search); misses inspected by type and field name (no fix needed)"
+  },
+  {
+   "repository": "emipa606/VanillalikeWheat",
+   "revision": "a2e3a6d6b86d9e6b39fa26b5f3b2ffbaaee33f6d",
+   "split": "dev",
+   "reason": "round 24 holdout (code search); misses inspected by type and field name (no fix needed)"
+  },
+  {
+   "repository": "emipa606/CIWSForestryBureauAuthorized",
+   "revision": "42bdcf53e7437ddeec3fb43691777d4382fc8d64",
+   "split": "dev",
+   "reason": "round 24 holdout (code search); misses inspected by type and field name (no fix needed)"
+  },
+  {
+   "repository": "emipa606/LandFill",
+   "revision": "5511eade268e5ee172854342a754ea41572bcbb7",
+   "split": "dev",
+   "reason": "round 24 holdout (code search); misses inspected by type and field name (no fix needed)"
+  },
+  {
+   "repository": "emipa606/UNColony",
+   "revision": "cc5f7213711d800327e4a26bd749577cf048c37c",
+   "split": "dev",
+   "reason": "round 24 holdout (code search); misses inspected by type and field name (no fix needed)"
+  },
+  {
+   "repository": "baobaolaodie/RimWorld-SylvieRace",
+   "revision": "6a113bdb556c9bec2255391b08ab8ffdcfabaf98",
+   "split": "dev",
+   "reason": "round 24 holdout (code search); misses inspected by type and field name (no fix needed)"
+  },
+  {
+   "repository": "emipa606/FireExtinguisher",
+   "revision": "49c292b830e5eea405aaa417e7b0c731203d473c",
+   "split": "dev",
+   "reason": "round 24 holdout (code search); misses inspected by type and field name (no fix needed)"
+  },
+  {
+   "repository": "emipa606/UtilitySupplements",
+   "revision": "bc11f8cffaff1817617becacf09641ba9657ffaa",
+   "split": "dev",
+   "reason": "round 24 holdout (code search); misses inspected by type and field name (no fix needed)"
+  },
+  {
+   "repository": "Metalocif/Ratkin-Anomaly",
+   "revision": "87754ef5e8733cd6dae616462bec3e0c4b396fe3",
+   "split": "dev",
+   "reason": "round 24 holdout (code search); misses inspected by type and field name (no fix needed)"
+  },
+  {
+   "repository": "aaronr7734/rimworld_access",
+   "revision": "03180ff31cd49fe87e2b2e06f27914f8e27bfaed",
+   "split": "dev",
+   "reason": "round 24 holdout (code search); misses inspected by type and field name (no fix needed)"
+  },
+  {
+   "repository": "Rim-Of-Madness-Team/HP-Lovecraft-Storyteller",
+   "revision": "6ed92c5b7a055a9b0d79f4662fed623f0944c5d6",
+   "split": "dev",
+   "reason": "round 24 holdout (code search); misses inspected by type and field name (no fix needed)"
+  },
+  {
+   "repository": "Thamuzz1331/SoS2Bioship",
+   "revision": "f8075ae10f41b4fc3c448b44d1abaa5e3afe52f9",
+   "split": "dev",
+   "reason": "round 24 holdout (code search); misses inspected by type and field name (no fix needed)"
+  },
+  {
+   "repository": "Watcher011/HSK.Watcher.content.Fallout2",
+   "revision": "3bd5d79bc227c67dc3fa966a1ab5238f76c65e6b",
+   "split": "dev",
+   "reason": "round 24 holdout (code search); misses inspected by type and field name (no fix needed)"
+  },
+  {
+   "repository": "emipa606/Xnayah",
+   "revision": "08e2fa8f72aa5f33d82b261095b1717579607990",
+   "split": "dev",
+   "reason": "round 24 holdout (code search); misses inspected by type and field name (no fix needed)"
+  },
+  {
+   "repository": "emipa606/JecsTobaccoAndCigarettes",
+   "revision": "93292e97c5a7030202c5b29550a60756f562cad4",
+   "split": "dev",
+   "reason": "round 24 holdout (code search); misses inspected by type and field name (no fix needed)"
+  },
+  {
+   "repository": "GoGaTio/Dead-Man-Switch-RenegadeClan",
+   "revision": "20e0917db1eefb99250ac6d88681866be54b82e3",
+   "split": "dev",
+   "reason": "round 24 holdout (code search); misses inspected by type and field name (no fix needed)"
+  },
+  {
+   "repository": "JerryTC02/RimframeGrineerVatHate",
+   "revision": "b605e1bed9988bd43dc96c2a209b39cf88e79b5a",
+   "split": "dev",
+   "reason": "round 24 holdout (code search); misses inspected by type and field name (no fix needed)"
+  },
+  {
+   "repository": "ScribioTeam/Dubs-Bad-Hygiene",
+   "revision": "49b72c997266d8f8b19cf8ed63e51b905c2fda8d",
+   "split": "dev",
+   "reason": "round 24 holdout (code search); misses inspected by type and field name (no fix needed)"
+  },
+  {
+   "repository": "emipa606/Fisto",
+   "revision": "439796acf71f4bacece9a1d819617ea0cfae9fdc",
+   "split": "dev",
+   "reason": "round 24 holdout (code search); misses inspected by type and field name (no fix needed)"
+  },
+  {
+   "repository": "alextd/RimWorld-UseBedrolls",
+   "revision": "f0bf682eea7bcefcff1a3ef7e1ab21600793e8d4",
+   "split": "dev",
+   "reason": "round 24 holdout (code search); misses inspected by type and field name (no fix needed)"
+  },
+  {
+   "repository": "emipa606/RunAndHide",
+   "revision": "7bcf8e751659b212e34b895fa79e6dde70fd0942",
+   "split": "dev",
+   "reason": "round 24 holdout (code search); misses inspected by type and field name (no fix needed)"
+  },
+  {
+   "repository": "emipa606/FavLocker",
+   "revision": "43c2b22bb88dac71f23501fbb72222220b32c3ac",
+   "split": "dev",
+   "reason": "round 24 holdout (code search); misses inspected by type and field name (no fix needed)"
+  },
+  {
+   "repository": "emipa606/PlasteelSurgery",
+   "revision": "9056ad3c9ec34c72f821f471a45e0735c447d94d",
+   "split": "dev",
+   "reason": "round 24 holdout (code search); misses inspected by type and field name (no fix needed)"
+  },
+  {
+   "repository": "Nominy/RimMercenaries",
+   "revision": "9924c8b137272306a2b9e37a8c54970d1c5eb95d",
+   "split": "dev",
+   "reason": "round 24 holdout (code search); misses inspected by type and field name (no fix needed)"
+  },
+  {
+   "repository": "emipa606/AdvancedParka",
+   "revision": "e730379e863f7a3779069fcdffa7e501a85dad88",
+   "split": "dev",
+   "reason": "round 24 holdout (code search); misses inspected by type and field name (no fix needed)"
+  },
+  {
+   "repository": "XeoNovaDan/TETurretExpansion",
+   "revision": "dbcf6c132069224c660a752caebb87b6a10a9f94",
+   "split": "dev",
+   "reason": "round 24 holdout (code search); misses inspected by type and field name (no fix needed)"
+  },
+  {
+   "repository": "emipa606/CamouflageandStealth",
+   "revision": "acaab466fe37c31057a8aef79f93a7cb1f22a633",
+   "split": "dev",
+   "reason": "round 24 holdout (code search); misses inspected by type and field name (no fix needed)"
+  },
+  {
+   "repository": "Lord-of-the-Rims-DevTeam/Lord-of-the-Rims---Unlimited",
+   "revision": "24fd28b17c6a7e2ac4d3597e8853bce2715dd3ad",
+   "split": "dev",
+   "reason": "round 24 holdout (code search); misses inspected by type and field name (no fix needed)"
+  },
+  {
+   "repository": "emipa606/MachineGunDefence",
+   "revision": "6bfdf51f62816179d82973b824bdc5440711058b",
+   "split": "dev",
+   "reason": "round 24 holdout (code search); misses inspected by type and field name (no fix needed)"
+  },
+  {
+   "repository": "mb80/HeatMap",
+   "revision": "245d94bd4b1166883b7f21d569ec668a0cf24a39",
+   "split": "dev",
+   "reason": "round 24 holdout (code search); misses inspected by type and field name (no fix needed)"
+  },
+  {
+   "repository": "Scurvyez/Fireflies",
+   "revision": "b5b7e6899cb222b086abc3c610016bc4e691cfa1",
+   "split": "dev",
+   "reason": "round 24 holdout (code search); misses inspected by type and field name (no fix needed)"
+  },
+  {
+   "repository": "YPetremann/lolitastuff",
+   "revision": "e3c36fc738c1135081abcb4a10a31cf2f028ff6b",
+   "split": "dev",
+   "reason": "round 24 holdout (code search); misses inspected by type and field name (no fix needed)"
+  },
+  {
+   "repository": "Vanilla-Expanded/VanillaWeaponsExpanded-Grenades",
+   "revision": "602f6f0271e61394fbac0798f8e35730e3188122",
+   "split": "dev",
+   "reason": "round 24 holdout (code search); misses inspected by type and field name (no fix needed)"
+  },
+  {
+   "repository": "zach-hill/DeathRattle-Comatose",
+   "revision": "126490bea3756e9428e62995d914453520fc8a52",
+   "split": "dev",
+   "reason": "round 24 holdout (code search); misses inspected by type and field name (no fix needed)"
+  },
+  {
+   "repository": "ArcherSaiter/RJW_Unleashed_Traits",
+   "revision": "77591b6408bf1e8d1795a88b083d755734976458",
+   "split": "dev",
+   "reason": "round 24 holdout (code search); misses inspected by type and field name (no fix needed)"
+  },
+  {
+   "repository": "Dubwise56/Skylights",
+   "revision": "d2dac91c3592434b45e5e509e9208b5374404ba0",
+   "split": "dev",
+   "reason": "round 24 holdout (code search); misses inspected by type and field name (no fix needed)"
+  },
+  {
+   "repository": "alextd/RimWorld-ListEverything",
+   "revision": "798853cfab6f1326fa72852b20c3e71c8ffc1f05",
+   "split": "dev",
+   "reason": "round 24 holdout (code search); misses inspected by type and field name (no fix needed)"
+  },
+  {
+   "repository": "RimWorld-zh-mods/eatKenny-Industrialisation",
+   "revision": "e24821f0c2bb412a97096829a6ee9967219ecb27",
+   "split": "dev",
+   "reason": "round 24 holdout (code search); misses inspected by type and field name (no fix needed)"
+  },
+  {
+   "repository": "cchwsd/rimworld-changedresser",
+   "revision": "fbe6cfa414545884a12e9fe6349f5ec9e875169f",
+   "split": "dev",
+   "reason": "round 24 holdout (code search); misses inspected by type and field name (no fix needed)"
+  },
+  {
+   "repository": "emipa606/NanotrasenArmory",
+   "revision": "73fe008fe6e2f156d334844b702bfc083fc6d0cc",
+   "split": "dev",
+   "reason": "round 24 holdout (code search); misses inspected by type and field name (no fix needed)"
+  },
+  {
+   "repository": "emipa606/MoreConsumablesAndMutagens",
+   "revision": "0bd818c37f2212aef3efea4d5cc679dea8196dfd",
+   "split": "dev",
+   "reason": "round 24 holdout (code search); misses inspected by type and field name (no fix needed)"
+  },
+  {
+   "repository": "emipa606/RefactoredWorkPriorities",
+   "revision": "be366a568c0dfe39d3acfa1785baaa270e7c41bb",
+   "split": "dev",
+   "reason": "round 24 holdout (code search); misses inspected by type and field name (no fix needed)"
+  },
+  {
+   "repository": "emipa606/PersonalMod",
+   "revision": "7583ff239cce8181e763f26f96176805ee753a68",
+   "split": "dev",
+   "reason": "round 24 holdout (code search); misses inspected by type and field name (no fix needed)"
+  },
+  {
+   "repository": "emipa606/RepairWorkType",
+   "revision": "470bc96b187c00a36b0f4f30550a49c835fa32b2",
+   "split": "dev",
+   "reason": "round 24 holdout (code search); misses inspected by type and field name (no fix needed)"
+  },
+  {
+   "repository": "abmpicoli/rimworld_list_everything_fork",
+   "revision": "f8187da716e0d21792c0f1faa7e06895fa672fc6",
+   "split": "dev",
+   "reason": "round 25 holdout (code search); misses inspected by type and field name; led to the truth de-duplication in precision_bench"
+  },
+  {
+   "repository": "emipa606/SteelFoam",
+   "revision": "e41b9675a49c8d4f4a9910c8f2af145ca1ccab3e",
+   "split": "dev",
+   "reason": "round 25 holdout (code search); misses inspected by type and field name; led to the truth de-duplication in precision_bench"
+  },
+  {
+   "repository": "emipa606/MoreThrumbos",
+   "revision": "9fac49caa782d20f0f02b672469ce017367b8a66",
+   "split": "dev",
+   "reason": "round 25 holdout (code search); misses inspected by type and field name; led to the truth de-duplication in precision_bench"
+  },
+  {
+   "repository": "emipa606/Dummy",
+   "revision": "7640c8e9df4739db845a0988500607c505d2b4f7",
+   "split": "dev",
+   "reason": "round 25 holdout (code search); misses inspected by type and field name; led to the truth de-duplication in precision_bench"
+  },
+  {
+   "repository": "emipa606/BeamMeUpScotty",
+   "revision": "274d77106f060adae8c1ceb37754cdc74f00320e",
+   "split": "dev",
+   "reason": "round 25 holdout (code search); misses inspected by type and field name; led to the truth de-duplication in precision_bench"
+  },
+  {
+   "repository": "emipa606/RFTribalRaiders",
+   "revision": "a838440dc20cdcd59b5453c6ec10bf9e85fe4042",
+   "split": "dev",
+   "reason": "round 25 holdout (code search); misses inspected by type and field name; led to the truth de-duplication in precision_bench"
+  },
+  {
+   "repository": "emipa606/RaiderEmus",
+   "revision": "fe68fea774bd14a8f72a91f96c69c3b378143ed3",
+   "split": "dev",
+   "reason": "round 25 holdout (code search); misses inspected by type and field name; led to the truth de-duplication in precision_bench"
+  },
+  {
+   "repository": "emipa606/OuterRimTatooineSandcrawler",
+   "revision": "e01ae5e6a77e99f9122babde6c90bd2c7036a29e",
+   "split": "dev",
+   "reason": "round 25 holdout (code search); misses inspected by type and field name; led to the truth de-duplication in precision_bench"
+  },
+  {
+   "repository": "Taranchuk/SurvivalTools2",
+   "revision": "e1e43a5b4820859e86b49fefbb9c1e595661576d",
+   "split": "dev",
+   "reason": "round 25 holdout (code search); misses inspected by type and field name; led to the truth de-duplication in precision_bench"
+  },
+  {
+   "repository": "emipa606/MiningCoSpaceship",
+   "revision": "7008d1b223b1dc60dbdc6effbb83d9d27a4063c3",
+   "split": "dev",
+   "reason": "round 25 holdout (code search); misses inspected by type and field name; led to the truth de-duplication in precision_bench"
+  },
+  {
+   "repository": "emipa606/BetterScenarioResearchAndTechLevelOptions",
+   "revision": "5e7a81b59c8813c427bf5389ac350901c67330ca",
+   "split": "dev",
+   "reason": "round 25 holdout (code search); misses inspected by type and field name; led to the truth de-duplication in precision_bench"
+  },
+  {
+   "repository": "emipa606/BeastsoftheRim",
+   "revision": "c5b0b0aa0f2c85acf645fb8f68b55d1c02a7b9f6",
+   "split": "dev",
+   "reason": "round 25 holdout (code search); misses inspected by type and field name; led to the truth de-duplication in precision_bench"
+  },
+  {
+   "repository": "emipa606/RealDining",
+   "revision": "271f8219ba2c852175ed2742a2f77f30194961fe",
+   "split": "dev",
+   "reason": "round 25 holdout (code search); misses inspected by type and field name; led to the truth de-duplication in precision_bench"
+  },
+  {
+   "repository": "suancai1234/_Ancient-Urban-Ruins",
+   "revision": "99bbf7aeab8145526ad80ad4ad486e59720ae495",
+   "split": "dev",
+   "reason": "round 25 holdout (code search); misses inspected by type and field name; led to the truth de-duplication in precision_bench"
+  },
+  {
+   "repository": "TheLoneTec/Tecs-Assorted-Patches",
+   "revision": "5b85d619e70206e6cb0aed1a07b79531e9799bcd",
+   "split": "dev",
+   "reason": "round 25 holdout (code search); misses inspected by type and field name; led to the truth de-duplication in precision_bench"
+  },
+  {
+   "repository": "Rim-Of-Madness-Team/Call-of-Cthulhu---Cults",
+   "revision": "f604c315ef37631c355937ceb8a90669c6dfa8c5",
+   "split": "dev",
+   "reason": "round 25 holdout (code search); misses inspected by type and field name; led to the truth de-duplication in precision_bench"
+  },
+  {
+   "repository": "Toakan-Network/RW-TradingControl",
+   "revision": "44a302c3efa59348e5ab16b9ee9a406c5d6d3ab6",
+   "split": "dev",
+   "reason": "round 25 holdout (code search); misses inspected by type and field name; led to the truth de-duplication in precision_bench"
+  },
+  {
+   "repository": "emipa606/NPDTiers",
+   "revision": "716f890a68263746f05513828aed8a7e06fdd103",
+   "split": "dev",
+   "reason": "round 25 holdout (code search); misses inspected by type and field name; led to the truth de-duplication in precision_bench"
+  },
+  {
+   "repository": "emipa606/Desynchronized",
+   "revision": "2fe12952e6b897dbf62599895cb2983c3d74694d",
+   "split": "dev",
+   "reason": "round 25 holdout (code search); misses inspected by type and field name; led to the truth de-duplication in precision_bench"
+  },
+  {
+   "repository": "emipa606/AutopsyTable",
+   "revision": "340d02b80dec6e62ce5fe429e0413454cc012fc8",
+   "split": "dev",
+   "reason": "round 25 holdout (code search); misses inspected by type and field name; led to the truth de-duplication in precision_bench"
+  },
+  {
+   "repository": "doakey3/RimWorldPharmacist",
+   "revision": "adc282d847e66fb7c51a285c6a2954f0a5447d07",
+   "split": "dev",
+   "reason": "round 25 holdout (code search); misses inspected by type and field name; led to the truth de-duplication in precision_bench"
+  },
+  {
+   "repository": "emipa606/ProstheticDidgets",
+   "revision": "55079eb833b3fab2ca9d9b94174f7114e6593050",
+   "split": "dev",
+   "reason": "round 25 holdout (code search); misses inspected by type and field name; led to the truth de-duplication in precision_bench"
+  },
+  {
+   "repository": "RWDevathon/Android-Tiers-Reforged-Core",
+   "revision": "f57f0a0949c42dcda0eed68d9b4569dfc110490a",
+   "split": "dev",
+   "reason": "round 25 holdout (code search); misses inspected by type and field name; led to the truth de-duplication in precision_bench"
+  },
+  {
+   "repository": "emipa606/Swords",
+   "revision": "f713de171691b0b34009eb871ea5f0d7e789486c",
+   "split": "dev",
+   "reason": "round 25 holdout (code search); misses inspected by type and field name; led to the truth de-duplication in precision_bench"
+  },
+  {
+   "repository": "augurr-mods/rimworld-rimfridge",
+   "revision": "4203e446cd11a43c54f73ffc4bd0aedbb58a0f87",
+   "split": "dev",
+   "reason": "round 25 holdout (code search); misses inspected by type and field name; led to the truth de-duplication in precision_bench"
+  },
+  {
+   "repository": "emipa606/StorageCrates",
+   "revision": "55d9d7cbc91a55432597fee4bec7f0e914dcb794",
+   "split": "dev",
+   "reason": "round 25 holdout (code search); misses inspected by type and field name; led to the truth de-duplication in precision_bench"
+  },
+  {
+   "repository": "emipa606/GhostGear",
+   "revision": "65148688e4fb813f06a78f9fa9992cc557a17a74",
+   "split": "dev",
+   "reason": "round 25 holdout (code search); misses inspected by type and field name; led to the truth de-duplication in precision_bench"
+  },
+  {
+   "repository": "emipa606/RFConcrete",
+   "revision": "ef1808f96fcab45bf53938ecc36209f161277a29",
+   "split": "dev",
+   "reason": "round 25 holdout (code search); misses inspected by type and field name; led to the truth de-duplication in precision_bench"
+  },
+  {
+   "repository": "TitaniusRex/RimWorld-FloranRoot",
+   "revision": "2ee286dd6fbfb8d47a3fc7edca234b2a13a64962",
+   "split": "dev",
+   "reason": "round 25 holdout (code search); misses inspected by type and field name; led to the truth de-duplication in precision_bench"
+  },
+  {
+   "repository": "emipa606/Aquarium",
+   "revision": "d4611fef58667c90184bd63cbc3b9f972d5f40fd",
+   "split": "dev",
+   "reason": "round 25 holdout (code search); misses inspected by type and field name; led to the truth de-duplication in precision_bench"
+  },
+  {
+   "repository": "RWDevathon/SkyMind-Neural-Manipulators",
+   "revision": "e931778ecd9dcf38e5f53a6dbabf7bad0ef9d0d7",
+   "split": "dev",
+   "reason": "round 25 holdout (code search); misses inspected by type and field name; led to the truth de-duplication in precision_bench"
+  },
+  {
+   "repository": "emipa606/SDBridges",
+   "revision": "10f045b764e6f639051c535b3ea1a4cf66558e56",
+   "split": "dev",
+   "reason": "round 25 holdout (code search); misses inspected by type and field name; led to the truth de-duplication in precision_bench"
+  },
+  {
+   "repository": "miomelliot/miho-celestial-fox-ru",
+   "revision": "7f012db6795ca4cf962dc140e65019ebab8489b6",
+   "split": "dev",
+   "reason": "round 25 holdout (code search); misses inspected by type and field name; led to the truth de-duplication in precision_bench"
+  },
+  {
+   "repository": "JerryTC02/RimframeGrineerHome",
+   "revision": "6257f7e9345d4ce93db0e11e60d7bd357e28d828",
+   "split": "dev",
+   "reason": "round 25 holdout (code search); misses inspected by type and field name; led to the truth de-duplication in precision_bench"
+  },
+  {
+   "repository": "RimWorldMods/EdB-Interface",
+   "revision": "21ae3f3e4163133b7c46763686305a053e79b9a2",
+   "split": "dev",
+   "reason": "round 25 holdout (code search); misses inspected by type and field name; led to the truth de-duplication in precision_bench"
+  },
+  {
+   "repository": "Watcher011/WatcherHSK-Fallout",
+   "revision": "c69c981086f941440b47a5381a63ada8af48fd38",
+   "split": "dev",
+   "reason": "round 25 holdout (code search); misses inspected by type and field name; led to the truth de-duplication in precision_bench"
+  },
+  {
+   "repository": "kasirii/VanillaStorytellersExpanded-WinstonWave-HSK",
+   "revision": "599b67f85450ca66c1d2b6312497bbe2a1d1bdef",
+   "split": "dev",
+   "reason": "round 25 holdout (code search); misses inspected by type and field name; led to the truth de-duplication in precision_bench"
+  },
+  {
+   "repository": "alextd/Rimworld-GearUpAndGo",
+   "revision": "786775630b85534932220c17590c97d92090c1b2",
+   "split": "dev",
+   "reason": "round 25 holdout (code search); misses inspected by type and field name; led to the truth de-duplication in precision_bench"
+  },
+  {
+   "repository": "RWDevathon/Mechanical-Humanlikes-Core",
+   "revision": "e35cdd37be14fc4cf048c037d3a7807e0dfb9468",
+   "split": "dev",
+   "reason": "round 25 holdout (code search); misses inspected by type and field name; led to the truth de-duplication in precision_bench"
+  },
+  {
+   "repository": "RWDevathon/Android-Tiers-M-Series",
+   "revision": "fa12b6366debe18a0bbcf46685d640d1c8128372",
+   "split": "dev",
+   "reason": "round 25 holdout (code search); misses inspected by type and field name; led to the truth de-duplication in precision_bench"
+  },
+  {
+   "repository": "Ratysz/RT_QuantumStorage",
+   "revision": "9d22146b5ae05b9728238d65a15b98dfaaab8eb9",
+   "split": "dev",
+   "reason": "round 25 holdout (code search); misses inspected by type and field name; led to the truth de-duplication in precision_bench"
+  },
+  {
+   "repository": "emipa606/AutoTamer",
+   "revision": "eb99a629b39620722dc02cf32fc1a4857fba8cc3",
+   "split": "dev",
+   "reason": "round 25 holdout (code search); misses inspected by type and field name; led to the truth de-duplication in precision_bench"
+  },
+  {
+   "repository": "RWDevathon/Android-Tiers-Biomimetics",
+   "revision": "910e6af94cadfc4c08994eac965e3e4fd18ad26a",
+   "split": "dev",
+   "reason": "round 25 holdout (code search); misses inspected by type and field name; led to the truth de-duplication in precision_bench"
+  },
+  {
+   "repository": "emipa606/MountainMiner",
+   "revision": "922cdb0bfd12708a8d599f2094d1b5a733160a0e",
+   "split": "dev",
+   "reason": "round 25 holdout (code search); misses inspected by type and field name; led to the truth de-duplication in precision_bench"
+  },
+  {
+   "repository": "aRandomKiwi/Hunt-For-Me",
+   "revision": "d38eceec35b93c48607b641030ac5a3999e44f3a",
+   "split": "dev",
+   "reason": "round 25 holdout (code search); misses inspected by type and field name; led to the truth de-duplication in precision_bench"
+  },
+  {
+   "repository": "RWDevathon/Artificial-Beings-Framework",
+   "revision": "2f1c925c50b2e38748b8cdf71667f60bb81ca87a",
+   "split": "dev",
+   "reason": "round 25 holdout (code search); misses inspected by type and field name; led to the truth de-duplication in precision_bench"
+  },
+  {
+   "repository": "MSeal/RimworldThanksForTheFish",
+   "revision": "5e15a4f4c824cd2e33a4452c9c0a49ba4df2ec8f",
+   "split": "dev",
+   "reason": "round 25 holdout (code search); misses inspected by type and field name; led to the truth de-duplication in precision_bench"
+  },
+  {
+   "repository": "emipa606/DecorativeTrees",
+   "revision": "5fbd286fafad815b25b70fd5b5b8c59ffd9d6b90",
+   "split": "dev",
+   "reason": "round 25 holdout (code search); misses inspected by type and field name; led to the truth de-duplication in precision_bench"
+  },
+  {
+   "repository": "Dubwise56/Rimkit",
+   "revision": "75685519b185755bbf83e75dd7a650a0e0492d24",
+   "split": "dev",
+   "reason": "round 25 holdout (code search); misses inspected by type and field name; led to the truth de-duplication in precision_bench"
+  },
+  {
+   "repository": "emipa606/SdAdvancedPowergeneration",
+   "revision": "92d039f099e4f75c930feeb8c3debf5a64156cba",
+   "split": "dev",
+   "reason": "round 25 holdout (code search); misses inspected by type and field name; led to the truth de-duplication in precision_bench"
+  },
+  {
+   "repository": "RWDevathon/MH-Drones-Reprogrammed",
+   "revision": "db7b4b00c45f94c063ca137b69dad3a31e717ad4",
+   "split": "dev",
+   "reason": "round 25 holdout (code search); misses inspected by type and field name; led to the truth de-duplication in precision_bench"
+  },
+  {
+   "repository": "emipa606/ArchotechPlus",
+   "revision": "62c75d040f03c2de8d83b478b5629896a73d4b99",
+   "split": "dev",
+   "reason": "round 25 holdout (code search); misses inspected by type and field name; led to the truth de-duplication in precision_bench"
+  },
+  {
+   "repository": "fluffy-mods/RelationsTab",
+   "revision": "30938fcb30da4c4a3b52a24b33531b4a96530f09",
+   "split": "dev",
+   "reason": "round 25 holdout (code search); misses inspected by type and field name; led to the truth de-duplication in precision_bench"
+  },
+  {
+   "repository": "Garethp/Rimworld-FamilyTree",
+   "revision": "d6be3f54c8bd4a7e5eb590a2d816d40cd4300fea",
+   "split": "dev",
+   "reason": "round 25 holdout (code search); misses inspected by type and field name; led to the truth de-duplication in precision_bench"
+  },
+  {
+   "repository": "kaptain-kavern/ADogSaid",
+   "revision": "8c129a7fefdcfb071dab9eb3fe11b6e9648fde04",
+   "split": "dev",
+   "reason": "round 25 holdout (code search); misses inspected by type and field name; led to the truth de-duplication in precision_bench"
+  },
+  {
+   "repository": "Neceros/Reinforced-Walls",
+   "revision": "ea399b89fa1d01d68c6f1cad26c34c7425c90f1e",
+   "split": "dev",
+   "reason": "round 25 holdout (code search); misses inspected by type and field name; led to the truth de-duplication in precision_bench"
+  },
+  {
+   "repository": "HeraldOfTzeentch/CombatExtendedHerald",
+   "revision": "beceb6346d1e984a660dafef772f11b28b1a745e",
+   "split": "dev",
+   "reason": "round 27 holdout (deeper code search); unattributed references inspected by field name, led to the *Def/*DefName hint"
+  },
+  {
+   "repository": "Dubwise56/Rimatomics",
+   "revision": "de328ca971de38ffef6dd5e5054a27105e279d01",
+   "split": "dev",
+   "reason": "round 27 holdout (deeper code search); unattributed references inspected by field name, led to the *Def/*DefName hint"
+  },
+  {
+   "repository": "zachary-foster/Minerals",
+   "revision": "77a42ac4bc45d61b0e045edf5fc43ff190e13488",
+   "split": "dev",
+   "reason": "round 27 holdout (deeper code search); unattributed references inspected by field name, led to the *Def/*DefName hint"
+  },
+  {
+   "repository": "Atla55/Android-Tiers-Core",
+   "revision": "b15a7f345d3b8bbf5bd7f6b9605a5b47f3c1de0d",
+   "split": "dev",
+   "reason": "round 27 holdout (deeper code search); unattributed references inspected by field name, led to the *Def/*DefName hint"
+  },
+  {
+   "repository": "emipa606/Insulation",
+   "revision": "50f600fcc1c997504e1654d15e806ca5164343b3",
+   "split": "dev",
+   "reason": "round 27 holdout (deeper code search); unattributed references inspected by field name, led to the *Def/*DefName hint"
+  },
+  {
+   "repository": "emipa606/XVIMECHFRAME",
+   "revision": "8674a1334e02990a9e214b500d3dfab446f05214",
+   "split": "dev",
+   "reason": "round 27 holdout (deeper code search); unattributed references inspected by field name, led to the *Def/*DefName hint"
+  },
+  {
+   "repository": "emipa606/Prospecting",
+   "revision": "72f1c79afc01c604ccd2977b6c357ea1f0cb817f",
+   "split": "dev",
+   "reason": "round 27 holdout (deeper code search); unattributed references inspected by field name, led to the *Def/*DefName hint"
+  },
+  {
+   "repository": "AobaKuma/MechsuitFramework",
+   "revision": "951b97f2dde4cd9158ab50dffb3310378aec07d1",
+   "split": "dev",
+   "reason": "round 27 holdout (deeper code search); unattributed references inspected by field name, led to the *Def/*DefName hint"
+  },
+  {
+   "repository": "emipa606/RazzleDazzle",
+   "revision": "9d24fbbcac2255477c43c5d88e146a0856f1e56a",
+   "split": "dev",
+   "reason": "round 27 holdout (deeper code search); unattributed references inspected by field name, led to the *Def/*DefName hint"
+  },
+  {
+   "repository": "Zylleon/MoreVanillaBiomes",
+   "revision": "163852aac72f7822792c3377f2b1630acba64a64",
+   "split": "dev",
+   "reason": "round 27 holdout (deeper code search); unattributed references inspected by field name, led to the *Def/*DefName hint"
+  },
+  {
+   "repository": "emipa606/RedAlert2",
+   "revision": "f7e40520a4385e624fcbaf6fa46592fbb6d24791",
+   "split": "dev",
+   "reason": "round 27 holdout (deeper code search); unattributed references inspected by field name, led to the *Def/*DefName hint"
+  },
+  {
+   "repository": "emipa606/RFFishingReWorkSeafoodAndSushiAddon",
+   "revision": "1c1fb22e496468a1172fc94b6cbd280682dcbd2b",
+   "split": "dev",
+   "reason": "round 27 holdout (deeper code search); unattributed references inspected by field name, led to the *Def/*DefName hint"
+  },
+  {
+   "repository": "AobaKuma/Dead-Man-Switch-MobileDragoon",
+   "revision": "822d5f921c556474583d595c74ed8fcdd04fa1b1",
+   "split": "dev",
+   "reason": "round 27 holdout (deeper code search); unattributed references inspected by field name, led to the *Def/*DefName hint"
+  },
+  {
+   "repository": "emipa606/MercersBackpacksNanoSuit",
+   "revision": "8e65054be07c1736b97b71a307f096a4158cbfec",
+   "split": "dev",
+   "reason": "round 27 holdout (deeper code search); unattributed references inspected by field name, led to the *Def/*DefName hint"
+  },
+  {
+   "repository": "ritsu/RimFlix",
+   "revision": "331982806ae83e62c9163f2f493e4a25da26e191",
+   "split": "dev",
+   "reason": "round 27 holdout (deeper code search); unattributed references inspected by field name, led to the *Def/*DefName hint"
+  },
+  {
+   "repository": "emipa606/CASFlakArmour",
+   "revision": "bac2a90aed234c333f422f117865ed3b0d7e0926",
+   "split": "dev",
+   "reason": "round 27 holdout (deeper code search); unattributed references inspected by field name, led to the *Def/*DefName hint"
+  },
+  {
+   "repository": "SWCP-KOTOR/guy762-RR-MM-SWCPCore",
+   "revision": "5b83f3856309cf227c12424049edd9e25b53b7fa",
+   "split": "dev",
+   "reason": "round 27 holdout (deeper code search); unattributed references inspected by field name, led to the *Def/*DefName hint"
+  },
+  {
+   "repository": "emipa606/MMDrumcanMOD",
+   "revision": "cf7d43821095a2095e1ba8da80e209ae4de29a1d",
+   "split": "dev",
+   "reason": "round 27 holdout (deeper code search); unattributed references inspected by field name, led to the *Def/*DefName hint"
+  },
+  {
+   "repository": "emipa606/RabbitOfCaerbannogIncident",
+   "revision": "1e04cbb87c2261e3acd626db6d9f13bf0878601c",
+   "split": "dev",
+   "reason": "round 27 holdout (deeper code search); unattributed references inspected by field name, led to the *Def/*DefName hint"
+  },
+  {
+   "repository": "sumghai/ReplimatMeals",
+   "revision": "9f3661453292ca8ee5e4c70f9f76872b6c5d5951",
+   "split": "dev",
+   "reason": "round 27 holdout (deeper code search); unattributed references inspected by field name, led to the *Def/*DefName hint"
+  },
+  {
+   "repository": "aRandomKiwi/Guards-For-Me",
+   "revision": "bdb4e9cae748aceeaeb5ea43ed369770f9fbea19",
+   "split": "dev",
+   "reason": "round 27 holdout (deeper code search); unattributed references inspected by field name, led to the *Def/*DefName hint"
+  },
+  {
+   "repository": "rheirman/GiddyUpMechanoids",
+   "revision": "feed852e524ba28d1dfa806f4b4e9ce8316aea61",
+   "split": "dev",
+   "reason": "round 27 holdout (deeper code search); unattributed references inspected by field name, led to the *Def/*DefName hint"
+  },
+  {
+   "repository": "emipa606/PulsefireTurret",
+   "revision": "87e94339bb296116c73531452373f05b0e509d70",
+   "split": "dev",
+   "reason": "round 27 holdout (deeper code search); unattributed references inspected by field name, led to the *Def/*DefName hint"
+  },
+  {
+   "repository": "emipa606/RecoveryPod",
+   "revision": "55f3cc6624b30eb968b6d5c5bfc30bcf49870fcb",
+   "split": "dev",
+   "reason": "round 27 holdout (deeper code search); unattributed references inspected by field name, led to the *Def/*DefName hint"
+  },
+  {
+   "repository": "pardeike/TotalFog",
+   "revision": "914c5247910dea7ccf648e16dae69b02eee938a4",
+   "split": "dev",
+   "reason": "round 27 holdout (deeper code search); unattributed references inspected by field name, led to the *Def/*DefName hint"
+  },
+  {
+   "repository": "TurtleShroom/TSP_STORYTIME_RIDES_AGAIN",
+   "revision": "84ab62d792f62a732b44486f9d62a55fce8c28a8",
+   "split": "dev",
+   "reason": "round 27 holdout (deeper code search); unattributed references inspected by field name, led to the *Def/*DefName hint"
+  },
+  {
+   "repository": "Seioch/Kurin-HAR",
+   "revision": "e47079996308404911f4cb1c061ce6b803553415",
+   "split": "dev",
+   "reason": "round 27 holdout (deeper code search); unattributed references inspected by field name, led to the *Def/*DefName hint"
+  },
+  {
+   "repository": "emipa606/AdvancedBiomes",
+   "revision": "24a21800044506cbee5b4630001f313984904558",
+   "split": "dev",
+   "reason": "round 27 holdout (deeper code search); unattributed references inspected by field name, led to the *Def/*DefName hint"
+  },
+  {
+   "repository": "emipa606/MoreRecordsInteraction",
+   "revision": "a37d49c184ec87abc3ae15d1e60a9b30718da3a3",
+   "split": "dev",
+   "reason": "round 27 holdout (deeper code search); unattributed references inspected by field name, led to the *Def/*DefName hint"
+  },
+  {
+   "repository": "ccccd333/EpicSiege-Reworked",
+   "revision": "5f2f80caf3c6fb83e22a2c27702b43e39b88cd85",
+   "split": "dev",
+   "reason": "round 27 holdout (deeper code search); unattributed references inspected by field name, led to the *Def/*DefName hint"
+  },
+  {
+   "repository": "haelime/SelectedPawnPortraitOverlay",
+   "revision": "d1be7bdef4ff72433e8e914d3e6253d9675852f0",
+   "split": "dev",
+   "reason": "round 27 holdout (deeper code search); unattributed references inspected by field name, led to the *Def/*DefName hint"
+  },
+  {
+   "repository": "RimWorld-CCL-Reborn/4M-Mehni-s-Misc-Modifications",
+   "revision": "ad743a32246bb858fa694beb4f5225c04b2d8b5f",
+   "split": "dev",
+   "reason": "round 27 holdout (deeper code search); unattributed references inspected by field name, led to the *Def/*DefName hint"
+  },
+  {
+   "repository": "emipa606/MercersBackpacks",
+   "revision": "a3d3fbeacda2816a2fa65ab1721cdbf3967342ed",
+   "split": "dev",
+   "reason": "round 27 holdout (deeper code search); unattributed references inspected by field name, led to the *Def/*DefName hint"
+  },
+  {
+   "repository": "TheLoneTec/Soft-Warm-Beds-HSK",
+   "revision": "8b82b5ded9f9c981204e29c255f81029d057ffa8",
+   "split": "dev",
+   "reason": "round 27 holdout (deeper code search); unattributed references inspected by field name, led to the *Def/*DefName hint"
+  },
+  {
+   "repository": "ATMnou/IFE",
+   "revision": "c97db0f62da3fc91688d14f021c1bc9e813c18ef",
+   "split": "dev",
+   "reason": "round 27 holdout (deeper code search); unattributed references inspected by field name, led to the *Def/*DefName hint"
+  },
+  {
+   "repository": "jptrrs/SoftWarmBeds",
+   "revision": "05696e5ddb5cc4d311bf5b21c3c45ae98c4dca4f",
+   "split": "dev",
+   "reason": "round 27 holdout (deeper code search); unattributed references inspected by field name, led to the *Def/*DefName hint"
+  },
+  {
+   "repository": "Void-n-Null/HideYourWealth",
+   "revision": "3585254a1e7850b9eaa7a59b1ad972ff154a8bd8",
+   "split": "dev",
+   "reason": "round 27 holdout (deeper code search); unattributed references inspected by field name, led to the *Def/*DefName hint"
+  },
+  {
+   "repository": "emipa606/CASCataphractArmour",
+   "revision": "0e75a0113d2d5bca8a37f126ddd42fe4d4491535",
+   "split": "dev",
+   "reason": "round 27 holdout (deeper code search); unattributed references inspected by field name, led to the *Def/*DefName hint"
+  },
+  {
+   "repository": "emipa606/FuelBurning",
+   "revision": "9e9f7bbc235b3a90b3e66e5ea840c71d2226c67e",
+   "split": "dev",
+   "reason": "round 27 holdout (deeper code search); unattributed references inspected by field name, led to the *Def/*DefName hint"
+  },
+  {
+   "repository": "Shadowrabbit/RaidExtension",
+   "revision": "5f91103a2a7f330170f4428fe66b6e42a598cc29",
+   "split": "dev",
+   "reason": "round 27 holdout (deeper code search); unattributed references inspected by field name, led to the *Def/*DefName hint"
+  },
+  {
+   "repository": "erdelf/MountainMiner",
+   "revision": "96b697b66bd2b921354fb4f76924a5e247c2701a",
+   "split": "dev",
+   "reason": "round 27 holdout (deeper code search); unattributed references inspected by field name, led to the *Def/*DefName hint"
+  },
+  {
+   "repository": "Ionfrigate12345/Rimworld_RaidExtensionContinued",
+   "revision": "479c9358d7dd68a1af5fdfc53e44b5375444267f",
+   "split": "dev",
+   "reason": "round 27 holdout (deeper code search); unattributed references inspected by field name, led to the *Def/*DefName hint"
+  },
+  {
+   "repository": "oelsart/NANAMEFloors",
+   "revision": "1925a52753f5e883dd6579ad7763a53afd551a4c",
+   "split": "dev",
+   "reason": "round 27 holdout (deeper code search); unattributed references inspected by field name, led to the *Def/*DefName hint"
+  },
+  {
+   "repository": "m1st4x/RimStory",
+   "revision": "8400e43a32fee92ee5dfd43514ba8d38b63983f7",
+   "split": "dev",
+   "reason": "round 27 holdout (deeper code search); unattributed references inspected by field name, led to the *Def/*DefName hint"
+  },
+  {
+   "repository": "Khaligufzel/RimStory",
+   "revision": "7841a3bcb6b6c34121315e2faf0b9dfc5712d158",
+   "split": "dev",
+   "reason": "round 27 holdout (deeper code search); unattributed references inspected by field name, led to the *Def/*DefName hint"
+  },
+  {
+   "repository": "RealTelefonmast/UtilityColumns",
+   "revision": "8ebd1ae2e31d24959c1c2420e9662a706cc27474",
+   "split": "dev",
+   "reason": "round 27 holdout (deeper code search); unattributed references inspected by field name, led to the *Def/*DefName hint"
+  },
+  {
+   "repository": "emipa606/DireRaids",
+   "revision": "38d01be61054880f121ebafa1f85f2a775467467",
+   "split": "dev",
+   "reason": "round 27 holdout (deeper code search); unattributed references inspected by field name, led to the *Def/*DefName hint"
+  },
+  {
+   "repository": "N7Huntsman/Combat-Shields",
+   "revision": "460c7cc44c8579637c35004d1ec1c017d19c4485",
+   "split": "dev",
+   "reason": "round 27 holdout (deeper code search); unattributed references inspected by field name, led to the *Def/*DefName hint"
+  }
+ ]
+}

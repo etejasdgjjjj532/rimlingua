@@ -1,0 +1,172 @@
+name: Native portable build
+
+on:
+  push:
+    branches: [main, master]
+  pull_request:
+  workflow_dispatch:
+    inputs:
+      private_free_quota_confirmed:
+        description: 'I verified private-repository free quota and disabled paid overages'
+        type: boolean
+        default: false
+      verify_windows11_client:
+        description: 'Also test the x64 portable on the standard Windows 11 Arm64 runner (OS x64 emulation)'
+        type: boolean
+        default: false
+  workflow_call:
+    inputs:
+      ref:
+        type: string
+        default: ''
+      private_free_quota_confirmed:
+        type: boolean
+        default: false
+      verify_windows11_client:
+        type: boolean
+        default: false
+
+permissions:
+  contents: read
+
+jobs:
+  test-build:
+    if: ${{ github.event.repository.private == false || inputs.private_free_quota_confirmed == true }}
+    strategy:
+      fail-fast: false
+      matrix:
+        include:
+          - os: ubuntu-22.04
+            target: linux
+          - os: windows-latest
+            target: windows
+    runs-on: ${{ matrix.os }}
+    timeout-minutes: 30
+    env:
+      PYTHONUTF8: '1'
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ inputs.ref || github.sha }}
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+          cache: pip
+          cache-dependency-path: pyproject.toml
+      - name: Linux display and fonts
+        if: runner.os == 'Linux'
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y xvfb libegl1 libgl1 libxcb-cursor0 libxcb-xinerama0 libxkbcommon-x11-0 fonts-noto-cjk
+      - name: Free project-local development dependencies
+        run: python -m pip install '.[dev]'
+      - name: Full regression suite
+        env:
+          QT_QPA_PLATFORM: offscreen
+        run: python tools/run_tests.py
+      - name: Native Linux source GUI at 100% and 200%
+        if: runner.os == 'Linux'
+        shell: bash
+        run: |
+          for scale in 1 2; do
+            QT_QPA_PLATFORM=xcb QT_SCALE_FACTOR=$scale xvfb-run -a -s '-screen 0 3840x2160x24' python tools/run_tests.py --script tools/verify_native_gui.py --require-native --output artifacts/source/linux-scale-$scale
+          done
+      - name: Native Windows source GUI at 100% and 200%
+        if: runner.os == 'Windows'
+        shell: pwsh
+        run: |
+          $env:QT_QPA_PLATFORM = 'windows'
+          foreach ($scale in 1, 2) {
+            $env:QT_SCALE_FACTOR = "$scale"
+            python tools/run_tests.py --script tools/verify_native_gui.py --require-native --output "artifacts/source/windows-scale-$scale"
+            if ($LASTEXITCODE -ne 0) { throw 'Native source GUI verification failed' }
+          }
+      - name: Build native portable archive and execute bundled self-test
+        run: python tools/build_portable.py --target ${{ matrix.target }}
+      - name: Native Linux binary GUI at 100% and 200%
+        if: runner.os == 'Linux'
+        shell: bash
+        run: |
+          for scale in 1 2; do
+            QT_QPA_PLATFORM=xcb QT_SCALE_FACTOR=$scale xvfb-run -a -s '-screen 0 3840x2160x24' dist/RimWorldTranslationEditor/RimWorldTranslationEditor --verify-gui --require-native --output artifacts/binary/linux-scale-$scale
+          done
+      - name: Native Windows binary GUI at 100% and 200%
+        if: runner.os == 'Windows'
+        shell: pwsh
+        run: |
+          $env:QT_QPA_PLATFORM = 'windows'
+          foreach ($scale in 1, 2) {
+            $env:QT_SCALE_FACTOR = "$scale"
+            $process = Start-Process -FilePath (Resolve-Path 'dist/RimWorldTranslationEditor/RimWorldTranslationEditor.exe') -ArgumentList '--verify-gui', '--require-native', '--output', "artifacts/binary/windows-scale-$scale" -Wait -PassThru
+            if ($process.ExitCode -ne 0) { throw 'Native binary GUI verification failed' }
+          }
+      - name: Linux extracted archive with Python and Git off PATH
+        if: runner.os == 'Linux'
+        shell: bash
+        run: |
+          QT_QPA_PLATFORM=xcb xvfb-run -a -s '-screen 0 3840x2160x24' python tools/verify_portable_archive.py --build-output dist --output artifacts/extracted
+      - name: Windows extracted archive with Python and Git off PATH
+        if: runner.os == 'Windows'
+        env:
+          QT_QPA_PLATFORM: windows
+        run: python tools/verify_portable_archive.py --build-output dist --output artifacts/extracted
+      - name: Attach matching native GUI evidence and finalize release archive
+        run: python tools/build_portable.py --finalize artifacts/extracted/scale-1/gui-report.json artifacts/extracted/scale-2/gui-report.json
+      - name: Save native screenshots and diagnostic reports
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: verification-${{ matrix.target }}
+          path: |
+            artifacts/source/
+            artifacts/binary/
+            artifacts/extracted/
+            dist/build-report.json
+            build/portable/binary-self-test.json
+          retention-days: 7
+          if-no-files-found: warn
+      - name: Save downloadable portable artifacts
+        uses: actions/upload-artifact@v4
+        with:
+          name: portable-${{ matrix.target }}
+          path: |
+            dist/*.zip
+            dist/*.tar.gz
+            dist/*.sha256
+          retention-days: 7
+          if-no-files-found: error
+
+  windows11-client:
+    needs: test-build
+    if: ${{ inputs.verify_windows11_client && (github.event.repository.private == false || inputs.private_free_quota_confirmed == true) }}
+    runs-on: windows-11-arm
+    timeout-minutes: 15
+    env:
+      PYTHONUTF8: '1'
+      QT_QPA_PLATFORM: windows
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ inputs.ref || github.sha }}
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+          architecture: x64
+      - uses: actions/download-artifact@v4
+        with:
+          name: portable-windows
+          path: artifacts/native-windows-build
+      - name: Verify actual Windows 11 client, both DPI scales, and Python-free portable
+        shell: pwsh
+        run: |
+          $archives = @(Get-ChildItem 'artifacts/native-windows-build/*-windows-x86_64.zip')
+          if ($archives.Count -ne 1) { throw 'Exactly one native x64 Windows archive is required' }
+          python tools/verify_portable_archive.py --archive $archives[0].FullName --output artifacts/windows11-client --require-windows-client
+          if ($LASTEXITCODE -ne 0) { throw 'Windows 11 client verification failed' }
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: verification-windows11-client-x64-emulation
+          path: artifacts/windows11-client/
+          retention-days: 7
+          if-no-files-found: warn

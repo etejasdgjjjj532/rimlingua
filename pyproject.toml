@@ -1,0 +1,30 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "rimworld-translation-editor"
+dynamic = ["version"]
+description = "Standalone RimWorld multilingual translation editor"
+requires-python = ">=3.11"
+license = "MPL-2.0"
+license-files = ["LICENSE"]
+dependencies = [
+  "PySide6>=6.8,<7",
+  "lxml>=5,<7",
+  "dnfile>=0.17,<1",
+  "polib>=1.2,<2",
+]
+
+[project.optional-dependencies]
+dev = ["PyInstaller>=6.16,<7"]
+
+[project.gui-scripts]
+rimworld-translator = "rimworld_translator.gui:main"
+
+[tool.setuptools.packages.find]
+include = ["rimworld_translator*"]
+[tool.setuptools.dynamic]
+version = {attr = "rimworld_translator.version.__version__"}
+[tool.setuptools.package-data]
+rimworld_translator = ["assets/flags/*.svg", "assets/flags/LICENSE", "assets/field_contracts.json"]

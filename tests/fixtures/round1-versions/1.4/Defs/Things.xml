@@ -1,0 +1,1 @@
+<Defs><ThingDef Name="Base" Abstract="True"><description>Inherited description</description></ThingDef><ThingDef ParentName="Base"><defName>Rifle</defName><label>old rifle</label></ThingDef><ThingDef><defName>Old</defName><label>Old label</label></ThingDef></Defs>

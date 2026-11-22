@@ -1,0 +1,282 @@
+{
+ "_comment": "Known internal (non-language) field contracts. Never a MOD or framework blacklist: each 'owned' row is one exact CLR declaring type + field whose value the code uses as an identifier, path, layout or condition, found in a reviewed static audit; other fields of the same MOD, other types and subclasses are not affected. 'legacy': the same contracts for saved entries without CLR owner metadata, matched by Def type (group) and the key path after the Def name; '*' matches any one segment and a list matches any of its names. An empty reason means no known exclusion, not proof of localization safety.",
+ "owned": [
+  {
+   "owner": "SaveOurShip2.ShipDef",
+   "field": "bigString",
+   "reason": "Serialized ship layout, not display text",
+   "evidence": "round 67 audit; tests/test_extraction_round67.py"
+  },
+  {
+   "owner": "SaveOurShip2.ShipShape",
+   "field": "shapeOrDef",
+   "reason": "Ship shape / Def reference",
+   "evidence": "round 67 audit; tests/test_extraction_round67.py"
+  },
+  {
+   "owner": "SaveOurShip2.NavyDef",
+   "field": "colorPrimary",
+   "reason": "Named palette reference",
+   "evidence": "round 67 audit; tests/test_extraction_round67.py"
+  },
+  {
+   "owner": "SaveOurShip2.NavyDef",
+   "field": "colorSecondary",
+   "reason": "Named palette reference",
+   "evidence": "round 67 audit; tests/test_extraction_round67.py"
+  },
+  {
+   "owner": "RimWorld.StorytellerCompProperties",
+   "field": "enableIfAnyModActive",
+   "reason": "MOD package-ID condition",
+   "evidence": "round 67 audit; tests/test_extraction_round67.py"
+  },
+  {
+   "owner": "RimWorld.StorytellerCompProperties",
+   "field": "disableIfAnyModActive",
+   "reason": "MOD package-ID condition",
+   "evidence": "round 67 audit; tests/test_extraction_round67.py"
+  },
+  {
+   "owner": "SaveOurShip2.CompProps_ResearchUnlock",
+   "field": "unlock",
+   "reason": "Research unlock identifier",
+   "evidence": "round 67 audit; tests/test_extraction_round67.py"
+  },
+  {
+   "owner": "SaveOurShip2.CompProps_Unfold",
+   "field": "graphicPathAlt",
+   "reason": "Texture asset path",
+   "evidence": "round 67 audit; tests/test_extraction_round67.py"
+  },
+  {
+   "owner": "SaveOurShip2.SymbolResolver_ShipDebrisRoom",
+   "field": "interior",
+   "reason": "Interior resolver identifier",
+   "evidence": "round 67 audit; tests/test_extraction_round67.py"
+  },
+  {
+   "owner": "SaveOurShip2.SymbolResolver_ShipRoom",
+   "field": "interior",
+   "reason": "Interior resolver identifier",
+   "evidence": "round 67 audit; tests/test_extraction_round67.py"
+  },
+  {
+   "owner": "SaveOurShip2.SymbolResolver_ShipRoomTriangle1",
+   "field": "interior",
+   "reason": "Interior resolver identifier",
+   "evidence": "round 67 audit; tests/test_extraction_round67.py"
+  },
+  {
+   "owner": "SaveOurShip2.SymbolResolver_ShipRoomTriangle2",
+   "field": "interior",
+   "reason": "Interior resolver identifier",
+   "evidence": "round 67 audit; tests/test_extraction_round67.py"
+  },
+  {
+   "owner": "RimWorld.ScenPart_PlanetLayer",
+   "field": "tag",
+   "reason": "Scenario planet-layer matching tag",
+   "evidence": "round 67 audit; tests/test_extraction_round67.py"
+  },
+  {
+   "owner": "Verse.HediffDef",
+   "field": "tags",
+   "reason": "Hediff compatibility matching tag",
+   "evidence": "round 67 audit; tests/test_extraction_round67.py"
+  },
+  {
+   "owner": "Verse.RecipeDef",
+   "field": "incompatibleWithHediffTags",
+   "reason": "Hediff compatibility matching tag",
+   "evidence": "round 67 audit; tests/test_extraction_round67.py"
+  },
+  {
+   "owner": "GD3.ScriptButton",
+   "field": "action",
+   "reason": "Script control-flow dispatch identifier",
+   "evidence": "round 80 audit; tests/test_round80_extraction.py"
+  },
+  {
+   "owner": "GD3.ScriptButton",
+   "field": "branch",
+   "reason": "Script branch dictionary identifier",
+   "evidence": "round 80 audit; tests/test_round80_extraction.py"
+  },
+  {
+   "owner": "GD3.ScriptTree",
+   "field": "graphic",
+   "reason": "Script portrait texture asset path",
+   "evidence": "round 80 audit; tests/test_round80_extraction.py"
+  },
+  {
+   "owner": "GD3.MechanoidScriptDef",
+   "field": "priceKind",
+   "reason": "Script payment resource selector",
+   "evidence": "round 80 audit; tests/test_round80_extraction.py"
+  },
+  {
+   "owner": "GD3.MechanoidScriptDef",
+   "field": "branch",
+   "reason": "Script branch dictionary identifier",
+   "evidence": "round 80 audit; tests/test_round80_extraction.py"
+  },
+  {
+   "owner": "CombatExtended.ProjectilePropertiesCE",
+   "field": "casingMoteDefname",
+   "reason": "Casing FleckDef reference",
+   "evidence": "round 81 audit; tests/test_round81_extraction.py"
+  },
+  {
+   "owner": "CombatExtended.ProjectilePropertiesCE",
+   "field": "casingFilthDefname",
+   "reason": "Casing filth ThingDef reference",
+   "evidence": "round 81 audit; tests/test_round81_extraction.py"
+  },
+  {
+   "owner": "CombatExtended.BipodCategoryDef",
+   "field": "bipod_id",
+   "reason": "Bipod weapon-tag matching identifier",
+   "evidence": "round 86 audit; tests/test_round86_extraction.py"
+  }
+ ],
+ "legacy": [
+  {
+   "groups": [
+    "CombatExtended.BipodCategoryDef"
+   ],
+   "path": [
+    "bipod_id"
+   ],
+   "reason": "Bipod weapon-tag matching identifier",
+   "evidence": "round 86 audit; tests/test_round86_extraction.py"
+  },
+  {
+   "groups": [
+    "SaveOurShip2.ShipDef"
+   ],
+   "path": [
+    "bigString"
+   ],
+   "reason": "Serialized ship layout, not display text",
+   "evidence": "round 67 audit; tests/test_extraction_round67.py"
+  },
+  {
+   "groups": [
+    "SaveOurShip2.ShipDef"
+   ],
+   "path": [
+    "core",
+    "shapeOrDef"
+   ],
+   "reason": "Ship shape / Def reference",
+   "evidence": "round 67 audit; tests/test_extraction_round67.py"
+  },
+  {
+   "groups": [
+    "SaveOurShip2.NavyDef"
+   ],
+   "path": [
+    [
+     "colorPrimary",
+     "colorSecondary"
+    ]
+   ],
+   "reason": "Named palette reference",
+   "evidence": "round 67 audit; tests/test_extraction_round67.py"
+  },
+  {
+   "groups": [
+    "StorytellerDef",
+    "RimWorld.StorytellerDef"
+   ],
+   "path": [
+    "comps",
+    "*",
+    [
+     "enableIfAnyModActive",
+     "disableIfAnyModActive"
+    ],
+    "*"
+   ],
+   "reason": "MOD package-ID condition",
+   "evidence": "round 67 audit; tests/test_extraction_round67.py"
+  },
+  {
+   "groups": [
+    "ThingDef",
+    "Verse.ThingDef"
+   ],
+   "path": [
+    "comps",
+    "*",
+    "unlock"
+   ],
+   "reason": "Research unlock identifier; legacy CLR owner requires verification",
+   "evidence": "round 67 audit; tests/test_extraction_round67.py"
+  },
+  {
+   "groups": [
+    "ThingDef",
+    "Verse.ThingDef"
+   ],
+   "path": [
+    "comps",
+    "*",
+    "graphicPathAlt"
+   ],
+   "reason": "Texture asset path; legacy CLR owner requires verification",
+   "evidence": "round 67 audit; tests/test_extraction_round67.py"
+  },
+  {
+   "groups": [
+    "RuleDef",
+    "RimWorld.BaseGen.RuleDef"
+   ],
+   "path": [
+    "resolvers",
+    "*",
+    "interior"
+   ],
+   "reason": "Interior resolver identifier; legacy CLR owner requires verification",
+   "evidence": "round 67 audit; tests/test_extraction_round67.py"
+  },
+  {
+   "groups": [
+    "ScenarioDef",
+    "RimWorld.ScenarioDef"
+   ],
+   "path": [
+    "scenario",
+    "surfaceLayer",
+    "tag"
+   ],
+   "reason": "Scenario planet-layer matching tag",
+   "evidence": "round 67 audit; tests/test_extraction_round67.py"
+  },
+  {
+   "groups": [
+    "HediffDef",
+    "Verse.HediffDef"
+   ],
+   "path": [
+    "tags",
+    "*"
+   ],
+   "reason": "Hediff compatibility matching tag",
+   "evidence": "round 67 audit; tests/test_extraction_round67.py"
+  },
+  {
+   "groups": [
+    "RecipeDef",
+    "Verse.RecipeDef"
+   ],
+   "path": [
+    "incompatibleWithHediffTags",
+    "*"
+   ],
+   "reason": "Hediff compatibility matching tag",
+   "evidence": "round 67 audit; tests/test_extraction_round67.py"
+  }
+ ]
+}

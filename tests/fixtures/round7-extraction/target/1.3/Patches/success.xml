@@ -1,0 +1,1 @@
+<Patch><Operation Class="PatchOperationSequence"><operations><li Class="PatchOperationTest"><success>Invert</success><xpath>Defs/ThingDef/description</xpath></li><li Class="PatchOperationAdd"><xpath>Defs/ThingDef[defName="Desk"]</xpath><value><description>inverted absence</description></value></li></operations></Operation></Patch>

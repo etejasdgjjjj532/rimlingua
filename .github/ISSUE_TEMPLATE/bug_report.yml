@@ -1,0 +1,39 @@
+name: Bug report
+description: Report a reproducible problem with startup, extraction, editing, saving or installation
+title: '[Bug] '
+body:
+  - type: markdown
+    attributes:
+      value: 'Include the OS, display scale, app version and steps to reproduce. Do not attach private project.json files or source MOD text.'
+  - type: input
+    id: version
+    attributes:
+      label: App version
+      placeholder: '0.3.0; portable or source install'
+    validations:
+      required: true
+  - type: input
+    id: system
+    attributes:
+      label: OS and display scale
+      placeholder: 'Windows 11 200% / Ubuntu 22.04 Wayland 100%'
+    validations:
+      required: true
+  - type: textarea
+    id: steps
+    attributes:
+      label: Steps to reproduce
+      description: 'Actions in order and the actual result'
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected result
+    validations:
+      required: true
+  - type: textarea
+    id: diagnostic
+    attributes:
+      label: Diagnostics and screenshots
+      description: 'Optional. Remove personal paths and private text.'
