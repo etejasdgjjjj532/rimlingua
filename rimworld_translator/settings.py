@@ -66,7 +66,7 @@ def normalize(data: dict) -> dict:
             data[field] = DEFAULTS[field]
     if not isinstance(data['reduce_motion'],bool):
         data['reduce_motion'] = False
-    if data['theme_mode'] not in {'system','light','dark'}:
+    if not isinstance(data['theme_mode'],str) or data['theme_mode'] not in {'system','light','dark'}:
         data['theme_mode'] = 'system'
     if not isinstance(data['ui_language'],str) or data['ui_language'] not in UI_LANGUAGES:
         data['ui_language'] = DEFAULTS['ui_language']

@@ -14,9 +14,8 @@ import re
 import tarfile
 import xml.etree.ElementTree as ET
 
-from .core import MAX_XML, english_comment
+from .core import MAX_XML, PLACEHOLDER as _PLACEHOLDER, english_comment
 
-_PLACEHOLDER = "TODO"
 _LIST_ITEM = re.compile(r"<li>(.*?)</li>", re.S)
 
 

@@ -10,9 +10,7 @@ from dataclasses import dataclass, field
 from pathlib import Path
 import xml.etree.ElementTree as ET
 
-from .core import MAX_XML
-
-_PLACEHOLDER = 'TODO'
+from .core import MAX_XML, PLACEHOLDER as _PLACEHOLDER
 
 
 @dataclass(frozen=True)

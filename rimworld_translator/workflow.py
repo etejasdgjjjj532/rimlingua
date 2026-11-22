@@ -11,7 +11,7 @@ import re
 from typing import Iterable
 import xml.etree.ElementTree as ET
 
-from .core import Entry, Project, atomic_write, safe_xml, writable_destination
+from .core import PLACEHOLDER as _PLACEHOLDER, Entry, Project, atomic_write, safe_xml, writable_destination
 from .languages import LANGUAGES, validate_language
 from .translation_diff import read_xml_diff
 
@@ -110,10 +110,6 @@ def _xml_identity(path: Path, key: str, entries_by_key: dict[str, list[Entry]]) 
         return f"DefInjected:{group}:{key}"
     matches = entries_by_key.get(key, [])
     return matches[0].id if len(matches) == 1 else key
-
-
-# RimWorld reads the literal value "TODO" as an untranslated placeholder.
-_PLACEHOLDER = "TODO"
 
 
 def _list_item_entries(path: Path, key: str, entries_by_key: dict[str, list[Entry]]) -> list[Entry]:

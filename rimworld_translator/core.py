@@ -16,6 +16,8 @@ import xml.etree.ElementTree as ET
 
 
 MAX_XML = 8 * 1024 * 1024
+# RimWorld reads the literal value "TODO" as an untranslated placeholder.
+PLACEHOLDER = "TODO"
 FIELDS = {"label", "description", "labelPlural", "jobString", "reportString", "verb", "gerund", "pawnLabel", "inspectString", "deathMessage", "labelShort", "text", "title"}
 KEY = re.compile(r"^[A-Za-z_][A-Za-z0-9_.-]*$")
 PACKAGE = re.compile(r"^[A-Za-z0-9_]+(?:\.[A-Za-z0-9_]+)+$")
