@@ -159,7 +159,7 @@ class VersionProfileTests(unittest.TestCase):
         core.export_versions_test(project, target)
         custom = target / 'notes.txt'
         custom.write_text('keep')
-        before = {str(p.relative_to(target)): p.read_bytes() for p in target.rglob('*') if p.is_file()}
+        before = {p.relative_to(target).as_posix(): p.read_bytes() for p in target.rglob('*') if p.is_file()}
         project.switch_version('1.10')
         greeting = 'Keyed:Keyed:Greeting'
         self.assertIn(greeting, project.entry_index())

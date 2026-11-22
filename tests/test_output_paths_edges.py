@@ -73,9 +73,9 @@ class OutputPathEdgeTests(unittest.TestCase):
                 self.refused(relative, 'relative')
 
     def test_tilde_expands_to_home_before_the_checks(self):
-        with mock.patch.dict(os.environ, {'HOME': str(self.root / 'home')}):
+        with mock.patch.dict(os.environ, {'HOME': str(self.root / 'home'), 'USERPROFILE': str(self.root / 'home')}):
             self.assertEqual(self.check('~/MyTranslation'), (self.root / 'home/MyTranslation').resolve())
-        with mock.patch.dict(os.environ, {'HOME': str(self.source)}):
+        with mock.patch.dict(os.environ, {'HOME': str(self.source), 'USERPROFILE': str(self.source)}):
             self.refused('~/Translation', 'source')
 
     # Trailing separators

@@ -35,7 +35,7 @@ class VersionOutputRound16Tests(unittest.TestCase):
 
     @staticmethod
     def snapshot(root):
-        return {str(path.relative_to(root)): path.read_bytes()
+        return {path.relative_to(root).as_posix(): path.read_bytes()
                 for path in root.rglob('*') if path.is_file()}
 
     def test_staging_write_failure_keeps_previous_all_version_output(self):
@@ -104,7 +104,7 @@ class VersionOutputRound16Tests(unittest.TestCase):
         obsolete.write_bytes(b'<LanguageData><Old>old</Old></LanguageData>')
         marker = self.target / '.rimworld-translator.json'
         metadata = json.loads(marker.read_text())
-        metadata['files'].append(str(obsolete.relative_to(self.target)))
+        metadata['files'].append(obsolete.relative_to(self.target).as_posix())
         marker.write_text(json.dumps(metadata), encoding='utf-8')
         return obsolete
 

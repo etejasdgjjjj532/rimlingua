@@ -45,7 +45,7 @@ class SaveStatusRound37Tests(unittest.TestCase):
         self.app.processEvents()
 
     def output_hashes(self):
-        return {str(path.relative_to(self.output)): hashlib.sha256(path.read_bytes()).hexdigest()
+        return {path.relative_to(self.output).as_posix(): hashlib.sha256(path.read_bytes()).hexdigest()
                 for path in self.output.rglob('*') if path.is_file()}
 
     def test_json_only_save_does_not_claim_xml_exists_in_either_ui_language(self):

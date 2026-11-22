@@ -39,7 +39,7 @@ class VersionOutputRound29Tests(unittest.TestCase):
         project.mark_reviewed(identity, approved=True)
         target = self.root / 'formal'
         export_mod(project, target)
-        before = {str(path.relative_to(target)): path.read_bytes()
+        before = {path.relative_to(target).as_posix(): path.read_bytes()
                   for path in target.rglob('*') if path.is_file()}
         self.revive(project)
         saved = self.root / 'workspace/returned.json'
@@ -47,7 +47,7 @@ class VersionOutputRound29Tests(unittest.TestCase):
         project = Project.load(saved)
         with self.assertRaisesRegex(ValueError, 'Source changed'):
             export_mod(project, target)
-        self.assertEqual({str(path.relative_to(target)): path.read_bytes()
+        self.assertEqual({path.relative_to(target).as_posix(): path.read_bytes()
                           for path in target.rglob('*') if path.is_file()}, before)
         project.mark_reviewed(identity, approved=True)
         export_mod(project, target)

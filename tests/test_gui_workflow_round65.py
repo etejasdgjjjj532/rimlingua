@@ -17,9 +17,10 @@ class CompactTrialReportRound65Tests(unittest.TestCase):
                 config = Path(temporary) / f'{width}.json'
                 config.write_text(json.dumps({'screens': [{'name': 'compact', 'width': width,
                     'height': height, 'logicalDpi': 96, 'logicalBaseDpi': 96, 'dpr': 1}]}))
-                env = dict(os.environ, QT_QPA_PLATFORM=f'offscreen:configfile={config}',
+                # QT_QPA_PLATFORM is split on ':', so pass the config relative to cwd (a drive letter would break it).
+                env = dict(os.environ, QT_QPA_PLATFORM=f'offscreen:configfile={config.name}',
                            RW65_COMPACT_SCREEN_CHILD='1')
-                run = subprocess.run([sys.executable, __file__, '-v'], env=env,
+                run = subprocess.run([sys.executable, str(Path(__file__).resolve()), '-v'], env=env, cwd=temporary,
                                      text=True, capture_output=True, timeout=30)
                 print(f'compact screen {width}x{height}:\n{run.stdout}{run.stderr}', flush=True)
                 self.assertEqual(run.returncode, 0, f'{width}x{height} actual Qt screen failed')
@@ -49,7 +50,7 @@ class CompactTrialReportRound65Tests(unittest.TestCase):
                     project.set_translation(entry.id, '安全 ' + version if entry.key == 'Safe' else '危険')
             saved = root / ('long-workspace-' + 'w' * 80) / ('nested-' + 'n' * 80) / 'project.json'
             project.save(saved)
-            tree = lambda: {str(p.relative_to(root)): p.read_bytes() for p in root.rglob('*') if p.is_file()}
+            tree = lambda: {p.relative_to(root).as_posix(): p.read_bytes() for p in root.rglob('*') if p.is_file()}
             before_source = {p.name: p.read_bytes() for p in source.rglob('*') if p.is_file()}
             window = Window(settings_path=root / 'settings.json')
             try:

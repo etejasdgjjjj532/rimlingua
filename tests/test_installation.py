@@ -55,7 +55,7 @@ class InstallationTests(unittest.TestCase):
                                              "1.6.4871", None, "linux", "Steam")
 
     def tree_hashes(self, root):
-        return {str(p.relative_to(root)): hashlib.sha256(p.read_bytes()).hexdigest()
+        return {p.relative_to(root).as_posix(): hashlib.sha256(p.read_bytes()).hexdigest()
                 for p in root.rglob("*") if p.is_file()}
 
     def test_review_is_read_only_then_installs_dedicated_owned_output(self):

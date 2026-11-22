@@ -52,7 +52,7 @@ class FormalVersionGuiTests(unittest.TestCase):
         self.app.processEvents()
 
     def tree(self, root):
-        return {str(p.relative_to(root)): p.read_bytes() for p in root.rglob('*') if p.is_file()}
+        return {p.relative_to(root).as_posix(): p.read_bytes() for p in root.rglob('*') if p.is_file()}
 
     def test_export_button_writes_ready_versions_and_reports_held(self):
         self.assertTrue(self.window.generate())

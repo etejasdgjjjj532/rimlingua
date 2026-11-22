@@ -8,9 +8,15 @@ import tempfile
 
 def main():
     root = Path(__file__).resolve().parents[1]
+    # Windows hands out 8.3 short temporary paths (RUNNER~1) while the code resolves paths to the long form;
+    # give this process and every child the long form so expected and returned paths compare equal.
+    temporary_root = str(Path(tempfile.gettempdir()).resolve())
+    tempfile.tempdir = temporary_root
     with tempfile.TemporaryDirectory(prefix='rimworld-tests-') as directory:
         state = Path(directory)
         environment = dict(os.environ)
+        for variable in ('TMP', 'TEMP', 'TMPDIR'):
+            environment[variable] = temporary_root
         for variable, folder in (('XDG_CONFIG_HOME', 'config'), ('XDG_DATA_HOME', 'data'),
                                  ('XDG_CACHE_HOME', 'cache'), ('XDG_STATE_HOME', 'state')):
             path = state / folder

@@ -52,7 +52,7 @@ class VersionOutputRound6Tests(unittest.TestCase):
         return self.target / version / 'Languages/Japanese/DefInjected/ThingDef/Translations.xml'
 
     def snapshot(self):
-        return {str(path.relative_to(self.target)): path.read_bytes()
+        return {path.relative_to(self.target).as_posix(): path.read_bytes()
                 for path in self.target.rglob('*') if path.is_file()}
 
     def change_translations(self):

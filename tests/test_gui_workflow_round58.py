@@ -58,7 +58,7 @@ class DeclaredTrialOutputRound58Tests(unittest.TestCase):
         self.app.processEvents()
 
     def bytes_tree(self, root):
-        return {str(path.relative_to(root)): path.read_bytes() for path in root.rglob('*') if path.is_file()}
+        return {path.relative_to(root).as_posix(): path.read_bytes() for path in root.rglob('*') if path.is_file()}
 
     def button(self):
         button = getattr(self.window, 'test_export_button', None)

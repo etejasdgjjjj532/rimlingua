@@ -1129,13 +1129,18 @@ def _publish_export(project: Project, target: Path, payloads: dict[str, bytes],
         old = metadata.get("files", [])
         if not isinstance(old, list) or not all(isinstance(x, str) for x in old):
             raise ValueError("Invalid export manifest")
-    for relative in [*payloads, *old, ".rimworld-translator.json"]:
+    relatives = [*payloads, *old, ".rimworld-translator.json"]
+    for relative in relatives:
         if not isinstance(relative, str):
             raise ValueError("Invalid manifest")
         rel = Path(relative)
         if rel.is_absolute() or ".." in rel.parts or not (relative == ".rimworld-translator.json" or is_export_content_path(relative)):
             raise ValueError("Unsafe export manifest path")
-        destination = target / rel
+    # Case aliases first: on a case-insensitive filesystem (Windows, macOS) a case-only clash would otherwise
+    # surface as an unrelated "not owned" conflict below.
+    _validate_export_case_aliases(target, relatives)
+    for relative in relatives:
+        destination = target / Path(relative)
         if destination.exists() and not destination.is_file():
             raise ValueError("Export file conflicts with an existing path")
         if relative in payloads and relative not in old and destination.exists():
@@ -1145,7 +1150,6 @@ def _publish_export(project: Project, target: Path, payloads: dict[str, bytes],
                 raise ValueError("Export contains a symbolic link")
             if part != destination and part.exists() and not part.is_dir():
                 raise ValueError("Export parent conflicts with an existing path")
-    _validate_export_case_aliases(target, [*payloads, *old, '.rimworld-translator.json'])
     marker_data = (json.dumps({"package_id": project.package_id, "files": sorted(payloads),
                                **({"test_only": True} if single_test else {}),
                                **({"test_only": True, "unverified_versions": test_versions} if test_versions is not None else {}),

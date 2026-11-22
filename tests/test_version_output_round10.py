@@ -72,7 +72,7 @@ class VersionOutputRound10Tests(unittest.TestCase):
 
     @staticmethod
     def files(root):
-        return {str(path.relative_to(root)): path.read_bytes()
+        return {path.relative_to(root).as_posix(): path.read_bytes()
                 for path in root.rglob('*') if path.is_file()}
 
     @staticmethod
@@ -156,7 +156,7 @@ class VersionOutputRound10Tests(unittest.TestCase):
         self.assertTrue(restored.entry_index()[GREETING].approved)
         manifest = json.loads((target / '.rimworld-translator.json').read_text())
         self.assertNotIn(removed, manifest['files'])
-        self.assertNotIn(str(custom.relative_to(target)), manifest['files'])
+        self.assertNotIn(custom.relative_to(target).as_posix(), manifest['files'])
 
     def test_legacy_schema1_keeps_only_its_scanned_version_in_output(self):
         legacy = Project.create(self.source, scan_mod(self.source, game_version='1.4'))

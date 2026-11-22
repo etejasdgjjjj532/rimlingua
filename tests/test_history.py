@@ -139,7 +139,7 @@ class HistoryTests(unittest.TestCase):
             self.modify("保持される現在の版")
             before = self.path.read_bytes()
             mod = self.path.parent / "mod"
-            exported = {str(p.relative_to(mod)): p.read_bytes() for p in mod.rglob("*") if p.is_file()}
+            exported = {p.relative_to(mod).as_posix(): p.read_bytes() for p in mod.rglob("*") if p.is_file()}
             import os
             original_replace = os.replace
             def reject_new_mod(source, target):
@@ -151,7 +151,7 @@ class HistoryTests(unittest.TestCase):
                 with self.assertRaises(OSError):
                     restore_snapshot(self.path, revision)
             self.assertEqual(self.path.read_bytes(), before)
-            self.assertEqual({str(p.relative_to(mod)): p.read_bytes() for p in mod.rglob("*") if p.is_file()}, exported)
+            self.assertEqual({p.relative_to(mod).as_posix(): p.read_bytes() for p in mod.rglob("*") if p.is_file()}, exported)
             self.assertEqual(len(list_snapshots(self.path)), 2)
 
 

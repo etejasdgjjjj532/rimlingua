@@ -28,7 +28,7 @@ class VersionOutputRound50Tests(unittest.TestCase):
         return project
 
     def snapshot(self):
-        return {str(p.relative_to(self.target)): p.read_bytes()
+        return {p.relative_to(self.target).as_posix(): p.read_bytes()
                 for p in self.target.rglob('*') if p.is_file()}
 
     def test_reserved_keyed_filename_rejected_before_creating_output(self):

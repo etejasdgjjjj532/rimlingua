@@ -1,4 +1,5 @@
 """存在しないロード先の条件で有界構成探索を浪費しない。"""
+import os
 from pathlib import Path
 import tempfile
 import unittest
@@ -64,7 +65,10 @@ class ReachableLoadFolderPlanningTests(unittest.TestCase):
                 self.assertEqual(self.keys(plan), {
                     'base': set(), 'optional:zzz.real': {'Actual.label'},
                 })
-                self.assertIn(diagnostic, {item.code for item in plan.diagnostics})
+                codes = {item.code for item in plan.diagnostics}
+                # A drive-letter path is rejected as an invalid load path on Windows instead of a missing folder.
+                accepted = {diagnostic, 'load-path'} if os.name == 'nt' and diagnostic == 'missing-folder' else {diagnostic}
+                self.assertTrue(accepted & codes, codes)
 
     def test_other_version_and_non_folder_elements_do_not_add_optional_ids(self):
         self.write('LoadFolders.xml', '''<loadFolders><v1.9>

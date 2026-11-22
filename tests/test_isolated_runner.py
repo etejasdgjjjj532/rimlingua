@@ -44,7 +44,9 @@ class Probe(unittest.TestCase):
             self.assertEqual(run.returncode, 0, run.stdout + run.stderr)
             data = json.loads(result.read_text())
             self.assertEqual(Path(data['source']).resolve(), ROOT / 'rimworld_translator/gui.py')
-            for field in ('parent', 'child', 'settings'):
+            # QSettings(UserScope, 'QtProject') always uses the native backend, which on Windows is the registry and
+            # cannot be redirected into the test root; only the editor's own settings file is isolated there.
+            for field in (('settings',) if os.name == 'nt' else ('parent', 'child', 'settings')):
                 self.assertTrue(Path(data[field]).is_relative_to(data['root']), data)
             self.assertFalse((root / 'personal.json').exists())
             self.assertFalse(Path(data['root']).exists(), 'Temporary test state must be cleaned up')
