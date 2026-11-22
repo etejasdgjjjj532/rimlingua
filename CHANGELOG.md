@@ -13,6 +13,12 @@ First public release. Development moved to the public repository (MPL-2.0).
 - The interface language now follows the OS by default. If the OS language list contains English, English is used; Japanese is used when only Japanese is listed; any other language falls back to English. Preferences offer "Follow OS language", Japanese and English, so the choice can still be pinned.
 - A list or dictionary in `ui_language` or `theme_mode` (hand-edited or imported settings) no longer crashes settings import or startup; the value falls back to its default.
 
+### Cross-platform
+
+- Saved relative paths (entry source files, provenance, selected folders, warnings) use "/" on every OS, so a project saved on Windows matches one saved on Linux.
+- Export reports a case-only file name clash as such on case-insensitive filesystems (Windows, macOS) instead of an unrelated "not owned" conflict.
+- The test suite runs on Windows: it pins the OS language for tests on every platform, uses long temporary paths instead of 8.3 short names, and no longer assumes POSIX path strings.
+
 ### Project and documentation
 
 - English is the primary written language (README, guides). The Japanese README and getting-started guide are kept as `README.ja.md` and `docs/GETTING_STARTED.ja.md`.
