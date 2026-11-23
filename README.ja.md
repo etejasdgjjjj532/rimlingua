@@ -1,10 +1,14 @@
 # rimlingua
 
+![rimlingua](docs/images/banner.png)
+
 *RimWorld の MOD を多言語に翻訳するエディター*
 
 [English](README.md) · [はじめての使い方](docs/GETTING_STARTED.ja.md) · [導入・ビルド手順](docs/DISTRIBUTION.md) · [変更履歴](CHANGELOG.md)
 
 ![License: MPL-2.0](https://img.shields.io/badge/license-MPL--2.0-blue) ![Status: pre-release](https://img.shields.io/badge/status-pre--release-orange)
+
+<p align="center"><img src="docs/images/ui-light.png" alt="rimlingua エディター（ライトテーマ）" width="48%"> <img src="docs/images/ui-dark.png" alt="rimlingua エディター（ダークテーマ）" width="48%"></p>
 
 **[ポータブル版をダウンロード（Releases）](https://github.com/etejasdgjjjj532/rimlingua/releases)**（Linux x86_64 / Windows x64。0.4.0 のプレリリースです。Windows 実機での起動はまだ確認していないので、動作の様子を教えてください。）
 
