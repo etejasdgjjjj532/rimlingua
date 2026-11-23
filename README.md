@@ -1,10 +1,14 @@
 # rimlingua
 
+![rimlingua](docs/images/banner.png)
+
 *A multilingual translation editor for RimWorld mods.*
 
 [日本語](README.ja.md) · [Getting started](docs/GETTING_STARTED.md) · [Installation and builds](docs/DISTRIBUTION.md) · [Changelog](CHANGELOG.md)
 
 ![License: MPL-2.0](https://img.shields.io/badge/license-MPL--2.0-blue) ![Status: pre-release](https://img.shields.io/badge/status-pre--release-orange)
+
+<p align="center"><img src="docs/images/ui-light.png" alt="rimlingua editor (light theme)" width="48%"> <img src="docs/images/ui-dark.png" alt="rimlingua editor (dark theme)" width="48%"></p>
 
 **[Download portable builds from Releases](https://github.com/etejasdgjjjj532/rimlingua/releases)** (Linux x86_64 and Windows x64; pre-release 0.4.0. Native Windows startup has not been verified yet, so please report what you see.)
 
