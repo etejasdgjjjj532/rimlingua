@@ -4,6 +4,10 @@
 
 [English](README.md) · [はじめての使い方](docs/GETTING_STARTED.ja.md) · [導入・ビルド手順](docs/DISTRIBUTION.md) · [変更履歴](CHANGELOG.md)
 
+![License: MPL-2.0](https://img.shields.io/badge/license-MPL--2.0-blue) ![Status: pre-release](https://img.shields.io/badge/status-pre--release-orange)
+
+**[ポータブル版をダウンロード（Releases）](https://github.com/etejasdgjjjj532/rimlingua/releases)**（Linux x86_64 / Windows x64。0.4.0 のプレリリースです。Windows 実機での起動はまだ確認していないので、動作の様子を教えてください。）
+
 元 MOD の文章を読み取り、選んだ言語の翻訳を編集して、独立した翻訳 MOD を作るデスクトップアプリです。翻訳は利用者が入力するか、既存の翻訳から取り込みます。元 MOD のファイルを変更せず、作業データとゲーム用ファイルを別のフォルダーに保存します。
 
 **ポータブル版は Python・Git・VS Code のインストール不要です。** RimWorld と翻訳対象の元 MOD は別途必要です。画面のメニューは日本語・英語、翻訳先は日本語を含む29言語に対応します。
@@ -17,7 +21,7 @@
 
 書き出しに失敗した場合も、先に保存できた作業データは残ります。画面に「XML 更新には診断の修正が必要」と出たら修正して再度保存してください。導入済みの翻訳 MOD は保存だけでは更新されないため、再度 **導入・更新**が必要です。
 
-画像付きの選択からゲームでの確認、取り込み、復元までの手順は[はじめての使い方](docs/GETTING_STARTED.ja.md)にあります。
+元 MOD の選択からゲームでの確認、取り込み、復元までの手順は[はじめての使い方](docs/GETTING_STARTED.ja.md)にあります。
 
 ## 起動と配布状況
 
@@ -86,7 +90,7 @@ RimWorldTranslations/Example-JP/
 | Windows Wineプレビュー | 実際のx64 EXEを展開し、Python・GitをPATHから外して100%・200%の同じ操作をWineで確認。Windows実機・Windowsのゲーム内表示の証拠ではありません。 |
 | Windows・CI・公開リリース | 手順と workflow は準備済み。ネイティブ Windows 環境と remote repository がないため、実行結果・公開ダウンロードは未取得です。 |
 
-最新の展開済みLinux版のレポートは `artifacts/linux-portable-current-verification/archive-report.json`、Windows Wine版は `artifacts/windows-portable-verification/archive-report.json` にあります。実 MOD のレポートは `artifacts/installed-verification-final.json`、`artifacts/sol-runtime/runtime-ui-report.json`、画面証拠は `artifacts/sol-runtime/isolated-run/game-translation-proof.png` にあります。これらのゲーム／MOD 由来の資料は配布物に含めません。最終の検証結果は各レポートの実値を参照してください。
+以下のレポートは手元の `artifacts/`（git 管理外で、このリポジトリには含まれません）にあります。最新の展開済みLinux版のレポートは `artifacts/linux-portable-current-verification/archive-report.json`、Windows Wine版は `artifacts/windows-portable-verification/archive-report.json` にあります。実 MOD のレポートは `artifacts/installed-verification-final.json`、`artifacts/sol-runtime/runtime-ui-report.json`、画面証拠は `artifacts/sol-runtime/isolated-run/game-translation-proof.png` にあります。これらのゲーム／MOD 由来の資料は配布物に含めません。最終の検証結果は各レポートの実値を参照してください。
 
 ## ソースから起動・開発する場合
 
