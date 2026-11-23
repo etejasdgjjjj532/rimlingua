@@ -4,6 +4,10 @@
 
 [日本語](README.ja.md) · [Getting started](docs/GETTING_STARTED.md) · [Installation and builds](docs/DISTRIBUTION.md) · [Changelog](CHANGELOG.md)
 
+![License: MPL-2.0](https://img.shields.io/badge/license-MPL--2.0-blue) ![Status: pre-release](https://img.shields.io/badge/status-pre--release-orange)
+
+**[Download portable builds from Releases](https://github.com/etejasdgjjjj532/rimlingua/releases)** (Linux x86_64 and Windows x64; pre-release 0.4.0. Native Windows startup has not been verified yet, so please report what you see.)
+
 A standalone desktop app for reading a source MOD, editing translations in your chosen languages, and generating a separate translation MOD. You enter translations or import existing work. The source MOD stays unchanged; project data and game files live in a separate folder.
 
 **Portable builds do not require a separate Python, Git, or VS Code installation.** You still need RimWorld and the source MOD. Menus support Japanese and English; translation targets include 29 languages.
@@ -86,7 +90,7 @@ Verification has distinct scopes:
 | Windows Wine preview | The actual extracted x64 EXE passed the same100%/200% checks under Wine with Python/Git off PATH. This is not native Windows or Windows game-internal UI evidence. |
 | Windows, CI and published release | Scripts/workflows are prepared. Native Windows and a remote repository are unavailable, so actual runs and published downloads remain outstanding. |
 
-Latest extracted-binary reports are `artifacts/linux-portable-current-verification/archive-report.json` and `artifacts/windows-portable-verification/archive-report.json`. Real-MOD reports are `artifacts/installed-verification-final.json` and `artifacts/sol-runtime/runtime-ui-report.json`; the game screenshot is `artifacts/sol-runtime/isolated-run/game-translation-proof.png`. These game/MOD-derived artifacts are not bundled for distribution. Read the reports for actual final results.
+Latest extracted-binary reports are kept locally under the git-ignored `artifacts/` folder and are not part of this repository: `artifacts/linux-portable-current-verification/archive-report.json` and `artifacts/windows-portable-verification/archive-report.json`. Real-MOD reports are `artifacts/installed-verification-final.json` and `artifacts/sol-runtime/runtime-ui-report.json`; the game screenshot is `artifacts/sol-runtime/isolated-run/game-translation-proof.png`. These game/MOD-derived artifacts are not bundled for distribution. Read the reports for actual final results.
 
 ## Run or develop from source
 
